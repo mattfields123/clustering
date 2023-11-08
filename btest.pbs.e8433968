@@ -1,0 +1,11 @@
+passivetracers.f90:54:71:
+
+   54 |                                         partsalpha(1) = particledata(1,t_array(counter_t-1),counter_x,counter_y)
+      |                                                                       1
+Warning: Legacy Extension: REAL array index at (1)
+passivetracers.f90:55:71:
+
+   55 |                                         partsalpha(2) = particledata(2,t_array(counter_t-1),counter_x,counter_y)
+      |                                                                       1
+Warning: Legacy Extension: REAL array index at (1)
+mkdir: cannot create directory ‘/rds/general/user/mf620/ephemeral/testcase3’: File exists

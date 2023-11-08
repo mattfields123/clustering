@@ -1,0 +1,9 @@
+passivetracers.f90:59:48:
+
+   59 |                                         parts = passive(partsalpha(1),partsalpha(2),t_array(counter_t),phase1,phase2,time1,time2,dt)
+      |                                                1
+Error: Type mismatch in argument ‘partx’ at (1); passed REAL(4) to REAL(8)
+/bin/ld: cannot find passivetracers.o: No such file or directory
+collect2: error: ld returned 1 exit status
+/var/spool/PBS/mom_priv/jobs/8434792.pbs.SC: line 26: ./passivetracers: No such file or directory
+mkdir: cannot create directory ‘/rds/general/user/mf620/ephemeral/testcase3’: File exists

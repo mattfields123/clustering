@@ -1,0 +1,4 @@
+Amplitude... 0(A=0.5),1(A=1),2(A=2)
+lifetime of wave... T 20(v = T), infty(v = infty), 40(v = 3T), 80(v = 5T)
+gamma...  001,01,005,025,0025,0, 015, 05, 1
+delta... 0 default... changes 0.25,0.5,0.75,100

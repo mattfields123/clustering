@@ -1,0 +1,10 @@
+passivetracers.f90:67:18:
+
+   67 | program passivenew
+      |                  1
+Error: Unexpected PROGRAM statement in CONTAINS section at (1)
+f951: Error: Unexpected end of file in ‘passivetracers.f90’
+/bin/ld: cannot find passivetracers.o: No such file or directory
+collect2: error: ld returned 1 exit status
+/var/spool/PBS/mom_priv/jobs/8433869.pbs.SC: line 26: ./passivetracers: No such file or directory
+mkdir: cannot create directory ‘/rds/general/user/mf620/ephemeral/testcase3’: File exists

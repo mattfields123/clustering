@@ -1,0 +1,9 @@
+passivetracers.f90:78:26:
+
+   78 |     call system_clock(beg3)
+      |                          1
+Error: Symbol ‘beg3’ at (1) has no IMPLICIT type; did you mean ‘beg1’?
+/bin/ld: cannot find passivetracers.o: No such file or directory
+collect2: error: ld returned 1 exit status
+/var/spool/PBS/mom_priv/jobs/8424250.pbs.SC: line 26: ./passivetracers: No such file or directory
+mkdir: cannot create directory ‘/rds/general/user/mf620/ephemeral/testcase2’: File exists

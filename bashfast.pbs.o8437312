@@ -1,0 +1,32 @@
+ time to velocity computation :   0.986999989    
+ time to particle :   0.718999982    
+ time to velocity computation :   0.990000010    
+ time to particle :   0.694999993    
+ time to velocity computation :   0.985000014    
+ time to particle :   0.689999998    
+ time to velocity computation :   0.987999976    
+ time to particle :   0.689000010    
+ time to velocity computation :   0.986000001    
+ time to particle :   0.691999972    
+ time to velocity computation :   0.978999972    
+ time to particle :   0.689000010    
+ time to velocity computation :   0.985000014    
+ time to particle :   0.707000017    
+ time to velocity computation :   0.991999984    
+ time to particle :   0.693000019    
+ time to velocity computation :   0.982999980    
+ time to particle :   0.686999977    
+ time to velocity computation :   0.984000027    
+ time to particle :   0.685999990    
+        2500  particles: cluster big data
+ time :    16.8169994    
+
+============================================
+
+        Job resource usage summary 
+
+                 Memory (GB)    NCPUs
+ Requested  :        64            32
+ Used       :         0 (peak)  24.30 (ave)
+
+============================================

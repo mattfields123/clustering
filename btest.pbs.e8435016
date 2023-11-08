@@ -1,0 +1,9 @@
+passivetracers.f90:79:45:
+
+   79 |                         call system_clock(end)
+      |                                             1
+Error: Symbol ‘end’ at (1) has no IMPLICIT type; did you mean ‘endi’?
+/bin/ld: cannot find passivetracers.o: No such file or directory
+collect2: error: ld returned 1 exit status
+/var/spool/PBS/mom_priv/jobs/8435016.pbs.SC: line 26: ./passivetracers: No such file or directory
+mkdir: cannot create directory ‘/testcase3’: Permission denied

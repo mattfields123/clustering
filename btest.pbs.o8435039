@@ -1,0 +1,12 @@
+         100          50
+ successful   63.4949989    
+
+============================================
+
+        Job resource usage summary 
+
+                 Memory (GB)    NCPUs
+ Requested  :        64            32
+ Used       :         0 (peak)  30.39 (ave)
+
+============================================

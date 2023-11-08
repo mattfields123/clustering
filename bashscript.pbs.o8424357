@@ -1,0 +1,27 @@
+           1 Vel
+ time to vel :    2.09999990    
+           1 Part
+           2 Vel
+ time to vel :    2.07500005    
+           2 Part
+           3 Vel
+ time to vel :    2.06500006    
+           3 Part
+           4 Vel
+ time to vel :    2.07299995    
+           4 Part
+           5 Vel
+ time to vel :    2.10100007    
+           5 Part
+      250000  particles: cluster big data
+ time :    445.954987    
+
+============================================
+
+        Job resource usage summary 
+
+                 Memory (GB)    NCPUs
+ Requested  :        64            16
+ Used       :         0 (peak)  15.26 (ave)
+
+============================================
