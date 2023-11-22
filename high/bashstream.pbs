@@ -28,5 +28,5 @@ gfortran -fopenmp constants.o parameters.o rossby_wave.o rossby_wave_attributes.
 OMP_NUM_THREADS=32 ./streampotential
 
 
-mkdir $ephemeral/driftdata
-cp * $ephemeral/driftdata
+mkdir $EPHEMERAL/driftdata
+cp * $EPHEMERAL/driftdata
