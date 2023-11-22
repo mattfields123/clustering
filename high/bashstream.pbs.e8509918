@@ -1,0 +1,56 @@
+streampotential.f90:25:1:
+
+   25 | MaduLawrence_loop(time1,phase1,t)
+      | 1
+Error: Unclassifiable statement at (1)
+streampotential.f90:42:11:
+
+   42 | end do end do
+      |           1
+Error: Syntax error in END DO statement at (1)
+streampotential.f90:51:9:
+
+   51 | contains
+      |         1
+Error: Unexpected CONTAINS statement at (1)
+streampotential.f90:54:13:
+
+   54 | implicit none
+      |             1
+Error: Duplicate IMPLICIT NONE statement at (1)
+streampotential.f90:55:18:
+
+   55 | integer :: c_k,c_l
+      |                  1
+Error: Unexpected data declaration statement at (1)
+streampotential.f90:56:36:
+
+   56 | integer :: a, N, time(65,65), phase1(65,65)
+      |                                    1
+Error: Symbol ‘phase1’ at (1) already has basic type of REAL
+streampotential.f90:57:21:
+
+   57 | real(dp) :: psi, k, l
+      |                     1
+Error: Unexpected data declaration statement at (1)
+streampotential.f90:72:3:
+
+   72 | end function streamfunction
+      |   1
+Error: Expecting END DO statement at (1)
+streampotential.f90:76:3:
+
+   76 | end streamfunction(x,y)
+      |   1
+Error: Expecting END DO statement at (1)
+streampotential.f90:81:3:
+
+   81 | end program
+      |   1
+Error: Expecting END DO statement at (1)
+f951: Error: Unexpected end of file in ‘streampotential.f90’
+/bin/ld: cannot find streampotential.o: No such file or directory
+collect2: error: ld returned 1 exit status
+/var/spool/PBS/mom_priv/jobs/8509918.pbs.SC: line 28: ./streampotential: No such file or directory
+mkdir: cannot create directory ‘/driftdata’: Permission denied
+cp: target '/driftdata' is not a directory
