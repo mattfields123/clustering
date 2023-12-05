@@ -1,2 +1,0 @@
-/var/spool/PBS/mom_priv/jobs/8434979.pbs.SC: line 26: 1117681 Segmentation fault      OMP_NUM_THREADS=32 ./passivetracers
-mkdir: cannot create directory ‘/testcase3’: Permission denied

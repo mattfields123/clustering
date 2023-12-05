@@ -28,11 +28,11 @@ module admin
         N = N + 1 
         if (k == 0) then
                 ML = 0
-        else if ((0 < k) .and. (k < 3)) then
+        else if ((0 < k) .and. (k < 1)) then
                 ML = exp(1-1/(1-(k-1)**2))
-        else if ((3 .le. k) .and. (k .le. N-2)) then
+        else if ((1 .le. k) .and. (k .le. N)) then
                 ML = 1 
-        else if ((N-2 < k) .and. (k < N + 1)) then
+        else if ((N < k) .and. (k < N + 1)) then
                 ML = exp(1-1/(1-(k-N+2)**2))
         else if (k==N+1) then
                 ML = 0 

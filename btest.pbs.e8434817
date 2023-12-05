@@ -1,2 +1,0 @@
-/var/spool/PBS/mom_priv/jobs/8434817.pbs.SC: line 26: 1115579 Segmentation fault      OMP_NUM_THREADS=32 ./passivetracers
-mkdir: cannot create directory ‘/rds/general/user/mf620/ephemeral/testcase3’: File exists

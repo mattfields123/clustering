@@ -1,9 +1,0 @@
-passivetracers.f90:51:1:
-
-   51 | .
-      | 1
-Error: Invalid character in name at (1)
-/bin/ld: cannot find passivetracers.o: No such file or directory
-collect2: error: ld returned 1 exit status
-/var/spool/PBS/mom_priv/jobs/8434852.pbs.SC: line 26: ./passivetracers: No such file or directory
-mkdir: cannot create directory ‘/rds/general/user/mf620/ephemeral/testcase3’: File exists
