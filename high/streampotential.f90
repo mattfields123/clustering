@@ -75,7 +75,7 @@ k = k_array(c_k)
 l = l_array(c_l)
 intermediary = (1-gamma) * Madulawrence(time(c_k,c_l)-t,vu) * amplitudes(c_k,c_l)
 psi = psi + intermediary * cos(tau*k*x+tau*l*y-dispersions(c_k,c_l)*t + phase1(c_k,c_l)) 
-
+print*, Madulawrence(time(c_k,c_l)-t,vu)
 end do
 end do
 psi = psi/scaling
