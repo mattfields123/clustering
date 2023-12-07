@@ -73,13 +73,43 @@ do c_k = 1,65
 do c_l = 1,65
 k = k_array(c_k)
 l = l_array(c_l)
-intermediary = (1-gamma) * Madulawrence(time(c_k,c_l)-t,vu) * amplitudes(c_k,c_l)
+intermediary = Madulawrence(time(c_k,c_l)-t,vu) * amplitudes(c_k,c_l)
 psi = psi + intermediary * cos(tau*k*x+tau*l*y-dispersions(c_k,c_l)*t + phase1(c_k,c_l)) 
 end do
 end do
 psi = psi/scaling
 end function streamfunction
 
+function potentialfunction(x,y,time1,time2,phase1,phase2) result(phi)
+implicit none
+real(dp) :: t
+real(dp) :: time1(65,65),time2(65,65), phase1(65,65), phase2(65,65)
+real(dp) :: psi, k, l , x , y, scaling
+real(dp) :: k_array(65,65), l_array(65,65)
+k_array = linspace(-3.2,3.2,65) 
+l_array = linspace(-3.2,3.2,65) 
+phi = 0.
+scaling = 513.5
+
+do c_k = 1,65
+do c_l = 1,65
+k = k_array(c_k)
+l = l_array(c_l)
+int1 = delta * MaduLawrence(time1(c_k,c_l)-t,vu)
+int2 = (1-delta) * MaduLawrence(time2(c_k,c_l)-t,vu)
+int11 = cos(tau*k*x+tau*l*y-dispersions(c_k,c_l)*t+phase1(c_k,c_l))
+int22 = cos(tau*k*x+tau*l*y-dispersions(c_k,c_l)*t+phase2(c_k,c_l))
+inter1 = int1*int11
+inter2 = int2*int22
+phi = phi + inter1 + inter2
+
+
+end do
+end do
+phi = phi/scaling
+
+
+end function potentialfunction
 
 
 end program streampotential
