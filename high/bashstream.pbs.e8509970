@@ -1,2 +1,0 @@
-mkdir: cannot create directory ‘/driftdata’: Permission denied
-cp: target '/driftdata' is not a directory

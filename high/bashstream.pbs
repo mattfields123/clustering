@@ -1,6 +1,6 @@
-#PBS -l select=1:ncpus=4:mem=64gb
+#PBS -l select=1:ncpus=32:mem=64gb
 #PBS -l walltime=23:55:00
-
+#PBS -q pqberloff
 module load gcc/11.2.0
 
 
@@ -27,6 +27,5 @@ gfortran -fopenmp streampotential.f90 -c
 gfortran -fopenmp constants.o parameters.o rossby_wave.o rossby_wave_attributes.o admin.o random.o velocity.o particle.o streampotential.o -o streampotential
 OMP_NUM_THREADS=32 ./streampotential
 
-
-mkdir $EPHEMERAL/driftdata
-cp * $EPHEMERAL/driftdata
+cp streamfunction.dat $HOME/HPC/high/streamdata
+cp potentialfunction.dat $HOME/HPC/high/streamdata
