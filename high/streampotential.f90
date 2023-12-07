@@ -68,14 +68,13 @@ real(dp) :: intermediary
 k_array = linspace(-3.2,3.2,65)
 l_array = linspace(-3.2,3.2,65)
 psi = 0.
- 
+scaling = 513.5 
 do c_k = 1,65
 do c_l = 1,65
 k = k_array(c_k)
 l = l_array(c_l)
 intermediary = (1-gamma) * Madulawrence(time(c_k,c_l)-t,vu) * amplitudes(c_k,c_l)
 psi = psi + intermediary * cos(tau*k*x+tau*l*y-dispersions(c_k,c_l)*t + phase1(c_k,c_l)) 
-print*, Madulawrence(time(c_k,c_l)-t,vu)
 end do
 end do
 psi = psi/scaling
