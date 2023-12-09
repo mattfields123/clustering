@@ -59,9 +59,10 @@ contains
         phi = phi/scaling
     end function potential
     
-    function velocity_pointML(x, y, t, phase1, phase2, time1, time2) result(velocity)
+    function velocity_pointML(x, y, t, phase1, phase2, time1, time2, amplitudes, dispersions) result(velocity)
         real(dp) :: x, y, t, k, l, psi1, psi2, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65)
         real(dp) :: velocity(2), k_array(65), l_array(65)
+        real(dp) :: amplitudes(65,65), dispersions(65,65)
         integer :: counter_k, counter_l
         
         k_array = linspace(-3.2,3.2,65)
@@ -73,8 +74,8 @@ contains
         k = k_array(counter_k)
         do counter_l = 1, 65
         l = l_array(counter_l)
-        psi1 = amplitude2(k,l)*sin(tau*k*x + tau*l*y - dispersion(k,l)*t + phase1(counter_k,counter_l))
-        psi2 = amplitude2(k,l)*sin(tau*k*x + tau*l*y - dispersion(k,l)*t + phase2(counter_k,counter_l))
+        psi1 = amplitudes(k,l)*sin(tau*k*x + tau*l*y - dispersions(k,l)*t + phase1(counter_k,counter_l))
+        psi2 = amplitudes(k,l)*sin(tau*k*x + tau*l*y - dispersions(k,l)*t + phase2(counter_k,counter_l))
         velocity(1) = velocity(1) + (tausol*l - taupot*k*delta)*psi1 
         velocity(1) = velocity(1) - taupot*(1-delta)*k*psi2
         velocity(2) = velocity(2) - (tausol*k + taupot*l*delta)*psi1 

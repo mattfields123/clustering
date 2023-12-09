@@ -1,6 +1,7 @@
 program passivetracers
 use particle
 use parameters
+use rossby_wave
 implicit none
 real(dp) :: phase1(65,65), phase2(65,65), time1(65,65), time2(65,65)
 integer :: i
@@ -21,6 +22,7 @@ subroutine vel_passive(timesteps, phase1, phase2, time1, time2, N_part)
     real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), velocity(2), parts(2)
     real(dp) :: t_array(timesteps), x_array(128), y_array(128), modx, mody
     real(dp) :: linx(N_part), liny(N_part), partx_array(N_part,N_part), party_array(N_part,N_part)
+    real(dp) :: dispersions(65,65), amplitudes(65,65)
     real :: dt = 0.25
     integer :: counter_x, counter_y, counter_t, timesteps
     integer :: N_part, counter_n1x, counter_n2x, counter_n1y, counter_n2y
@@ -43,6 +45,9 @@ subroutine vel_passive(timesteps, phase1, phase2, time1, time2, N_part)
         enddo
     enddo
     write(3,*) sum(partx_array)/(N_part**2), ',', sum(party_array)/(N_part**2)
+
+    call dispersion_relation_array(dispersions)
+    call amplitudes_array(amplitudes)
 
     do counter_t = 1,timesteps
     t = t_array(counter_t)
