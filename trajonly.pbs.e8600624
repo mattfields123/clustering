@@ -1,0 +1,34 @@
+gfortran: warning: rossby_wave: linker input file unused because linking not done
+gfortran: error: rossby_wave: linker input file not found: No such file or directory
+particle.f90:6:82:
+
+    6 |     function passive(partx, party, t, phase1, phase2, time1, time2, dt, amplitudes, dispersions) result(parts)
+      |                                                                                  1
+Error: Symbol ‘amplitudes’ at (1) has no IMPLICIT type
+particle.f90:6:95:
+
+    6 |     function passive(partx, party, t, phase1, phase2, time1, time2, dt, amplitudes, dispersions) result(parts)
+      |                                                                                               1
+Error: Symbol ‘dispersions’ at (1) has no IMPLICIT type
+particle.f90:25:37:
+
+   25 |         souls = 1.5*R*acceleration_ML(x,y,t,phase1,phase2,time1,time2)
+      |                                     1
+Error: Function ‘acceleration_ml’ at (1) has no IMPLICIT type
+particle.f90:26:25:
+
+   26 |         souls = souls + (velocity_pointML(x,y,t,phase1,phase2,time1,time2) - (/u, v/))*St
+      |                         1
+Error: Missing actual argument for argument ‘amplitudes’ at (1)
+passivetracers.f90:2:5:
+
+    2 | use particle
+      |     1
+Fatal Error: Cannot open module file ‘particle.mod’ for reading at (1): No such file or directory
+compilation terminated.
+/bin/ld: cannot find rossby_wave.o: No such file or directory
+/bin/ld: cannot find particle.o: No such file or directory
+/bin/ld: cannot find passivetracers.o: No such file or directory
+collect2: error: ld returned 1 exit status
+/var/spool/PBS/mom_priv/jobs/8600624.pbs.SC: line 28: ./passivetracers: No such file or directory
+mkdir: cannot create directory ‘/rds/general/user/mf620/ephemeral/testcase2’: File exists
