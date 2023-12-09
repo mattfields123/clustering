@@ -29,6 +29,10 @@ real(dp) :: dispersions(65,65)
 real(dp) :: k_array(65), l_array(65)
 integer :: a,b
 real(dp) :: k,l
+
+k_array = linspace(-3.2,3.2,65)
+l_array = linspace(-3.2,3.2,65)
+
 do a = 1,65
 do b = 1,65
 k = k_array(a)

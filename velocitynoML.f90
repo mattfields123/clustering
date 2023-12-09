@@ -9,8 +9,8 @@ real(dp) :: mu = 0.3_dp
 real(dp) :: scaling = 513.5_dp
 
 !real(dp) :: scaling = 65._dp**2
-real(dp) :: tausol = 8*atan(1.)*(1-0.15) !relies on gamma
-real(dp) :: taupot = 8*atan(1.)*0.15 !relies on gamma
+real(dp) :: tausol = 8*atan(1.)*(1-gamma) !relies on gamma
+real(dp) :: taupot = 8*atan(1.)*gamma !relies on gamma
 
 contains
     function velocity_pointML(x, y, t, phase1, phase2, time1, time2, amplitudes, dispersions) result(velocity)
@@ -30,6 +30,7 @@ contains
         l = l_array(c_l)
         psi1 = amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase1(c_k,c_l))
         psi2 = amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase2(c_k,c_l))
+     
         velocity(1) = velocity(1) + (tausol*l - taupot*k*delta)*psi1 
         velocity(1) = velocity(1) - taupot*(1-delta)*k*psi2
         velocity(2) = velocity(2) - (tausol*k + taupot*l*delta)*psi1 
@@ -37,6 +38,7 @@ contains
         end do
         end do
         !$OMP END PARALLEL DO
+        
         velocity = velocity/scaling
     
     end function velocity_pointML

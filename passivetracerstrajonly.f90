@@ -48,13 +48,11 @@ subroutine vel_passive(timesteps, phase1, phase2, time1, time2, N_part)
 
     call dispersion_relation_array(dispersions)
     call amplitudes_array(amplitudes)
-
     do counter_t = 1,timesteps
     t = t_array(counter_t)
     call MaduLawrence_loop(time1, phase1, t)
     call MaduLawrence_loop(time2, phase2, t)
     
-    print*,counter_t, 'Part'
     !$OMP PARALLEL DO private(parts,modx,mody)
     do c_n2x = 1, N_part
     do c_n2y = 1, N_part
@@ -66,9 +64,7 @@ subroutine vel_passive(timesteps, phase1, phase2, time1, time2, N_part)
         !write(2,*) modx, ',', mody, ',', parts(1), ',', parts(2)
     end do
     end do
-    !$OMP END PARALLEL DO
-    
-    print*,  sum(partx_array)/(N_part**2), ',', sum(party_array)/(N_part**2)
+    !$OMP END PARALLEL DO 
     write(3,*) sum(partx_array)/(N_part**2), ',', sum(party_array)/(N_part**2)
     end do
     close(3)

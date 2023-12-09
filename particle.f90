@@ -15,6 +15,7 @@ contains
         k3 = velocity_pointML(partx+k2(1)*dt/2,party+k2(2)*dt/2,t+dt/2,phase1,phase2,time1,time2,amplitudes,dispersions)
         k4 = velocity_pointML(partx+k3(1)*dt,party+k3(2)*dt,t+dt,phase1,phase2,time1,time2,amplitudes,dispersions)
         parts = parts + dt*(k1+2*k2+2*k3+k4)/6
+       
     end function passive
 
 end module particle
