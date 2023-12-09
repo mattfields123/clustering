@@ -1,0 +1,33 @@
+streampotential.f90:15:36:
+
+    5 | use rossby_wave
+      |    2                                
+......
+   15 | integer :: c_x, c_y, c_t, time_steps
+      |                                    1
+Error: Symbol ‘time_steps’ at (1) conflicts with symbol from module ‘parameters’, use-associated at (2)
+streampotential.f90:34:6:
+
+   34 | do c_t = 1 , 10
+      |      1
+Error: Symbol ‘c_t’ at (1) has no IMPLICIT type
+streampotential.f90:39:6:
+
+   39 | do c_x = 1 , 10
+      |      1
+Error: Symbol ‘c_x’ at (1) has no IMPLICIT type
+streampotential.f90:40:6:
+
+   40 | do c_y = 1, 10
+      |      1
+Error: Symbol ‘c_y’ at (1) has no IMPLICIT type
+streampotential.f90:28:10:
+
+   28 | t_array = linspace(0.,(time_steps-1)*dt,time_steps)
+      |          1
+Error: Type mismatch in argument ‘end_point’ at (1); passed REAL(8) to REAL(4)
+/bin/ld: cannot find streampotential.o: No such file or directory
+collect2: error: ld returned 1 exit status
+/var/spool/PBS/mom_priv/jobs/8595933.pbs.SC: line 28: ./streampotential: No such file or directory
+cp: cannot stat 'streamfunction.dat': No such file or directory
+cp: cannot stat 'potentialfunction.dat': No such file or directory

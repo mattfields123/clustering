@@ -1,0 +1,10 @@
+streampotential.f90:28:10:
+
+   28 | t_array = linspace(0.,(timesteps-1)*dt,timesteps)
+      |          1
+Error: Type mismatch in argument ‘end_point’ at (1); passed REAL(8) to REAL(4)
+/bin/ld: cannot find streampotential.o: No such file or directory
+collect2: error: ld returned 1 exit status
+/var/spool/PBS/mom_priv/jobs/8595961.pbs.SC: line 28: ./streampotential: No such file or directory
+cp: cannot stat 'streamfunction.dat': No such file or directory
+cp: cannot stat 'potentialfunction.dat': No such file or directory

@@ -1,0 +1,10 @@
+streampotential.f90:40:44:
+
+   40 | phi_result(c_x,c_y) = potentialfunction(x,y,t,time1,time2,phase1,phase2)
+      |                                            1
+Error: Rank mismatch in argument ‘time1’ at (1) (rank-2 and scalar)
+/bin/ld: cannot find streampotential.o: No such file or directory
+collect2: error: ld returned 1 exit status
+/var/spool/PBS/mom_priv/jobs/8595929.pbs.SC: line 28: ./streampotential: No such file or directory
+cp: cannot stat 'streamfunction.dat': No such file or directory
+cp: cannot stat 'potentialfunction.dat': No such file or directory

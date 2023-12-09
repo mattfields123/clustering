@@ -1,0 +1,70 @@
+streampotential.f90:84:69:
+
+   84 | function potentialfunction(x,y,time1,time2,phase1,phase2) result(phi)
+      |                                                                     1
+Error: Function result ‘phi’ at (1) has no IMPLICIT type
+streampotential.f90:95:6:
+
+   95 | do c_k = 1,65
+      |      1
+Error: Symbol ‘c_k’ at (1) has no IMPLICIT type
+streampotential.f90:96:6:
+
+   96 | do c_l = 1,65
+      |      1
+Error: Symbol ‘c_l’ at (1) has no IMPLICIT type
+streampotential.f90:99:4:
+
+   99 | int1 = delta * MaduLawrence(time1(c_k,c_l)-t,vu)
+      |    1
+Error: Symbol ‘int1’ at (1) has no IMPLICIT type
+streampotential.f90:101:5:
+
+  101 | int11 = cos(tau*k*x+tau*l*y-dispersions(c_k,c_l)*t+phase1(c_k,c_l))
+      |     1
+Error: Symbol ‘int11’ at (1) has no IMPLICIT type
+streampotential.f90:100:4:
+
+  100 | int2 = (1-delta) * MaduLawrence(time2(c_k,c_l)-t,vu)
+      |    1
+Error: Symbol ‘int2’ at (1) has no IMPLICIT type
+streampotential.f90:102:5:
+
+  102 | int22 = cos(tau*k*x+tau*l*y-dispersions(c_k,c_l)*t+phase2(c_k,c_l))
+      |     1
+Error: Symbol ‘int22’ at (1) has no IMPLICIT type
+streampotential.f90:103:6:
+
+  103 | inter1 = int1*int11
+      |      1
+Error: Symbol ‘inter1’ at (1) has no IMPLICIT type
+streampotential.f90:104:6:
+
+  104 | inter2 = int2*int22
+      |      1
+Error: Symbol ‘inter2’ at (1) has no IMPLICIT type
+streampotential.f90:90:0:
+
+   90 | k_array = linspace(-3.2,3.2,65)
+      | 
+Error: Incompatible ranks 2 and 1 in assignment at (1)
+streampotential.f90:91:0:
+
+   91 | l_array = linspace(-3.2,3.2,65)
+      | 
+Error: Incompatible ranks 2 and 1 in assignment at (1)
+streampotential.f90:40:44:
+
+   40 | phi_result(c_x,c_y) = potentialfunction(x,y,t,time1,time2,phase1,phase2)
+      |                                            1
+Error: Rank mismatch in argument ‘time1’ at (1) (rank-2 and scalar)
+streampotential.f90:40:22:
+
+   40 | phi_result(c_x,c_y) = potentialfunction(x,y,t,time1,time2,phase1,phase2)
+      |                      1
+Error: Cannot convert UNKNOWN to REAL(8) at (1)
+/bin/ld: cannot find streampotential.o: No such file or directory
+collect2: error: ld returned 1 exit status
+/var/spool/PBS/mom_priv/jobs/8595922.pbs.SC: line 28: ./streampotential: No such file or directory
+cp: cannot stat 'streamfunction.dat': No such file or directory
+cp: cannot stat 'potentialfunction.dat': No such file or directory
