@@ -8,8 +8,10 @@ integer :: i
 phase1 = tau*random_matrix(65,65)
 phase2 = tau*random_matrix(65,65)
 time1 = vu*random_matrix(65,65)
-time2 = vu*random_matrix(65,65)
+time2 = vu*random_matrix(65,65
 
+
+ 
 call vel_passive(time_steps, phase1, phase2, time1, time2, N_particles)
 !print *, char(7)  
 !call execute_command_line ("powershell.exe -File ../email.ps1", exitstat=i)

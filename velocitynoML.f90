@@ -9,16 +9,19 @@ real(dp) :: mu = 0.3_dp
 real(dp) :: scaling = 513.5_dp
 
 !real(dp) :: scaling = 65._dp**2
-real(dp) :: tausol = 8*atan(1.)*(1-gamma) !relies on gamma
-real(dp) :: taupot = 8*atan(1.)*gamma !relies on gamma
+
 
 contains
-    function velocity_pointML(x, y, t, phase1, phase2, time1, time2, amplitudes, dispersions) result(velocity)
+    function velocity_pointML(x, y, t, phase1, phase2, time1, time2, amplitudes, dispersions, g) result(velocity)
         real(dp) :: x, y, t, k, l, psi1, psi2, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65)
         real(dp) :: velocity(2), k_array(65), l_array(65)
         real(dp) :: amplitudes(65,65), dispersions(65,65)
+        real(dp) :: g, tausol, taupot
         integer :: c_k, c_l
         
+        tausol = 8*atan(1.)*(1-g) !relies on gamma
+        taupot = 8*atan(1.)*g !relies on gamma
+
         k_array = linspace(-3.2,3.2,65)
         l_array = linspace(-3.2,3.2,65)
         velocity = (/0.,0./)
