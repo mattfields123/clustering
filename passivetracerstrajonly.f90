@@ -23,12 +23,11 @@ subroutine vel_passive(timesteps, phase1, phase2, time1, time2, N_part)
     real(dp) :: t_array(timesteps), x_array(128), y_array(128), modx, mody
     real(dp) :: linx(N_part), liny(N_part), partx_array(N_part,N_part), party_array(N_part,N_part)
     real(dp) :: dispersions(65,65), amplitudes(65,65)
-    real(dp), allocatable :: partavgs(:,:,:)
     real :: dt = 0.25
     integer :: counter_x, counter_y, counter_t, timesteps
     integer :: N_part, counter_n1x, c_n2x, counter_n1y, c_n2y
-    integer :: counter_write1,beginning,end
-    real :: rate, gamma1(10)
+    integer :: beginning,end
+    real :: rate
     integer :: beg1,end1
     x_array = linspace(-5.0,5.0,128)
     y_array = linspace(-5.0,5.0,128)
@@ -36,41 +35,23 @@ subroutine vel_passive(timesteps, phase1, phase2, time1, time2, N_part)
  
     linx = linspace(-5.0,(N_part-1.)/(0.1*N_part)-5.0,N_part)
     liny = linspace(-5.0,(N_part-1.)/(0.1*N_part)-5.0,N_part)
-    
-    
-    allocate(partavgs(10,2,timesteps+1))
-    
-    gamma1 = linspace(0.,1.,10)
-    
-    call system_clock(beginning, rate)
-    
-    
-    do counter_write1 = 1,10
-    gamma = gamma1(counter_write1)
 
+    open(3, file = 'partavg.dat')
+    call system_clock(beginning, rate)
     do counter_n1x = 1, N_part
         do counter_n1y = 1, N_part
-            partx_array(counter_n1x,counter_n1y) = linx(counter_n1x)    
+            partx_array(counter_n1x,counter_n1y) = linx(counter_n1x)
             party_array(counter_n1x,counter_n1y) = liny(counter_n1y)
         enddo
     enddo
+    write(3,*) sum(partx_array)/(N_part**2), ',', sum(party_array)/(N_part**2)
 
-        partavgs(counter_write1,1,1) = sum(partx_array)/(N_part**2)
-        partavgs(counter_write1,2,1) = sum(party_array)/(N_part**2)
-    
-
-    ! write(3,*) sum(partx_array)/(N_part**2), ',', sum(party_array)/(N_part**2)
-
-    
     call dispersion_relation_array(dispersions)
     call amplitudes_array(amplitudes)
-
-
     do counter_t = 1,timesteps
-    
-        t = t_array(counter_t)
-        call MaduLawrence_loop(time1, phase1, t)
-        call MaduLawrence_loop(time2, phase2, t)
+    t = t_array(counter_t)
+    call MaduLawrence_loop(time1, phase1, t)
+    call MaduLawrence_loop(time2, phase2, t)
     
     !$OMP PARALLEL DO private(parts,modx,mody)
     do c_n2x = 1, N_part
@@ -84,19 +65,9 @@ subroutine vel_passive(timesteps, phase1, phase2, time1, time2, N_part)
     end do
     end do
     !$OMP END PARALLEL DO 
-    partavg(counter_write1,1,counter_t+1) = sum(partx_array)/(N_part**2)
-    partavg(counter_write1,2,counter_t+1) = sum(party_array)/(N_part**2) 
-    
-    ! write(3,*) sum(partx_array)/(N_part**2), ',', sum(party_array)/(N_part**2)
+    write(3,*) sum(partx_array)/(N_part**2), ',', sum(party_array)/(N_part**2)
     end do
-    end do
-
-
-open(3, file = 'partavg.dat')
-    write(3,*) partavg   
-close(3)
-
-
+    close(3)
     print*, N_part**2, ' particles: cluster big data'
     call system_clock(end)
 
