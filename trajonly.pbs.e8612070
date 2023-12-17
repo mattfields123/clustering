@@ -1,0 +1,9 @@
+executearray.f90:20:12:
+
+   20 | write(1,*) = vel_passive2(time_steps, phase1, phase2, time1, time2, N_particle,gammas(c_g))
+      |            1
+Error: Expected expression in WRITE statement at (1)
+/bin/ld: cannot find executearray.o: No such file or directory
+collect2: error: ld returned 1 exit status
+/var/spool/PBS/mom_priv/jobs/8612070.pbs.SC: line 29: ./executearray: No such file or directory
+mkdir: cannot create directory ‘/rds/general/user/mf620/ephemeral/testcase2’: File exists

@@ -13,11 +13,11 @@ time1 = vu*random_matrix(65,65)
 time2 = vu*random_matrix(65,65)
 
 gammas = linspace(0.,1.,10)
+print*, gammas
 open(1, file="partavg.dat")
 do c_g=1,10
 
-
-write(1,*) = vel_passive2(time_steps, phase1, phase2, time1, time2, N_particle,gammas(c_g))
+write(1,*) vel_passive(time_steps, phase1, phase2, time1, time2, N_particles ,gammas(c_g))
 
 end do
 

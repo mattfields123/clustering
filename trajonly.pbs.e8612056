@@ -1,0 +1,103 @@
+passivetracers.f90:9:0:
+
+    9 | function vel_passive(timesteps, phase1, phase2, time1, time2, N_part)
+      | 
+Error: Function result ‘vel_passive’ at (1) has no IMPLICIT type
+passivetracers.f90:79:3:
+
+   79 | end subroutine vel_passive
+      |   1
+Error: Expecting END FUNCTION statement at (1)
+passivetracers.f90:83:13:
+
+   83 | real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), velocity(2), parts(2)
+      |             1
+Error: Symbol ‘x’ at (1) already has basic type of REAL
+passivetracers.f90:84:23:
+
+   84 |     real(dp) :: t_array(timesteps), x_array(128), y_array(128), modx, mody
+      |                       1
+Error: Symbol ‘t_array’ at (1) already has basic type of REAL
+passivetracers.f90:85:20:
+
+   85 |     real(dp) :: linx(N_part), liny(N_part), partx_array(N_part,N_part), party_array(N_part,N_part)
+      |                    1
+Error: Symbol ‘linx’ at (1) already has basic type of REAL
+passivetracers.f90:86:27:
+
+   86 |     real(dp) :: dispersions(65,65), amplitudes(65,65)
+      |                           1
+Error: Symbol ‘dispersions’ at (1) already has basic type of REAL
+passivetracers.f90:88:39:
+
+   88 |     real(dp), allocatable :: partavg(:)
+      |                                       1
+Error: Unexpected data declaration statement at (1)
+passivetracers.f90:90:10:
+
+   90 |     real :: dt = 0.25
+      |          1
+Error: PROCEDURE attribute of ‘real’ conflicts with LABEL attribute at (1)
+passivetracers.f90:91:24:
+
+   91 |     integer :: counter_x, counter_y, counter_t, timesteps
+      |                        1
+Error: Symbol ‘counter_x’ at (1) already has basic type of INTEGER
+passivetracers.f90:92:21:
+
+   92 |     integer :: N_part, counter_n1x, c_n2x, counter_n1y, c_n2y
+      |                     1
+Error: Symbol ‘n_part’ at (1) already has basic type of INTEGER
+passivetracers.f90:93:24:
+
+   93 |     integer :: beginning,end
+      |                        1
+Error: Symbol ‘beginning’ at (1) already has basic type of INTEGER
+passivetracers.f90:94:10:
+
+   94 |     real :: rate
+      |          1
+Error: PROCEDURE attribute of ‘real’ conflicts with LABEL attribute at (1)
+passivetracers.f90:95:19:
+
+   95 |     integer :: beg1,end1
+      |                   1
+Error: Symbol ‘beg1’ at (1) already has basic type of INTEGER
+passivetracers.f90:97:13:
+
+   97 |     allocate(partavg(timesteps+1))
+      |             1
+Error: Allocate-object at (1) is neither a data pointer nor an allocatable variable
+passivetracers.f90:134:132:
+
+  134 |             parts = passive2(partx_array(c_n2x,c_n2y),party_array(c_n2x,c_n2y),t,phase1,phase2,time1,time2,dt,amplitudes,dispersions,g)
+      |                                                                                                                                    1
+Error: Line truncated at (1) [-Werror=line-truncation]
+passivetracers.f90:134:132:
+
+  134 |             parts = passive2(partx_array(c_n2x,c_n2y),party_array(c_n2x,c_n2y),t,phase1,phase2,time1,time2,dt,amplitudes,dispersions,g)
+      |                                                                                                                                    1
+Error: Syntax error in argument list at (1)
+passivetracers.f90:150:25:
+
+  150 | end function vel_passive2
+      |                         1
+Error: Expected label ‘vel_passive’ for END FUNCTION statement at (1)
+passivetracers.f90:152:3:
+
+  152 | end module passivetracers
+      |   1
+Error: Expecting END FUNCTION statement at (1)
+f951: Error: Unexpected end of file in ‘passivetracers.f90’
+f951: some warnings being treated as errors
+executearray.f90:2:5:
+
+    2 | use passivetracers
+      |     1
+Fatal Error: Cannot open module file ‘passivetracers.mod’ for reading at (1): No such file or directory
+compilation terminated.
+/bin/ld: cannot find passivetracers.o: No such file or directory
+/bin/ld: cannot find executearray.o: No such file or directory
+collect2: error: ld returned 1 exit status
+/var/spool/PBS/mom_priv/jobs/8612056.pbs.SC: line 29: ./executearray: No such file or directory
+mkdir: cannot create directory ‘/rds/general/user/mf620/ephemeral/testcase2’: File exists

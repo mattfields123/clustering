@@ -1,0 +1,30 @@
+        2500  particles: cluster big data
+ time :    2.02099991    
+        2500  particles: cluster big data
+ time :    1.98599994    
+        2500  particles: cluster big data
+ time :    1.99899995    
+        2500  particles: cluster big data
+ time :    2.00000000    
+        2500  particles: cluster big data
+ time :    2.00099993    
+        2500  particles: cluster big data
+ time :    2.00200009    
+        2500  particles: cluster big data
+ time :    1.99899995    
+        2500  particles: cluster big data
+ time :    1.99899995    
+        2500  particles: cluster big data
+ time :    2.00200009    
+        2500  particles: cluster big data
+ time :    2.00300002    
+
+============================================
+
+        Job resource usage summary 
+
+                 Memory (GB)    NCPUs
+ Requested  :        64            32
+ Used       :         0 (peak)  22.30 (ave)
+
+============================================
