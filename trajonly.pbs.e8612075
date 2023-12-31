@@ -1,9 +1,0 @@
-executearray.f90:20:10:
-
-   20 | write(1,*) vel_passive2(time_steps, phase1, phase2, time1, time2, N_particles ,gammas(c_g))
-      |          1
-Error: Function ‘vel_passive2’ at (1) has no IMPLICIT type; did you mean ‘vel_passive’?
-/bin/ld: cannot find executearray.o: No such file or directory
-collect2: error: ld returned 1 exit status
-/var/spool/PBS/mom_priv/jobs/8612075.pbs.SC: line 29: ./executearray: No such file or directory
-mkdir: cannot create directory ‘/rds/general/user/mf620/ephemeral/testcase2’: File exists
