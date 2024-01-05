@@ -1,0 +1,9 @@
+executearray.f90:20:85:
+
+   18 | do c_g=1,11
+      |           2                                                                          
+   19 | 
+   20 | write(1,*) vel_passive(time_steps, phase1, phase2, time1, time2, N_particles ,gammas(c_g))
+      |                                                                                     1
+Warning: Array reference at (1) out of bounds (11 > 10) in loop beginning at (2)
+mkdir: cannot create directory ‘/rds/general/user/mf620/ephemeral/testcase2’: File exists

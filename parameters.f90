@@ -7,7 +7,7 @@ use constants
 real :: delta = 0.
 real(dp) :: vu = 100*atan(1.)
 real :: amp_scaling = 1
-integer :: time_steps = 100
-integer :: N_particles = 10
+integer :: time_steps = 4000
+integer :: N_particles = 200
 
 end module parameters
