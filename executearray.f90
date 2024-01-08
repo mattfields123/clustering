@@ -12,7 +12,19 @@ phase2 = tau*random_matrix(65,65)
 time1 = vu*random_matrix(65,65)
 time2 = vu*random_matrix(65,65)
 
-gammas = linspace(0.,1.,11)
+gammas(1) = 0.1
+gammas(2) = 0.5
+gammas(3) = 1
+gammas(4) = 2
+gammas(5) = 3
+gammas(6) = 4
+gammas(7) = 9
+gammas(8) = 25
+gammas(9) = 36
+gammas(10) = 49
+gammas(11) = 64
+
+
 print*, gammas
 open(1, file="partavg.dat")
 do c_g=1,11
