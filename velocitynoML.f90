@@ -18,9 +18,9 @@ contains
         real(dp) :: amplitudes(65,65), dispersions(65,65)
         real(dp) :: g, tausol, taupot
         integer :: c_k, c_l
-        
-        tausol = 8*atan(1.)*(1-g) !relies on gamma
-        taupot = 8*atan(1.)*g !relies on gamma
+
+        tausol = 8*atan(1.)*(1-gamma) !relies on gamma
+        taupot = 8*atan(1.)*gamma !relies on gamma
 
         k_array = linspace(-3.2,3.2,65)
         l_array = linspace(-3.2,3.2,65)
@@ -31,8 +31,8 @@ contains
         k = k_array(c_k)
         do c_l = 1, 65
         l = l_array(c_l)
-        psi1 = amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase1(c_k,c_l))
-        psi2 = amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase2(c_k,c_l))
+        psi1 = g*amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase1(c_k,c_l))
+        psi2 = g*amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase2(c_k,c_l))
      
         velocity(1) = velocity(1) + (tausol*l - taupot*k*delta)*psi1 
         velocity(1) = velocity(1) - taupot*(1-delta)*k*psi2
