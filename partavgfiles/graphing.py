@@ -7,25 +7,27 @@ with open("/Users/bunny/Documents/msci/mscigit/partavgfiles/partavg.dat") as fil
     array = np.loadtxt(file_name)
 
 print(np.shape(array))
-
-t = np.linspace(0,1,4001)
+array = array*400
+t = np.linspace(0,4000*0.25,4001)
 arr = np.zeros(11)
 for x in range(11):
     y = linregress(t,array[x,:])
     arr[x] = y.slope
 
-t0 = [0,0.005,0.01,0.025,0.05,0.075,0.1,0.25,0.5,0.75,1]
+t0 = [0.1,0.5,1,2,3,4,9,25,36,49,64]
 
-plt.figure()
-plt.xlabel('Gamma')
-plt.ylabel('Drift Velocity')
+fig1 = plt.figure()
+plt.xlabel('Amplitude scaling')
+plt.ylabel('Drift Velocity km/ time')
 plt.plot(t0,arr,)
 
 plt.show()
 
-plt.figure()
-plt.xlabel('Westward Drift')
+fig2 = plt.figure()
+plt.xlabel('Westward Drift / km')
 plt.ylabel('Time')
 for x in range(11):
-    plt.plot(array[x,:],t)
+    plt.plot(array[x,:],t,label=str(t0[x]))
+
+plt.legend()
 plt.show()
