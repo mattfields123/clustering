@@ -31,13 +31,13 @@ contains
         k = k_array(c_k)
         do c_l = 1, 65
         l = l_array(c_l)
-        psi1 = g*amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase1(c_k,c_l))
-        psi2 = g*amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase2(c_k,c_l))
+        psi1 = amp_scaling*amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase1(c_k,c_l))
+        psi2 = amp_scaling*amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase2(c_k,c_l))
      
-        velocity(1) = velocity(1) + (tausol*l - taupot*k*delta)*psi1 
-        velocity(1) = velocity(1) - taupot*(1-delta)*k*psi2
-        velocity(2) = velocity(2) - (tausol*k + taupot*l*delta)*psi1 
-        velocity(2) = velocity(2) - taupot*l*(1-delta)*psi2
+        velocity(1) = velocity(1) + (tausol*l - taupot*k*g)*psi1 
+        velocity(1) = velocity(1) - taupot*(1-g)*k*psi2
+        velocity(2) = velocity(2) - (tausol*k + taupot*l*g)*psi1 
+        velocity(2) = velocity(2) - taupot*l*(1-g)*psi2
         end do
         end do
         !$OMP END PARALLEL DO
