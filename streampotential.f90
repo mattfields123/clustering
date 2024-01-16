@@ -22,8 +22,8 @@ phase1 = tau*random_matrix(65,65)
 time1 = g*random_matrix(65,65)
 time2 = g*random_matrix(65,65)
         
-timesteps = 50
-grid = 250
+timesteps = 20
+grid = 100
 
 dt = 0.25
 
