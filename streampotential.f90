@@ -12,7 +12,7 @@ real(dp) :: phase1(65,65), phase2(65,65), time1(65,65), time2(65,65)
 real(dp) :: psi_result(10,10), x, y, x_array(10), y_array(10)
 real(dp) :: phi_result(10,10)
 real(dp) :: dispersions(65,65), amplitudes(65,65)
-integer :: c_x, c_y, c_t, timesteps
+integer :: c_x, c_y, c_t, timesteps, grid
 real(dp) :: t_array(10)
 real(dp) :: t
 real :: dt
@@ -22,11 +22,13 @@ phase1 = tau*random_matrix(65,65)
 time1 = g*random_matrix(65,65)
 time2 = g*random_matrix(65,65)
         
-timesteps = 10
+timesteps = 50
+grid = 100
+
 dt = 0.25
 
-x_array = linspace(-5.0,5.0,10)        
-y_array = linspace(-5.0,5.0,10)
+x_array = linspace(-5.0,5.0,grid)        
+y_array = linspace(-5.0,5.0,grid)
 t_array = linspace(0.,(timesteps-1.)*dt,timesteps)
 call amplitudes_array(amplitudes)
 call dispersion_relation_array(dispersions)
@@ -38,8 +40,8 @@ t = t_array(c_t)
 call MaduLawrence_loop(time1,phase1,t,g)
 call MaduLawrence_loop(time2,phase2,t,g)
 
-do c_x = 1 , 10
-do c_y = 1, 10
+do c_x = 1 , grid
+do c_y = 1, grid
 x = x_array(c_x)
 y = y_array(c_y)
 psi_result(c_x,c_y) = streamfunction(x,y,t,time1,phase1)
@@ -47,8 +49,8 @@ phi_result(c_x,c_y) = potentialfunction(x,y,t,time1,time2,phase1,phase2)
 end do 
 end do 
 
-do c_x = 1,10
-do c_y = 1,10
+do c_x = 1,grid
+do c_y = 1,grid
 
 write(1,*) psi_result(c_x,c_y)
 write(2,*) phi_result(c_x,c_y)
