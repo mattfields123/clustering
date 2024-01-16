@@ -3,7 +3,6 @@
 #PBS -q pqberloff
 module load gcc/11.2.0
 
-
 cp $HOME/HPC/parameters.f90 $TMPDIR
 cp $HOME/HPC/constants.f90 $TMPDIR
 cp $HOME/HPC/rossby_wave_attributes.f90 $TMPDIR
