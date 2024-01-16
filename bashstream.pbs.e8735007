@@ -1,0 +1,30 @@
+streampotential.f90:107:27:
+
+  107 | int1 = delta * MaduLawrence(time1(c_k,c_l)-t,g)
+      |                           1
+Error: Type mismatch in argument ‘n’ at (1); passed REAL(4) to REAL(8)
+streampotential.f90:108:31:
+
+  108 | int2 = (1-delta) * MaduLawrence(time2(c_k,c_l)-t,g)
+      |                               1
+Error: Type mismatch in argument ‘n’ at (1); passed REAL(4) to REAL(8)
+streampotential.f90:82:27:
+
+   82 | intermediary = Madulawrence(time(c_k,c_l)-t,g) * amplitudes(c_k,c_l)
+      |                           1
+Error: Type mismatch in argument ‘n’ at (1); passed REAL(4) to REAL(8)
+streampotential.f90:37:40:
+
+   37 | call MaduLawrence_loop(time1,phase1,t,g)
+      |                                        1
+Error: Type mismatch in argument ‘g’ at (1); passed REAL(4) to REAL(8)
+streampotential.f90:38:40:
+
+   38 | call MaduLawrence_loop(time2,phase2,t,g)
+      |                                        1
+Error: Type mismatch in argument ‘g’ at (1); passed REAL(4) to REAL(8)
+/bin/ld: cannot find streampotential.o: No such file or directory
+collect2: error: ld returned 1 exit status
+/var/spool/PBS/mom_priv/jobs/8735007.pbs.SC: line 27: ./streampotential: No such file or directory
+cp: cannot stat 'streamfunction.dat': No such file or directory
+cp: cannot stat 'potentialfunction.dat': No such file or directory

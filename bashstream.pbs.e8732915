@@ -1,0 +1,22 @@
+f951: Error: Cannot open file ‘velocity.f90’
+<built-in>: Fatal Error: cannot open input file: velocity.f90
+compilation terminated.
+particle.f90:2:5:
+
+    2 | use velocity
+      |     1
+Fatal Error: Cannot open module file ‘velocity.mod’ for reading at (1): No such file or directory
+compilation terminated.
+streampotential.f90:6:5:
+
+    6 | use velocity
+      |     1
+Fatal Error: Cannot open module file ‘velocity.mod’ for reading at (1): No such file or directory
+compilation terminated.
+/bin/ld: cannot find velocity.o: No such file or directory
+/bin/ld: cannot find particle.o: No such file or directory
+/bin/ld: cannot find streampotential.o: No such file or directory
+collect2: error: ld returned 1 exit status
+/var/spool/PBS/mom_priv/jobs/8732915.pbs.SC: line 27: ./streampotential: No such file or directory
+cp: cannot stat 'streamfunction.dat': No such file or directory
+cp: cannot stat 'potentialfunction.dat': No such file or directory

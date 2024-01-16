@@ -16,10 +16,11 @@ integer :: c_x, c_y, c_t, timesteps
 real(dp) :: t_array(10)
 real(dp) :: t
 real :: dt
+real(dp) ::  g=50*(4*atan(1.))
 phase1 = tau*random_matrix(65,65)
 phase1 = tau*random_matrix(65,65)
-time1 = vu*random_matrix(65,65)
-time2 = vu*random_matrix(65,65)
+time1 = g*random_matrix(65,65)
+time2 = g*random_matrix(65,65)
         
 timesteps = 10
 dt = 0.25
@@ -34,8 +35,8 @@ open(1, file = 'streamfunction.dat')
 open(2, file = 'potentialfunction.dat')
 do c_t = 1 , timesteps
 t = t_array(c_t)
-call MaduLawrence_loop(time1,phase1,t)
-call MaduLawrence_loop(time2,phase2,t)
+call MaduLawrence_loop(time1,phase1,t,g)
+call MaduLawrence_loop(time2,phase2,t,g)
 
 do c_x = 1 , 10
 do c_y = 1, 10
@@ -79,7 +80,7 @@ do c_k = 1,65
 do c_l = 1,65
 k = k_array(c_k)
 l = l_array(c_l)
-intermediary = Madulawrence(time(c_k,c_l)-t,vu) * amplitudes(c_k,c_l)
+intermediary = amplitudes(c_k,c_l)
 psi = psi + intermediary * cos(tau*k*x+tau*l*y-dispersions(c_k,c_l)*t + phase1(c_k,c_l)) 
 end do
 end do
@@ -104,8 +105,8 @@ do c_k = 1,65
 do c_l = 1,65
 k = k_array(c_k)
 l = l_array(c_l)
-int1 = delta * MaduLawrence(time1(c_k,c_l)-t,vu)
-int2 = (1-delta) * MaduLawrence(time2(c_k,c_l)-t,vu)
+int1 = delta 
+int2 = (1-delta)
 int11 = cos(tau*k*x+tau*l*y-dispersions(c_k,c_l)*t+phase1(c_k,c_l))
 int22 = cos(tau*k*x+tau*l*y-dispersions(c_k,c_l)*t+phase2(c_k,c_l))
 inter1 = int1*int11

@@ -4,16 +4,15 @@
 module load gcc/11.2.0
 
 
-cp $HOME/HPC/high/parameters.f90 $TMPDIR
-cp $HOME/HPC/high/constants.f90 $TMPDIR
-cp $HOME/HPC/high/rossby_wave.f90 $TMPDIR
-cp $HOME/HPC/high/rossby_wave_attributes.f90 $TMPDIR
-cp $HOME/HPC/high/admin.f90 $TMPDIR
-cp $HOME/HPC/high/random.f90 $TMPDIR
-cp $HOME/HPC/high/velocity.f90 $TMPDIR
-cp $HOME/HPC/high/particle.f90 $TMPDIR
-cp $HOME/HPC/high/streampotential.f90 $TMPDIR
-cp $HOME/HPC/plot.py $TMPDIR
+cp $HOME/work/clustering/parameters.f90 $TMPDIR
+cp $HOME/work/clustering/constants.f90 $TMPDIR
+cp $HOME/work/clustering/rossby_wave.f90 $TMPDIR
+cp $HOME/work/clustering/rossby_wave_attributes.f90 $TMPDIR
+cp $HOME/work/clustering/admin.f90 $TMPDIR
+cp $HOME/work/clustering/random.f90 $TMPDIR
+cp $HOME/work/clustering/velocitynoML.f90 $TMPDIR/velocity.f90
+cp $HOME/work/clustering/particle.f90 $TMPDIR
+cp $HOME/work/clustering/streampotential.f90 $TMPDIR
 
 gfortran -c constants.f90
 gfortran -c parameters.f90
@@ -27,5 +26,5 @@ gfortran -fopenmp streampotential.f90 -c
 gfortran -fopenmp constants.o parameters.o rossby_wave.o rossby_wave_attributes.o admin.o random.o velocity.o particle.o streampotential.o -o streampotential
 OMP_NUM_THREADS=32 ./streampotential
 
-cp streamfunction.dat $HOME/HPC/high/streamdata
-cp potentialfunction.dat $HOME/HPC/high/streamdata
+cp streamfunction.dat $HOME/work/clustering/streamdata
+cp potentialfunction.dat $HOME/work/clustering/streamdata

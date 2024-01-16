@@ -1,0 +1,43 @@
+cp: cannot stat '/rds/general/user/mf620/home/work/clustering/admin.f90': No such file or directory
+f951: Error: Cannot open file ‘admin.f90’
+<built-in>: Fatal Error: cannot open input file: admin.f90
+compilation terminated.
+rossby_wave.f90:5:5:
+
+    5 | use admin
+      |     1
+Fatal Error: Cannot open module file ‘admin.mod’ for reading at (1): No such file or directory
+compilation terminated.
+velocity.f90:3:5:
+
+    3 | use admin
+      |     1
+Fatal Error: Cannot open module file ‘admin.mod’ for reading at (1): No such file or directory
+compilation terminated.
+particle.f90:2:5:
+
+    2 | use velocity
+      |     1
+Fatal Error: Cannot open module file ‘velocity.mod’ for reading at (1): No such file or directory
+compilation terminated.
+passivetracers.f90:2:5:
+
+    2 | use particle
+      |     1
+Fatal Error: Cannot open module file ‘particle.mod’ for reading at (1): No such file or directory
+compilation terminated.
+executearray.f90:2:5:
+
+    2 | use passivetracers
+      |     1
+Fatal Error: Cannot open module file ‘passivetracers.mod’ for reading at (1): No such file or directory
+compilation terminated.
+/bin/ld: cannot find rossby_wave.o: No such file or directory
+/bin/ld: cannot find admin.o: No such file or directory
+/bin/ld: cannot find velocity.o: No such file or directory
+/bin/ld: cannot find particle.o: No such file or directory
+/bin/ld: cannot find passivetracers.o: No such file or directory
+/bin/ld: cannot find executearray.o: No such file or directory
+collect2: error: ld returned 1 exit status
+/var/spool/PBS/mom_priv/jobs/8732854.pbs.SC: line 29: ./executearray: No such file or directory
+mkdir: cannot create directory ‘/rds/general/user/mf620/ephemeral/testcase2’: File exists
