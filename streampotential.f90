@@ -16,7 +16,7 @@ integer :: c_x, c_y, c_t, timesteps, grid
 real(dp) :: t_array(10)
 real(dp) :: t
 real :: dt
-real(dp) ::  g=50*(4*atan(1.))
+real(dp) ::  g=5
 phase1 = tau*random_matrix(65,65)
 phase1 = tau*random_matrix(65,65)
 time1 = g*random_matrix(65,65)
