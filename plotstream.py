@@ -6,15 +6,18 @@ with open("/Users/bunny/Documents/msci/mscigit/streamdata/potentialfunction.dat"
 with open("/Users/bunny/Documents/msci/mscigit/streamdata/streamfunction.dat") as file_name:
     darray = np.loadtxt(file_name, delimiter=",")
 print(np.shape(array))
-points = np.zeros((10,10,10))
-points = array.reshape((10,10,10))
+grid = 100
+timesteps = 50
 
-points2 = darray.reshape((10,10,10))
+points = np.zeros((timesteps,grid,grid))
+points = array.reshape((timesteps,grid,grid))
+
+points2 = darray.reshape((timesteps,grid,grid))
 
 
 print(points[0])
-x_coords = np.linspace(-5,5,10)
-y_coords = np.linspace(5,5,10)
+x_coords = np.linspace(-5,5,grid)
+y_coords = np.linspace(5,5,grid)
 
 print(points[1][3][1:10])
 print(points[2][3][1:10])
