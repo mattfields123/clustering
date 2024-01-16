@@ -23,9 +23,11 @@ time1 = g*random_matrix(65,65)
 time2 = g*random_matrix(65,65)
         
 timesteps = 50
-grid = 100
+grid = 250
 
 dt = 0.25
+
+print*,delta
 
 x_array = linspace(-5.0,5.0,grid)        
 y_array = linspace(-5.0,5.0,grid)
