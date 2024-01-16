@@ -34,10 +34,10 @@ contains
         psi1 = amp_scaling*amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase1(c_k,c_l))
         psi2 = amp_scaling*amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase2(c_k,c_l))
      
-        velocity(1) = velocity(1) + (tausol*l - taupot*k*g)*psi1 
-        velocity(1) = velocity(1) - taupot*(1-g)*k*psi2
-        velocity(2) = velocity(2) - (tausol*k + taupot*l*g)*psi1 
-        velocity(2) = velocity(2) - taupot*l*(1-g)*psi2
+        velocity(1) = velocity(1) + (tausol*l - taupot*k*delta)*psi1 
+        velocity(1) = velocity(1) - taupot*(1-delta)*k*psi2
+        velocity(2) = velocity(2) - (tausol*k + taupot*l*delta)*psi1 
+        velocity(2) = velocity(2) - taupot*l*(1-delta)*psi2
         end do
         end do
         !$OMP END PARALLEL DO
@@ -47,13 +47,13 @@ contains
     end function velocity_pointML
     
     
-    subroutine MaduLawrence_loop(time, phase, t)
-        real(dp) :: t, phase(65,65), time(65,65), div, ML
+    subroutine MaduLawrence_loop(time, phase, t, g)
+        real(dp) :: g,  t, phase(65,65), time(65,65), div, ML
         integer :: counter_k, counter_l
         do counter_k = 1, 65
             do counter_l = 1, 65
                 if (time(counter_k,counter_l)-t<0) then
-                    time(counter_k,counter_l) = time(counter_k,counter_l) + vu
+                    time(counter_k,counter_l) = time(counter_k,counter_l) + g
                     phase(counter_k,counter_l) = random_number1()*tau
                 end if
             end do

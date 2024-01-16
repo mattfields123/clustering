@@ -1,0 +1,9 @@
+executearray.f90:12:10:
+
+   12 | time1 = vu*random_matrix(65,65)
+      |          1
+Error: Symbol ‘vu’ at (1) has no IMPLICIT type; did you mean ‘mu’?
+/bin/ld: cannot find executearray.o: No such file or directory
+collect2: error: ld returned 1 exit status
+/var/spool/PBS/mom_priv/jobs/8729768.pbs.SC: line 29: ./executearray: No such file or directory
+mkdir: cannot create directory ‘/rds/general/user/mf620/ephemeral/testcase2’: File exists

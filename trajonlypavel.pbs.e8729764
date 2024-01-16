@@ -1,0 +1,30 @@
+velocity.f90:50:50:
+
+   50 |     subroutine MaduLawrence_loop(time, phase, t, g)
+      |                                                  1
+Error: Symbol ‘g’ at (1) has no IMPLICIT type
+particle.f90:2:5:
+
+    2 | use velocity
+      |     1
+Fatal Error: Cannot open module file ‘velocity.mod’ for reading at (1): No such file or directory
+compilation terminated.
+passivetracers.f90:2:5:
+
+    2 | use particle
+      |     1
+Fatal Error: Cannot open module file ‘particle.mod’ for reading at (1): No such file or directory
+compilation terminated.
+executearray.f90:2:5:
+
+    2 | use passivetracers
+      |     1
+Fatal Error: Cannot open module file ‘passivetracers.mod’ for reading at (1): No such file or directory
+compilation terminated.
+/bin/ld: cannot find velocity.o: No such file or directory
+/bin/ld: cannot find particle.o: No such file or directory
+/bin/ld: cannot find passivetracers.o: No such file or directory
+/bin/ld: cannot find executearray.o: No such file or directory
+collect2: error: ld returned 1 exit status
+/var/spool/PBS/mom_priv/jobs/8729764.pbs.SC: line 29: ./executearray: No such file or directory
+mkdir: cannot create directory ‘/rds/general/user/mf620/ephemeral/testcase2’: File exists
