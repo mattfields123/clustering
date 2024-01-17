@@ -7,7 +7,7 @@ with open("/Users/bunny/Documents/msci/mscigit/streamdata/streamfunction.dat") a
     darray = np.loadtxt(file_name, delimiter=",")
 print(np.shape(array))
 grid = 100
-timesteps = 20
+timesteps = 50
 
 points = np.zeros((timesteps,grid,grid))
 points = array.reshape((timesteps,grid,grid))
@@ -24,8 +24,8 @@ print(points[2][3][1:10])
 
 fig, ax = plt.subplots(nrows=2,ncols=1)
 
-c = ax[0].imshow(points[10],cmap='jet',extent=[-5,5,-5,5])
+c = ax[0].imshow(points[15],cmap='jet',extent=[-5,5,-5,5])
 
-d = ax[1].imshow(points2[10],cmap='jet',extent=[-5,5,-5,5])
+d = ax[1].imshow(points2[15],cmap='jet',extent=[-5,5,-5,5])
 
 plt.show()
