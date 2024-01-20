@@ -47,13 +47,13 @@ contains
     end function velocity_pointML
     
     
-    subroutine MaduLawrence_loop(time, phase, t, g)
-        real(dp) :: g,  t, phase(65,65), time(65,65), div, ML
+    subroutine MaduLawrence_loop(time, phase, t, vu)
+        real(dp) :: vu,  t, phase(65,65), time(65,65), div, ML
         integer :: counter_k, counter_l
         do counter_k = 1, 65
             do counter_l = 1, 65
                 if (time(counter_k,counter_l)-t<0) then
-                    time(counter_k,counter_l) = time(counter_k,counter_l) + g
+                    time(counter_k,counter_l) = time(counter_k,counter_l) + vu
                     phase(counter_k,counter_l) = random_number1()*tau
                 end if
             end do

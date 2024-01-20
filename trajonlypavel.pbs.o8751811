@@ -1,0 +1,33 @@
+   24646.666015625000        62.831855773925781        157.07963562011719        314.15927124023438        628.31854248046875        1570.7963867187500        3141.5927734375000        6283.1855468750000        6.2831854820251465        3.1415927410125732        6.2831856310367584E-002
+         400  particles: cluster big data
+ time :    1.32700002    
+         400  particles: cluster big data
+ time :    1.32700002    
+         400  particles: cluster big data
+ time :    1.32700002    
+         400  particles: cluster big data
+ time :    1.32400000    
+         400  particles: cluster big data
+ time :    1.32599998    
+         400  particles: cluster big data
+ time :    1.32599998    
+         400  particles: cluster big data
+ time :    1.32500005    
+         400  particles: cluster big data
+ time :    1.32700002    
+         400  particles: cluster big data
+ time :    1.32500005    
+         400  particles: cluster big data
+ time :    1.32599998    
+         400  particles: cluster big data
+ time :    1.33700001    
+
+============================================
+
+        Job resource usage summary 
+
+                 Memory (GB)    NCPUs
+ Requested  :        64            32
+ Used       :         0 (peak)  19.72 (ave)
+
+============================================

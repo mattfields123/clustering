@@ -1,0 +1,10 @@
+f951: Error: Cannot open file ‘executearray.f90’
+<built-in>: Fatal Error: cannot open input file: executearray.f90
+compilation terminated.
+/bin/ld: cannot find executearray.o: No such file or directory
+collect2: error: ld returned 1 exit status
+/var/spool/PBS/mom_priv/jobs/8751812.pbs.SC: line 29: ./executearray: No such file or directory
+mkdir: cannot create directory ‘/rds/general/user/mf620/ephemeral/testcase2’: File exists
+cp: cannot stat 'partavg.dat': No such file or directory
+cp: cannot stat 'partx.dat': No such file or directory
+cp: cannot stat 'party.dat': No such file or directory
