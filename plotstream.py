@@ -24,8 +24,8 @@ print(points[2][3][1:10])
 
 fig, ax = plt.subplots(nrows=2,ncols=1)
 
-c = ax[0].imshow(points[15],cmap='jet',extent=[-5,5,-5,5])
+c = ax[0].imshow(points[25],cmap='jet',extent=[-5,5,-5,5])
 
-d = ax[1].imshow(points2[15],cmap='jet',extent=[-5,5,-5,5])
+d = ax[1].imshow(points2[25],cmap='jet',extent=[-5,5,-5,5])
 
 plt.show()
