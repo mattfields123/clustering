@@ -28,8 +28,8 @@ def update_plot(ii):
     plt.xlabel('X (km)')
     plt.ylabel('Y (km)')
     plt.scatter(partx[:,ii],party[:,ii])
-    plt.xlim(-2000, 2000)
-    plt.ylim(-2000, 2000)
+    #plt.xlim(-2000, 2000)
+    #plt.ylim(-2000, 2000)
 
 
 anim = FuncAnimation(fig,
