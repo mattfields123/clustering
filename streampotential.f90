@@ -17,10 +17,11 @@ real(dp) :: t_array(10)
 real(dp) :: t
 real :: dt
 real(dp) ::  g=0.1
+real(dp) :: nu=1.
 phase1 = tau*random_matrix(65,65)
 phase1 = tau*random_matrix(65,65)
-time1 = 1*random_matrix(65,65)
-time2 = 1*random_matrix(65,65)
+time1 = nu*random_matrix(65,65)
+time2 = nu*random_matrix(65,65)
         
 timesteps = 50
 grid = 100
@@ -44,8 +45,8 @@ open(2, file = 'potentialfunction.dat')
 do c_t = 1 , timesteps
 t = t_array(c_t)
 
-call MaduLawrence_loop(time1,phase1,t,1)
-call MaduLawrence_loop(time2,phase2,t,1)
+call MaduLawrence_loop(time1,phase1,t,nu)
+call MaduLawrence_loop(time2,phase2,t,nu)
 ! Where there is 1 we have vu (testing)
 do c_x = 1 , grid
 do c_y = 1, grid
