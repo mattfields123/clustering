@@ -26,5 +26,9 @@ gfortran -fopenmp streampotential.f90 -c
 gfortran -fopenmp constants.o parameters.o rossby_wave.o rossby_wave_attributes.o admin.o random.o velocity.o particle.o streampotential.o -o streampotential
 OMP_NUM_THREADS=32 ./streampotential
 
+cp amplitudes.dat $HOME/work/clustering/streamdata
+cp dispersions.dat $HOME/work/clustering/streamdata
+
+
 cp streamfunction.dat $HOME/work/clustering/streamdata
 cp potentialfunction.dat $HOME/work/clustering/streamdata
