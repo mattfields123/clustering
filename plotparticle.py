@@ -14,6 +14,9 @@ with open("party.dat") as file_name:
 partx.reshape(N_part**2,tsteps+1)
 party.reshape(N_part**2,tsteps+1)
 
+partx = np.fmod(partx,10)-5
+party = np.fmod(party,10)-5
+
 
 fig = plt.figure(figsize=(12, 12))
 axes = plt.subplot()
@@ -28,8 +31,8 @@ def update_plot(ii):
     plt.xlabel('X (km)')
     plt.ylabel('Y (km)')
     plt.scatter(partx[:,ii],party[:,ii])
-    #plt.xlim(-2000, 2000)
-    #plt.ylim(-2000, 2000)
+    plt.xlim(-5, 5)
+    plt.ylim(-5, 5)
 
 
 anim = FuncAnimation(fig,
