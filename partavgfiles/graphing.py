@@ -143,7 +143,8 @@ ax[0].scatter(t0b,-barr3,marker='^')
 ax[1].set_xlabel('Westward Drift / km')
 ax[1].set_ylabel('Time / day')
 for x in range(11):
-    ax[1].plot(array[x,:],t,label=str(t0[x]))
+    ax[1].plot(array[x,:],t,label=str(t0b[x]))
+    ax[1].plot(barray[x,:],t,label=str(t0[x]))
 
 ax[1].legend()
 plt.show()
