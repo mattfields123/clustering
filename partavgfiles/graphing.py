@@ -8,20 +8,34 @@ with open("/Users/bunny/Documents/msci/PARTICLE AVERAGES/partavggamma/partavg.da
 with open("/Users/bunny/Documents/msci/PARTICLE AVERAGES/partavggamma smaller range/partavg.dat") as file_name:
     barray = np.loadtxt(file_name)
 
+with open("/Users/bunny/Documents/msci/PARTICLE AVERAGES/partavggamma2/partavg.dat") as file_name:
+    array2 = np.loadtxt(file_name)
+with open("/Users/bunny/Documents/msci/PARTICLE AVERAGES/partavggamma smaller range2/partavg.dat") as file_name:
+    barray2 = np.loadtxt(file_name)
 
 
 
 print(np.shape(array))
 array = array*400
 barray = barray*400
+array2 = array2*400
+barray2 = barray2*400
 t = np.linspace(0,4000*0.6,4001)
 arr = np.zeros(11)
 barr = np.zeros(11)
+arr2 = np.zeros(11)
+barr2 = np.zeros(11)
 for x in range(11):
     y = linregress(t[1000:4000],array[x,1000:4000])
     ylarge = linregress(t[1000:4000],barray[x,1000:4000])
+    y2 = linregress(t[1000:4000],array2[x,1000:4000])
+    ylarge2 = linregress(t[1000:4000],barray2[x,1000:4000])
+
     arr[x] = y.slope
     barr[x] = ylarge.slope
+    arr2[x] = y2.slope
+    barr2[x] = ylarge2.slope
+
 t0b = [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1] # gamma large
 # t0 = [0.1,0.5,1,2,3,4,9,25,36,49,64] # amp
 t0 = [0.,0.005,0.01,0.025,0.05,0.075,0.1,0.25,0.5,0.75,1] # gamma
@@ -63,6 +77,8 @@ logtb = np.log(t0b)
 logx = np.log(-arr)
 logb = np.log(-barr)
 
+print(t0,t0b)
+
 combined = np.zeros(20)
 combinedt = np.zeros(20)
 
@@ -80,6 +96,10 @@ print(gg)
 plt.figure()
 plt.scatter(logt[1:11],-arr[1:11],marker='x')
 plt.scatter(logtb[1:11],-barr[1:11])
+plt.scatter(logt[1:11],-arr2[1:11],marker='x')
+plt.scatter(logtb[1:11],-barr2[1:11])
+
+
 
 fig, ax = plt.subplots(1,2)
 ax[0].set_xlabel('Gamma')
@@ -92,9 +112,10 @@ ax[0].set_ylabel('Drift Velocity / $\mathrm{kmday}^{-1}$')
 #ax[0].plot(t0[1:3],-arr[1:3],)
 #ax[0].plot(t0[4:11],-arr[4:11])
 
-ax[0].plot(t0,-arr)
-ax[0].plot(t0b,-barr)
-
+ax[0].scatter(t0,-arr,marker='x')
+ax[0].scatter(t0b,-barr,marker='x')
+ax[0].scatter(t0,-arr2)
+ax[0].scatter(t0b,-barr2)
 
 #t0 = [10*np.pi,20*np.pi,50*np.pi,100*np.pi,200*np.pi,500*np.pi,1000*np.pi,2000*np.pi,2*np.pi,np.pi,0.2*np.pi] # delta
 

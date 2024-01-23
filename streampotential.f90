@@ -22,8 +22,8 @@ phase1 = tau*random_matrix(65,65)
 time1 = g*random_matrix(65,65)
 time2 = g*random_matrix(65,65)
         
-timesteps = 50
-grid = 100
+timesteps = 5
+grid = 10
 
 dt = 0.25
 
@@ -48,6 +48,8 @@ x = x_array(c_x)
 y = y_array(c_y)
 psi_result(c_x,c_y) = streamfunction(x,y,t,time1,phase1)
 phi_result(c_x,c_y) = potentialfunction(x,y,t,time1,time2,phase1,phase2)
+print(phi_result(2,2))
+print(psi_result(2,2))
 end do 
 end do 
 

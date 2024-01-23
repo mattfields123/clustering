@@ -29,3 +29,24 @@ c = ax[0].imshow(points[25],cmap='jet',extent=[-5,5,-5,5])
 d = ax[1].imshow(points2[25],cmap='jet',extent=[-5,5,-5,5])
 
 plt.show()
+
+def init_func():
+    plt.cla()
+
+
+def update_plot(ii):
+    plt.cla()
+    plt.xlabel('X (km)')
+    plt.ylabel('Y (km)')
+    plt.imshow(points[ii])
+    plt.xlim(-5, 5)
+    plt.ylim(-5, 5)
+
+
+anim = FuncAnimation(fig,
+                     update_plot,
+                     frames=np.arange(0, timesteps),
+                     init_func=init_func)
+
+writervideo = FFMpegWriter(fps=10)
+anim.save('stream.mp4', writer=writervideo)
