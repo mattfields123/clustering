@@ -27,20 +27,25 @@ grid = 100
 
 dt = 0.25
 
-print*,delta
 
 x_array = linspace(-5.0,5.0,grid)        
 y_array = linspace(-5.0,5.0,grid)
 t_array = linspace(0.,(timesteps-1.)*dt,timesteps)
+
+
 call amplitudes_array(amplitudes)
 call dispersion_relation_array(dispersions)
 
+
 open(1, file = 'streamfunction.dat')
 open(2, file = 'potentialfunction.dat')
+
+
 do c_t = 1 , timesteps
 t = t_array(c_t)
-call MaduLawrence_loop(time1,phase1,t,g)
-call MaduLawrence_loop(time2,phase2,t,g)
+
+call MaduLawrence_loop(time1,phase1,t,vu)
+call MaduLawrence_loop(time2,phase2,t,vu)
 
 do c_x = 1 , grid
 do c_y = 1, grid

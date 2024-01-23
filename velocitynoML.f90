@@ -21,7 +21,7 @@ contains
 
         tausol = 8*atan(1.)*(1-g) !relies on gamma
         taupot = 8*atan(1.)*g !relies on gamma
-        print*,g
+        
         k_array = linspace(-3.2,3.2,65)
         l_array = linspace(-3.2,3.2,65)
         velocity = (/0.,0./)
