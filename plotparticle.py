@@ -6,13 +6,13 @@ N_part = 200
 tsteps = 1000
 
 with open("partx.dat") as file_name:
-    partx = np.loadtxt(file_name, delimiter=",")
+    partx = np.loadtxt(file_name)
 
 with open("party.dat") as file_name:
-    party = np.loadtxt(file_name, delimiter=",")
+    party = np.loadtxt(file_name)
 
-partx.reshape(N_part**2,tsteps)
-party.reshape(N_part**2,tsteps)
+partx.reshape(N_part**2,tsteps+1)
+party.reshape(N_part**2,tsteps+1)
 
 
 fig = plt.figure(figsize=(12, 12))
@@ -34,7 +34,7 @@ def update_plot(ii):
 
 anim = FuncAnimation(fig,
                      update_plot,
-                     frames=np.arange(0, time),
+                     frames=np.arange(0, timesteps+1),
                      init_func=init_func)
 
 writervideo = FFMpegWriter(fps=100)

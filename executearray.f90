@@ -9,28 +9,28 @@ real(dp) :: gammas(11)
 
 phase1 = tau*random_matrix(65,65)
 phase2 = tau*random_matrix(65,65)
-! time1 = vu*random_matrix(65,65)
-! time2 = vu*random_matrix(65,65)
+time1 = vu*random_matrix(65,65)
+time2 = vu*random_matrix(65,65)
 
-gammas(1) = 5**tau 
-gammas(2) = 10*tau
-gammas(3) = 25*tau
-gammas(4) = 50*tau
-gammas(5) = 100*tau
-gammas(6) = 250*tau
-gammas(7) = 500*tau
-gammas(8) = 1000*tau
-gammas(9) = 1*tau
-gammas(10) = 0.5*tau
-gammas(11) = 0.01*tau
+gammas(1) = 0. 
+gammas(2) = 0.1
+gammas(3) = 0.2
+gammas(4) = 0.3
+gammas(5) = 0.4
+gammas(6) = 0.5
+gammas(7) = 0.6
+gammas(8) = 0.7
+gammas(9) = 0.8
+gammas(10) = 0.9
+gammas(11) = 1.
 
 
 print*, gammas
 open(1, file="partavg.dat")
 do c_g=1,11
 
-time1 = gammas(c_g) * random_matrix(65,65)
-time2 = gammas(c_g) * random_matrix(65,65)
+! time1 = gammas(c_g) * random_matrix(65,65)
+! time2 = gammas(c_g) * random_matrix(65,65)
 
 write(1,*) vel_passive(time_steps, phase1, phase2, time1, time2, N_particles ,gammas(c_g))
 

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/var/tmp/pbs.8767050.pbs/plotparticle.py", line 37, in <module>
+    frames=np.arange(0, timesteps+1),
+                        ^^^^^^^^^
+NameError: name 'timesteps' is not defined. Did you mean: 'tsteps'?
+cp: cannot stat 'inertial.mp4': No such file or directory

@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/var/tmp/pbs.8766845.pbs/plotparticle.py", line 9, in <module>
+    partx = np.loadtxt(file_name, delimiter=",")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/site-packages/numpy/lib/npyio.py", line 1373, in loadtxt
+    arr = _read(fname, dtype=dtype, comment=comment, delimiter=delimiter,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/site-packages/numpy/lib/npyio.py", line 1016, in _read
+    arr = _load_from_filelike(
+          ^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string '  -5.0000000000000000       -4.9499998092651367       -4.8999996185302734       -4.8499994277954102 to float64 at row 0, column 1.
+cp: cannot stat 'inertial.mp4': No such file or directory
