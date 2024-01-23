@@ -48,5 +48,5 @@ anim = FuncAnimation(fig,
                      frames=np.arange(0, timesteps),
                      init_func=init_func)
 
-writervideo = FFMpegWriter(fps=1)
+writervideo = FFMpegWriter(fps=5)
 anim.save('stream.mp4', writer=writervideo)
