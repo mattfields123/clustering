@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/var/tmp/pbs.8767032.pbs/plotparticle.py", line 37, in <module>
-    frames=np.arange(0, time),
-                        ^^^^
-NameError: name 'time' is not defined
-cp: cannot stat 'inertial.mp4': No such file or directory

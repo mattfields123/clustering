@@ -26,6 +26,9 @@ gammas(11) = 1.
 
 
 print*, gammas
+print*, vu
+print*, delta
+
 open(1, file="partavg.dat")
 do c_g=1,11
 

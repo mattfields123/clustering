@@ -10,7 +10,7 @@ phase1 = tau*random_matrix(65,65)
 phase2 = tau*random_matrix(65,65)
 time1 = vu*random_matrix(65,65)
 time2 = vu*random_matrix(65,65)
-g = 1
+g = 0.1
 
 
 open(1,file='partavg.dat')

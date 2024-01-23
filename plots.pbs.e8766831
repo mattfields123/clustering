@@ -1,8 +1,0 @@
-cp: missing destination file operand after '/rds/general/user/mf620/home/work/clustering/plotparticle.py'
-Try 'cp --help' for more information.
-cp: missing destination file operand after '/rds/general/user/mf620/home/work/partfiles/partx.dat'
-Try 'cp --help' for more information.
-cp: missing destination file operand after '/rds/general/user/mf620/home/work/partfiles/party.dat'
-Try 'cp --help' for more information.
-python: can't open file '/var/tmp/pbs.8766831.pbs/plotparticle.py': [Errno 2] No such file or directory
-cp: cannot stat 'inertial.mp4': No such file or directory
