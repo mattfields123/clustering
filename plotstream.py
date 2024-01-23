@@ -6,8 +6,8 @@ with open("/Users/bunny/Documents/msci/mscigit/streamdata/potentialfunction.dat"
 with open("/Users/bunny/Documents/msci/mscigit/streamdata/streamfunction.dat") as file_name:
     darray = np.loadtxt(file_name, delimiter=",")
 print(np.shape(array))
-grid = 10
-timesteps = 5
+grid = 100
+timesteps = 50
 
 points = np.zeros((timesteps,grid,grid))
 points = array.reshape((timesteps,grid,grid))

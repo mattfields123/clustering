@@ -12,6 +12,12 @@ with open("/Users/bunny/Documents/msci/PARTICLE AVERAGES/partavggamma2/partavg.d
     array2 = np.loadtxt(file_name)
 with open("/Users/bunny/Documents/msci/PARTICLE AVERAGES/partavggamma smaller range2/partavg.dat") as file_name:
     barray2 = np.loadtxt(file_name)
+with open("/Users/bunny/Documents/msci/PARTICLE AVERAGES/partavggamma3/partavg.dat") as file_name:
+    array3 = np.loadtxt(file_name)
+with open("/Users/bunny/Documents/msci/PARTICLE AVERAGES/partavggamma smaller range3/partavg.dat") as file_name:
+    barray3 = np.loadtxt(file_name)
+
+
 
 
 
@@ -20,21 +26,32 @@ array = array*400
 barray = barray*400
 array2 = array2*400
 barray2 = barray2*400
+array3 = array3*400
+barray3 = barray3*400
+
+
 t = np.linspace(0,4000*0.6,4001)
 arr = np.zeros(11)
 barr = np.zeros(11)
 arr2 = np.zeros(11)
 barr2 = np.zeros(11)
+arr3 = np.zeros(11)
+barr3 = np.zeros(11)
+
 for x in range(11):
     y = linregress(t[1000:4000],array[x,1000:4000])
     ylarge = linregress(t[1000:4000],barray[x,1000:4000])
     y2 = linregress(t[1000:4000],array2[x,1000:4000])
     ylarge2 = linregress(t[1000:4000],barray2[x,1000:4000])
+    y3 = linregress(t[1000:4000],array3[x,1000:4000])
+    ylarge3 = linregress(t[1000:4000],barray3[x,1000:4000])
 
     arr[x] = y.slope
     barr[x] = ylarge.slope
     arr2[x] = y2.slope
     barr2[x] = ylarge2.slope
+    arr3[x] = y3.slope
+    barr3[x] = ylarge3.slope
 
 t0b = [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1] # gamma large
 # t0 = [0.1,0.5,1,2,3,4,9,25,36,49,64] # amp
@@ -116,6 +133,9 @@ ax[0].scatter(t0,-arr,marker='x')
 ax[0].scatter(t0b,-barr,marker='x')
 ax[0].scatter(t0,-arr2)
 ax[0].scatter(t0b,-barr2)
+ax[0].scatter(t0,-arr3,marker='^')
+ax[0].scatter(t0b,-barr3,marker='^')
+
 
 #t0 = [10*np.pi,20*np.pi,50*np.pi,100*np.pi,200*np.pi,500*np.pi,1000*np.pi,2000*np.pi,2*np.pi,np.pi,0.2*np.pi] # delta
 
