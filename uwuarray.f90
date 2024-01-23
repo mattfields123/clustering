@@ -29,8 +29,11 @@ print*, gammas
 open(1, file="partavg.dat")
 do c_g=1,11
 
-! time1 = gammas(c_g) * random_matrix(65,65)
-! time2 = gammas(c_g) * random_matrix(65,65)
+
+phase1 = tau*random_matrix(65,65)
+phase2 = tau*random_matrix(65,65)
+time1 = vu*random_matrix(65,65)
+time2 = vu*random_matrix(65,65)
 
 write(1,*) vel_passive(time_steps, phase1, phase2, time1, time2, N_particles ,gammas(c_g))
 
