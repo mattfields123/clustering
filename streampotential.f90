@@ -23,8 +23,8 @@ phase1 = tau*random_matrix(65,65)
 time1 = nu*random_matrix(65,65)
 time2 = nu*random_matrix(65,65)
         
-timesteps = 5
-grid = 10
+timesteps = 50
+grid = 100
 
 dt = 0.25
 
@@ -40,8 +40,8 @@ call dispersion_relation_array(dispersions)
 
 open(1, file = 'streamfunction.dat')
 open(2, file = 'potentialfunction.dat')
-open(3, file= 'amplitudes.dat')
-open(4, file = 'dispersions.dat')
+!open(3, file= 'amplitudes.dat')
+!open(4, file = 'dispersions.dat')
 
 do c_t = 1 , timesteps
 t = t_array(c_t)
@@ -72,8 +72,8 @@ end do
 
 end do
 
-write(3,*) amplitudes
-write(4,*) dispersions
+!write(3,*) amplitudes
+!write(4,*) dispersions
 
 close(1)
 close(2)
