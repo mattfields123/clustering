@@ -7,17 +7,17 @@ real(dp) :: phase1(65,65), phase2(65,65), time1(65,65), time2(65,65)
 integer :: c_g
 real(dp) :: gammas(11)
 
-gammas(1) = 0.05
-gammas(2) = 0.075
-gammas(3) = 0.1
-gammas(4) = 0.125
-gammas(5) = 0.15
-gammas(6) = 0.175
-gammas(7) = 0.2
-gammas(8) = 0.25
-gammas(9) = 0.5
-gammas(10) = 0.75
-gammas(11) = 0.9
+gammas(1) = 0.005
+gammas(2) = 0.01
+gammas(3) = 0.02
+gammas(4) = 0.03
+gammas(5) = 0.04
+gammas(6) = 0.05
+gammas(7) = 0.06
+gammas(8) = 0.07
+gammas(9) = 0.08
+gammas(10) = 0.09
+gammas(11) = 0.01
 
 
 print*, gammas
