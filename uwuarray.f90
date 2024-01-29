@@ -13,16 +13,16 @@ time1 = vu*random_matrix(65,65)
 time2 = vu*random_matrix(65,65)
 
 gammas(1) = 0. 
-gammas(2) = 0.005
-gammas(3) = 0.01
-gammas(4) = 0.025
-gammas(5) = 0.05
-gammas(6) = 0.075
-gammas(7) = 0.1
-gammas(8) = 0.25
-gammas(9) = 0.5
-gammas(10) = 0.75
-gammas(11) = 1.
+gammas(2) = 0.05
+gammas(3) = 0.1
+gammas(4) = 0.15
+gammas(5) = 0.20
+gammas(6) = 0.25
+gammas(7) = 0.30
+gammas(8) = 0.35
+gammas(9) = 0.40
+gammas(10) = 0.45
+gammas(11) = 0.5
 
 
 print*, gammas
