@@ -34,14 +34,14 @@ barr2 = np.zeros(11)
 for x in range(11):
     y = linregress(t[1000:4000],array[x,1000:4000])
     ylarge = linregress(t[1000:4000],barray[x,1000:4000])
-    y2 = linregress(t[1000:4000,array2[x,1000:4000]])
+    y2 = linregress(t[1000:4000],array2[x,1000:4000])
     ylarge2 = linregress(t[1000:4000],barray2[x,1000:4000])
 
 
     arr[x] = y.slope
     barr[x] = ylarge.slope
     arr2[x] = y2.slope
-    barr2[x] = ylarge2.shope
+    barr2[x] = ylarge2.slope
 t0b = [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1] # gamma large
 # t0 = [0.1,0.5,1,2,3,4,9,25,36,49,64] # amp
 t0 = [0.,0.005,0.01,0.025,0.05,0.075,0.1,0.25,0.5,0.75,1] # gamma
@@ -52,15 +52,15 @@ t0[0] = 10e-10
 t0b[0] = 10e-10
 t0b2[0] = 10e-10
 
-logt = np.log(t0)
-logtb = np.log(t0b)
-logx = np.log(-arr)
-logb = np.log(-barr)
-logx2 = np.log(-arr2)
-logb2 = np.log(-barr2)
+logt = np.log10(t0)
+logtb = np.log10(t0b)
+logx = np.log10(-arr)
+logb = np.log10(-barr)
+logx2 = np.log10(-arr2)
+logb2 = np.log10(-barr2)
 
-logt02 = np.log(t02)
-logt0b2 = np.log(t0b2)
+logt02 = np.log10(t02)
+logt0b2 = np.log10(t0b2)
 
 
 print(t0,t0b)
@@ -100,8 +100,8 @@ ax3[1,1].set_ylabel('log C')
 
 ax3[0,0].scatter(t0[1:11],-arr[1:11],marker='x')
 ax3[0,0].scatter(t0b[1:11],-barr[1:11],marker='x')
-ax3[1,1].scatter(t02[1:11],-arr2[1:11],marker='x')
-ax3[1,1].scatter(t0b2[1:11],-barr2[1:11],marker='x')
+ax3[0,0].scatter(t02[1:11],-arr2[1:11],marker='x')
+ax3[0,0].scatter(t0b2[1:11],-barr2[1:11],marker='x')
 
 
 ax3[0,0].set_xlabel('$\gamma$')
