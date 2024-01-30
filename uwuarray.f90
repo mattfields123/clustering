@@ -12,17 +12,17 @@ phase2 = tau*random_matrix(65,65)
 time1 = vu*random_matrix(65,65)
 time2 = vu*random_matrix(65,65)
 
-gammas(1) = 0. 
-gammas(2) = 0.05
-gammas(3) = 0.1
-gammas(4) = 0.15
-gammas(5) = 0.20
-gammas(6) = 0.25
-gammas(7) = 0.30
-gammas(8) = 0.35
-gammas(9) = 0.40
-gammas(10) = 0.45
-gammas(11) = 0.5
+gammas(1) = 0.01
+gammas(2) = 0.1
+gammas(3) = 0.5
+gammas(4) = 1
+gammas(5) = 2
+gammas(6) = 3
+gammas(7) = 4
+gammas(8) = 8
+gammas(9) = 16
+gammas(10) = 32
+gammas(11) = 64
 
 
 print*, gammas
