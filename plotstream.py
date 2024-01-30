@@ -10,9 +10,17 @@ grid = 100
 timesteps = 50
 
 points = np.zeros((timesteps,grid,grid))
-points = array.reshape((timesteps,grid,grid))
+points2 = np.zeros((timesteps,grid,grid))
+for t in range(timesteps):
+    for g in range(grid):
+        for h in range(grid):
+            points[t,g,h] = array[t*timesteps+g*grid+h]
+            points2[t,g,h] = darray[t*timesteps+g*grid+h]
+            
 
-points2 = darray.reshape((timesteps,grid,grid))
+plt.imshow(darray[0:10000].reshape((100,100)))
+for x in range(timesteps):
+    print(darray[10000*x],darray[10000*x+1],darray[10000*x+5])
 
 
 x_coords = np.linspace(-5,5,grid)
