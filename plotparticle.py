@@ -11,8 +11,8 @@ with open("partx.dat") as file_name:
 with open("party.dat") as file_name:
     party = np.loadtxt(file_name)
 
-partx.reshape(N_part**2,tsteps+1)
-party.reshape(N_part**2,tsteps+1)
+partx.reshape(tsteps+1,N_part**2)
+party.reshape(tsteps+1,N_part**2)
 
 partx = np.fmod(partx,10)-5
 party = np.fmod(party,10)-5
@@ -40,5 +40,5 @@ anim = FuncAnimation(fig,
                      frames=np.arange(0, tsteps+1),
                      init_func=init_func)
 
-writervideo = FFMpegWriter(fps=100)
+writervideo = FFMpegWriter(fps=10)
 anim.save('inertial.mp4', writer=writervideo)
