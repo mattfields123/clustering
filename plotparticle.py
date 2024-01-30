@@ -30,7 +30,7 @@ def update_plot(ii):
     plt.cla()
     plt.xlabel('X (km)')
     plt.ylabel('Y (km)')
-    plt.scatter(partx[:,ii],party[:,ii])
+    plt.scatter(partx[ii,:],party[ii,:])
     plt.xlim(-5, 5)
     plt.ylim(-5, 5)
 
