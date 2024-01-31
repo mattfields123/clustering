@@ -12,7 +12,7 @@ cp $HOME/work/clustering/random.f90 $TMPDIR
 cp $HOME/work/clustering/velocitynoML.f90 $TMPDIR/velocity.f90
 cp $HOME/work/clustering/particle.f90 $TMPDIR
 cp $HOME/work/clustering/passivetracers.f90 $TMPDIR/passivetracers.f90
-cp $HOME/work/clustering/executedata.f90 $TMPDIR
+cp $HOME/work/clustering/executedata.f90 $TMPDIR/executearray.f90
 
 gfortran -c constants.f90
 gfortran -c parameters.f90
