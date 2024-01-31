@@ -30,7 +30,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
  
     linx = linspace(-5.0,(N_part-1.)/(0.1*N_part)-5.0,N_part)
     liny = linspace(-5.0,(N_part-1.)/(0.1*N_part)-5.0,N_part)
-
+    print*, linx
     
     call system_clock(beginning, rate)
     open(2,file='partx.dat')
