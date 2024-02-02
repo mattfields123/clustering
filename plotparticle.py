@@ -14,8 +14,8 @@ with open("party.dat") as file_name:
 partx.reshape(tsteps+1,N_part**2)
 party.reshape(tsteps+1,N_part**2)
 
-partx = np.fmod(partx,10)-5
-party = np.fmod(party,10)-5
+partx = np.fmod(partx+1000,10)-1005
+party = np.fmod(party+1000,10)-1005
 
 
 fig = plt.figure(figsize=(12, 12))
