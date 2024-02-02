@@ -29,7 +29,7 @@ barr2 = np.zeros(11)
 arr3 = np.zeros(11)
 
 for x in range(11):
-    y = linregress(t[1000:4000],array[x,1000:4000])
+    y = linregress(t[1000:4000]/2,array[x,1000:4000])
     ylarge = linregress(t[1000:4000]/2,barray[x,1000:4000])
     # y2 = linregress(t[1000:4000],array2[x,1000:4000])
     # ylarge2 = linregress(t[1000:4000],barray2[x,1000:4000])
@@ -120,14 +120,15 @@ largex = []
 
 
 fig3, ax3 = plt.subplots(2,2)
-ax3[1,1].scatter(logt,logx,marker='x')
+ax3[1,1].scatter(logt,logx,marker='x',label='$\gamma=1$')
 ax3[1,1].scatter(logtb,logb,marker='x')
 
-ax3[0,1].scatter(t0,logx,marker='x')
-ax3[0,1].scatter(t0b,logb,marker='x')
+# ax3[0,1].scatter(t0,logx,marker='x',label='gamma=1')
+# ax3[0,1].scatter(t0b,logb,marker='x')
 
-ax3[1,0].scatter(logt,-arr,marker='x')
-ax3[1,0].scatter(logtb,-barr,marker='x')
+# ax3[1,0].scatter(logt,-arr,marker='x',label='gamma=1')
+# ax3[1,0].scatter(logtb,-barr,marker='x')
+
 
 
 # ax3[1,1].scatter(logt02[0:11],logx2[0:11],marker='x')
@@ -135,7 +136,7 @@ ax3[1,0].scatter(logtb,-barr,marker='x')
 # ax3[1,1].scatter(logt0c[0:10], logx3[0:10],marker='x')
 
 
-ax3[1,1].set_xlabel('log $\gamma$')
+ax3[1,1].set_xlabel('log $Amplitude Scaling$')
 ax3[1,1].set_ylabel('log C')
 
 # ax3[1,0].scatter(t0[1:11],logx[1:11],marker='x')
@@ -148,14 +149,15 @@ ax3[1,1].set_ylabel('log C')
 # ax3[0,1].set_xlabel('log $\gamma$')
 # ax3[0,1].set_ylabel('C')
 
-ax3[0,0].scatter(t0[1:11],-arr[1:11],marker='x')
+ax3[0,0].scatter(t0[1:11],-arr[1:11],marker='x',label='$\gamma=1$')
 ax3[0,0].scatter(t0b[1:11],-barr[1:11],marker='x')
 # ax3[0,0].scatter(t02[1:11],-arr2[1:11],marker='x')
 # ax3[0,0].scatter(t0b2[1:11],-barr2[1:11],marker='x')
 
 
-ax3[0,0].set_xlabel('$\gamma$')
+ax3[0,0].set_xlabel('$Amplitude Scaling$')
 ax3[0,0].set_ylabel('C')
+plt.legend()
 
 plt.show()
 
