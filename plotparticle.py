@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.animation import FuncAnimation, FFMpegWriter
 
-N_part = 200
+N_part = 500
 tsteps = 1000
 
 with open("partx.dat") as file_name:
@@ -30,7 +30,7 @@ def update_plot(ii):
     plt.cla()
     plt.xlabel('X (km)')
     plt.ylabel('Y (km)')
-    plt.scatter(partx[ii,:],party[ii,:])
+    plt.scatter(partx[ii,:],party[ii,:],c='black',s=0.1)
     plt.xlim(-5, 5)
     plt.ylim(-5, 5)
 

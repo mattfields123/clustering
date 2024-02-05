@@ -30,5 +30,5 @@ OMP_NUM_THREADS=256 ./executearray
 
 mkdir $EPHEMERAL/testcase2
 cp * $EPHEMERAL/testcase2
-cp partavg.dat $HOME/work/clustering/partavgfiles2
+cp partavg.dat $HOME/work/partfiles/beta32partavg
 
