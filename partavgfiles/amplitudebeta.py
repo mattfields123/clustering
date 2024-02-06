@@ -22,7 +22,7 @@ print(np.shape(barray))
 # barray2 = barray2*400
 # array3 = array3*400
 # t = np.linspace(0,10000*0.05*(4*10**5/(3600*24)),10001)
-t = np.linspace(0,10000*0.05,10001)q
+t = np.linspace(0,10000*0.05,10001)
 arr = np.zeros(11)
 barr = np.zeros(11)
 arr2 = np.zeros(11)
