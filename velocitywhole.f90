@@ -19,9 +19,12 @@ contains
         real(dp) :: g, tausol, taupot
         integer :: c_k, c_l
 
-        tausol = 8*atan(1.)*(1-gamma) !relies on gamma
-        taupot = 8*atan(1.)*gamma !relies on gamma
-        
+!        tausol = 8*atan(1.)*(1-gamma) !relies on gamma
+ !       taupot = 8*atan(1.)*gamma !relies on gamma
+  
+        tausol = 8*atan(1.)
+        taupot = 8*atan(1.)
+      
         k_array = linspace(-3.2,3.2,65)
         l_array = linspace(-3.2,3.2,65)
         velocity = (/0.,0./)
