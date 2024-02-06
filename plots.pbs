@@ -6,9 +6,9 @@ module load anaconda3/personal
 
 
 cp $HOME/work/clustering/plotparticle.py $TMPDIR
-cp $HOME/work/partfiles/partx.dat $TMPDIR
-cp $HOME/work/partfiles/party.dat $TMPDIR
+cp $HOME/work/partfiles/gamma01_250kparticles/partx.dat $TMPDIR
+cp $HOME/work/partfiles/gamma01_250kparticles/party.dat $TMPDIR
 
 python plotparticle.py
 
-cp inertial.mp4 $HOME/work/partfiles
+cp anim.mp4 $HOME/work/partfiles/gamma01_250kparticles

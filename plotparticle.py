@@ -30,9 +30,9 @@ def update_plot(ii):
     plt.cla()
     plt.xlabel('X (km)')
     plt.ylabel('Y (km)')
-    plt.scatter(partx[ii,:],party[ii,:],c='black',s=0.1)
-    plt.xlim(-5, 5)
-    plt.ylim(-5, 5)
+    plt.scatter(400*partx[ii,:],400*party[ii,:],c='black',s=0.1)
+    plt.xlim(-2000, 2000)
+    plt.ylim(-2000, 2000)
 
 
 anim = FuncAnimation(fig,
@@ -40,5 +40,5 @@ anim = FuncAnimation(fig,
                      frames=np.arange(0, tsteps+1),
                      init_func=init_func)
 
-writervideo = FFMpegWriter(fps=10)
-anim.save('inertial.mp4', writer=writervideo)
+writervideo = FFMpegWriter(fps=20)
+anim.save('anim.mp4', writer=writervideo)
