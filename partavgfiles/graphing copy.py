@@ -20,13 +20,13 @@ with open("/Users/bunny/Documents/msci/PARTICLE AVERAGES/partavggamma 6/partavg.
 
 
 print(np.shape(array))
-array = array*400
-barray = barray*400
-array2 = array2*400
-barray2 = barray2*400
-array3 = array3*400
+# array = array*400
+# barray = barray*400
+# array2 = array2*400
+# barray2 = barray2*400
+# array3 = array3*400
 
-t = np.linspace(0,4000*0.6,4001)
+t = np.linspace(0,4000*0.25,4001)
 arr = np.zeros(11)
 barr = np.zeros(11)
 arr2 = np.zeros(11)
@@ -189,3 +189,5 @@ for x in range(11):
 
 ax[1].legend()
 plt.show()
+
+print(arr)

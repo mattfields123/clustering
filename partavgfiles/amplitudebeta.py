@@ -16,12 +16,13 @@ with open("/Users/bunny/Documents/msci/mscigit/files/beta64avg.dat") as file_nam
 
 print(np.shape(array))
 print(np.shape(barray))
-array = array*400
-barray = barray*400
+# array = array*400
+# barray = barray*400
 # array2 = array2*400
 # barray2 = barray2*400
 # array3 = array3*400
-t = np.linspace(0,10000*0.05*(4*10**5/(3600*24)),10001)
+# t = np.linspace(0,10000*0.05*(4*10**5/(3600*24)),10001)
+t = np.linspace(0,10000*0.05,10001)q
 arr = np.zeros(11)
 barr = np.zeros(11)
 arr2 = np.zeros(11)
@@ -153,6 +154,8 @@ ax3[0,0].scatter(t0[1:11],-arr[1:11],marker='x',label='$\gamma=1$')
 ax3[0,0].scatter(t0b[1:11],-barr[1:11],marker='x')
 # ax3[0,0].scatter(t02[1:11],-arr2[1:11],marker='x')
 # ax3[0,0].scatter(t0b2[1:11],-barr2[1:11],marker='x')
+
+print(barr)
 
 
 ax3[0,0].set_xlabel('$Amplitude Scaling$')
