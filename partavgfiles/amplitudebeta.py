@@ -3,9 +3,9 @@ import numpy as np
 from scipy.stats import linregress
 
 
-with open("/Users/bunny/Documents/msci/mscigit/partavgbeta.dat") as file_name:
+with open("/Users/bunny/Documents/msci/mscigit/files/beta32avg.dat") as file_name:
     array = np.loadtxt(file_name)
-with open("/Users/bunny/Documents/msci/PARTICLE AVERAGES/partavgamp 2/partavg.dat") as file_name:
+with open("/Users/bunny/Documents/msci/mscigit/files/beta64avg.dat") as file_name:
     barray = np.loadtxt(file_name)
 
 
@@ -15,13 +15,14 @@ with open("/Users/bunny/Documents/msci/PARTICLE AVERAGES/partavgamp 2/partavg.da
 
 
 print(np.shape(array))
+print(np.shape(barray))
 array = array*400
 barray = barray*400
 # array2 = array2*400
 # barray2 = barray2*400
 # array3 = array3*400
 
-t = np.linspace(0,4000*0.6,4001)
+t = np.linspace(0,10000*0.6,10001)
 arr = np.zeros(11)
 barr = np.zeros(11)
 arr2 = np.zeros(11)
@@ -29,8 +30,8 @@ barr2 = np.zeros(11)
 arr3 = np.zeros(11)
 
 for x in range(11):
-    y = linregress(t[1000:4000]/2,array[x,1000:4000])
-    ylarge = linregress(t[1000:4000]/2,barray[x,1000:4000])
+    y = linregress(t[1000:10000]*0.05/0.25,array[x,1000:10000])
+    ylarge = linregress(t[1000:10000]*0.05/0.25,barray[x,1000:10000])
     # y2 = linregress(t[1000:4000],array2[x,1000:4000])
     # ylarge2 = linregress(t[1000:4000],barray2[x,1000:4000])
     # y3 = linregress(t[1000:4000],array3[x,1000:4000])
