@@ -121,8 +121,8 @@ largex = []
 
 
 fig3, ax3 = plt.subplots(2,2)
-ax3[1,1].scatter(logt,logx,marker='x',label='$\gamma=1$')
-ax3[1,1].scatter(logtb,logb,marker='x')
+ax3[1,1].scatter(logt,logx,marker='x',label='$beta=64$')
+ax3[1,1].scatter(logtb,logb,marker='x',label='$beta=32$')
 
 # ax3[0,1].scatter(t0,logx,marker='x',label='gamma=1')
 # ax3[0,1].scatter(t0b,logb,marker='x')
@@ -150,8 +150,8 @@ ax3[1,1].set_ylabel('log C')
 # ax3[0,1].set_xlabel('log $\gamma$')
 # ax3[0,1].set_ylabel('C')
 
-ax3[0,0].scatter(t0[1:11],-arr[1:11],marker='x',label='$\gamma=1$')
-ax3[0,0].scatter(t0b[1:11],-barr[1:11],marker='x')
+ax3[0,0].scatter(t0[1:8],-arr[1:8],marker='x',label='$beta=32$')
+ax3[0,0].scatter(t0b[1:8],-barr[1:8],marker='x',label='beta=64')
 # ax3[0,0].scatter(t02[1:11],-arr2[1:11],marker='x')
 # ax3[0,0].scatter(t0b2[1:11],-barr2[1:11],marker='x')
 
