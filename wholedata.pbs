@@ -28,7 +28,6 @@ gfortran -fopenmp constants.o parameters.o rossby_wave_attributes.o rossby_wave.
 OMP_NUM_THREADS=256 ./executearray
 
 
-mkdir $EPHEMERAL/testcase2
 cp * $EPHEMERAL/testcase2
 cp partavg.dat $HOME/work/partfiles/bigcluster
 cp partx.dat $HOME/work/partfiles/bigcluster

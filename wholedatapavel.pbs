@@ -31,6 +31,6 @@ OMP_NUM_THREADS=32 ./executearray
 
 mkdir $EPHEMERAL/testcase2
 cp * $EPHEMERAL/testcase2
-cp partavg.dat $HOME/work/clustering/partavgfiles/bigcluster/gamma0_250kparticles
+cp partavg.dat $HOME/work/partfiles/bigcluster/gamma0_250kparticles
 cp partx.dat $HOME/work/partfiles/bigcluster/gamma0_250kparticles
 cp party.dat $HOME/work/partfiles/bigcluster/gamma0_250kparticles

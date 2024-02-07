@@ -18,12 +18,11 @@ contains
         real(dp) :: amplitudes(65,65), dispersions(65,65)
         real(dp) :: g, tausol, taupot
         integer :: c_k, c_l
-
-!        tausol = 8*atan(1.)*(1-gamma) !relies on gamma
- !       taupot = 8*atan(1.)*gamma !relies on gamma
+!     tausol = 8*atan(1.)*(1-gamma) !relies on gamma
+ !    taupot = 8*atan(1.)*gamma !relies on gamma
   
-        tausol = 8*atan(1.)
-        taupot = 8*atan(1.)
+        tausol = (1-gamma)*8*atan(1.)
+        taupot = gamma*8*atan(1.)
       
         k_array = linspace(-3.2,3.2,65)
         l_array = linspace(-3.2,3.2,65)
@@ -32,7 +31,7 @@ contains
         !$OMP PARALLEL DO private(psi1,psi2,k,l) reduction(+:velocity)
         do c_k = 1, 65
         k = k_array(c_k)
-        do c_l = 1, 65
+        do c_l = 1, 65i
         l = l_array(c_l)
         psi1 = amp_scaling*amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase1(c_k,c_l))
         psi2 = amp_scaling*amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase2(c_k,c_l))
