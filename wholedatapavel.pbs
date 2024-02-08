@@ -4,7 +4,7 @@
 module load gcc/11.2.0
 
 
-cp $HOME/work/clustering/parameterslarge.f90 $TMPDIR/parameters.f90
+cp $HOME/work/clustering/parameterslargepavel.f90 $TMPDIR/parameters.f90
 cp $HOME/work/clustering/constantsbeta32.f90 $TMPDIR/constants.f90
 cp $HOME/work/clustering/rossby_wave_attributes.f90 $TMPDIR
 cp $HOME/work/clustering/rossby_wave.f90 $TMPDIR
@@ -31,6 +31,6 @@ OMP_NUM_THREADS=32 ./executearray
 
 mkdir $EPHEMERAL/testcase2
 cp * $EPHEMERAL/testcase2
-cp partavg.dat $HOME/work/partfiles/bigcluster/gamma0_250kparticles
-cp partx.dat $HOME/work/partfiles/bigcluster/gamma0_250kparticles
-cp party.dat $HOME/work/partfiles/bigcluster/gamma0_250kparticles
+cp partavg.dat $HOME/work/partfiles/bigcluster/gamma01_250kparticles/delta1
+cp partx.dat $HOME/work/partfiles/bigcluster/gamma01_250kparticles/delta1
+cp party.dat $HOME/work/partfiles/bigcluster/gamma01_250kparticles/delta1

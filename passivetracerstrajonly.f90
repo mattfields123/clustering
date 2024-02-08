@@ -15,7 +15,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     real(dp) :: g
     real(dp), allocatable :: partavg(:)
 
-    real :: dt = 0.05
+    real :: dt = 0.01
     integer :: counter_x, counter_y, counter_t, timesteps
     integer :: N_part, counter_n1x, c_n2x, counter_n1y, c_n2y
     integer :: beginning,end

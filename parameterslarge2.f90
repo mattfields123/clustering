@@ -2,7 +2,7 @@ module parameters
 use constants
         implicit none
 
-real, parameter :: gamma = 0.
+real, parameter :: gamma = 1.
 real :: delta = 1.
 real(dp) :: vu = 100*atan(1.)
 real :: amp_scaling = 1.

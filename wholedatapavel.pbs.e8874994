@@ -1,2 +1,0 @@
-mkdir: cannot create directory ‘/rds/general/user/mf620/ephemeral/testcase2’: File exists
-cp: cannot create regular file '/rds/general/user/mf620/home/work/clustering/partavgfiles/bigcluster/gamma0_250kparticles': No such file or directory

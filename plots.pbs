@@ -6,9 +6,9 @@ module load anaconda3/personal
 
 
 cp $HOME/work/clustering/plotparticle.py $TMPDIR
-cp $HOME/work/partfiles/gamma01_250kparticles/partx.dat $TMPDIR
-cp $HOME/work/partfiles/gamma01_250kparticles/party.dat $TMPDIR
+cp $HOME/work/partfiles/bigcluster/gamma01_250kparticles/delta1/partx.dat $TMPDIR
+cp $HOME/work/partfiles/bigcluster/gamma01_250kparticles/delta1/party.dat $TMPDIR
 
 python plotparticle.py
 
-cp anim.mp4 $HOME/work/partfiles/gamma01_250kparticles
+cp anim.mp4 $HOME/work/clustering/gamma01delta1.mp4

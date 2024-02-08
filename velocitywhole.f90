@@ -31,7 +31,7 @@ contains
         !$OMP PARALLEL DO private(psi1,psi2,k,l) reduction(+:velocity)
         do c_k = 1, 65
         k = k_array(c_k)
-        do c_l = 1, 65i
+        do c_l = 1, 65
         l = l_array(c_l)
         psi1 = amp_scaling*amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase1(c_k,c_l))
         psi2 = amp_scaling*amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase2(c_k,c_l))

@@ -1,13 +1,13 @@
-#PBS -l select=1:ncpus=1:mem=64gb
+#PBS -l select=1:ncpus=4:mem=64gb
 #PBS -l walltime=23:55:00
 
 module load anaconda3/personal
 
 
 cp $HOME/work/clustering/plotparticle.py $TMPDIR
-cp $HOME/work/partfiles/bigcluster/gamma0_250kparticles/partx.dat $TMPDIR
-cp $HOME/work/partfiles/bigcluster/gamma0_250kparticles/party.dat $TMPDIR
+cp $HOME/work/partfiles/bigcluster/gamma0_250kparticles/delta1/partx.dat $TMPDIR
+cp $HOME/work/partfiles/bigcluster/gamma0_250kparticles/delta1/party.dat $TMPDIR
 
 python plotparticle.py
 
-cp anim.mp4 $HOME/work/partfiles/bigcluster/gamma0_250kparticles
+cp anim.mp4 $HOME/work/clustering/gamma0delta1.mp4
