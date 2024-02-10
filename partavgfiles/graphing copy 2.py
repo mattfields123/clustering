@@ -5,43 +5,21 @@ from scipy.stats import linregress
 
 with open("/Users/bunny/Documents/msci/mscigit/partavgfiles/partavg.dat") as file_name:
     array = np.loadtxt(file_name)
-with open("/Users/bunny/Documents/msci/mscigit/partavgfiles2/partavg.dat") as file_name:
-    barray = np.loadtxt(file_name)
 
 
 
 
 
-
+t = np.linspace(0,10000*0.05,10001)
 
 print(np.shape(array))
 array = array*400
-barray = barray*400
-# array2 = array2*400
-# barray2 = barray2*400
-# array3 = array3*400
-
-t = np.linspace(0,4000*0.6,4001)
 arr = np.zeros(11)
-barr = np.zeros(11)
-arr2 = np.zeros(11)
-barr2 = np.zeros(11)
-arr3 = np.zeros(11)
 
 for x in range(11):
-    y = linregress(t[1000:4000]/2,array[x,1000:4000])
-    ylarge = linregress(t[1000:4000]/2,barray[x,1000:4000])
-    # y2 = linregress(t[1000:4000],array2[x,1000:4000])
-    # ylarge2 = linregress(t[1000:4000],barray2[x,1000:4000])
-    # y3 = linregress(t[1000:4000],array3[x,1000:4000])
+    y = linregress(t[1000:10000],array[x,1000:10000])
 
     arr[x] = y.slope
-    barr[x] = ylarge.slope
-    # arr2[x] = y2.slope
-    # barr2[x] = ylarge2.slope
-    # arr3[x] = y3.slope
-# t0b = [0.01,0.05,0.1,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1] # gamma large
-# t0 = [0.1,0.5,1,2,3,4,9,25,36,49,64] # amp
 t0 = [0.01,0.1,0.5,1,2,3,4,8,16,32,64] # gamma
 t0b = [0.01,0.1,0.5,1,2,3,4,8,16,32,64] # gamma
 
@@ -54,7 +32,6 @@ t0c = [0.005,0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.1]
 logt = np.log10(t0)
 logtb = np.log10(t0b)
 logx = np.log10(-arr)
-logb = np.log10(-barr)
 # logx2 = np.log10(-arr2)
 # logb2 = np.log10(-barr2)
 
@@ -77,10 +54,6 @@ combinedt[10:20] = logtb[1:11]
 # combinedt[41:52] = logt0c
 
 combinedx[0:10] = logx[1:11]
-combinedx[10:20] = logb[1:11]
-# combinedx[20:31] = logx2
-# combinedx[31:41] = logb2[1:11]
-# combinedx[41:52] = logx3
 
 combined = np.zeros((2,52))
 combined[0] = combinedt
@@ -121,7 +94,6 @@ largex = []
 
 fig3, ax3 = plt.subplots(2,2)
 ax3[1,1].scatter(logt,logx,marker='x',label='$\gamma=1$')
-ax3[1,1].scatter(logtb,logb,marker='x')
 
 # ax3[0,1].scatter(t0,logx,marker='x',label='gamma=1')
 # ax3[0,1].scatter(t0b,logb,marker='x')
@@ -150,7 +122,6 @@ ax3[1,1].set_ylabel('log C')
 # ax3[0,1].set_ylabel('C')
 
 ax3[0,0].scatter(t0[1:11],-arr[1:11],marker='x',label='$\gamma=1$')
-ax3[0,0].scatter(t0b[1:11],-barr[1:11],marker='x')
 # ax3[0,0].scatter(t02[1:11],-arr2[1:11],marker='x')
 # ax3[0,0].scatter(t0b2[1:11],-barr2[1:11],marker='x')
 
@@ -177,7 +148,6 @@ ax[0].set_ylabel('Drift Velocity / $\mathrm{kmday}^{-1}$')
 #ax[0].plot(t0[4:11],-arr[4:11])
 
 ax[0].scatter(t0,-arr,marker='x')
-ax[0].scatter(t0b,-barr,marker='x')
 
 
 
@@ -188,7 +158,6 @@ ax[1].set_xlabel('Westward Drift / km')
 ax[1].set_ylabel('Time / day')
 for x in range(11):
     ax[1].plot(array[x,:],t,label=str(t0b[x]))
-    ax[1].plot(barray[x,:],t,label=str(t0[x]))
 
 ax[1].legend()
 plt.show()
