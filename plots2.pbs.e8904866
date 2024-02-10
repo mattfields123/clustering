@@ -1,0 +1,14 @@
+cp: error writing '/var/tmp/pbs.8904866.pbs/partx.dat': No space left on device
+cp: error writing '/var/tmp/pbs.8904866.pbs/party.dat': No space left on device
+Traceback (most recent call last):
+  File "/tmp/pbs.8904866.pbs/plotparticle.py", line 9, in <module>
+    partx = np.loadtxt(file_name)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/site-packages/numpy/lib/npyio.py", line 1373, in loadtxt
+    arr = _read(fname, dtype=dtype, comment=comment, delimiter=delimiter,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/site-packages/numpy/lib/npyio.py", line 1016, in _read
+    arr = _load_from_filelike(
+          ^^^^^^^^^^^^^^^^^^^^
+ValueError: the number of columns changed from 250000 to 137287 at row 543; use `usecols` to select a subset and avoid this error
+cp: cannot stat 'anim.mp4': No such file or directory
