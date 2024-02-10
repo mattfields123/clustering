@@ -10,4 +10,4 @@ cp $HOME/work/partfiles/bigcluster/gamma0_250kparticles/delta01/party.dat $TMPDI
 
 python plotparticle.py
 
-cp anim.mp4 $HOME/work/clustering/gamma0delta01.mp4
+cp anim.mp4 $HOME/work/partfiles/bigcluster/gamma0_250kparticles/delta01/gamma0delta01.mp4
