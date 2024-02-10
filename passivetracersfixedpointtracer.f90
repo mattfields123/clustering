@@ -63,7 +63,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     do c_v2 = 1, 1000
 
         vel = velocity_pointML(x_array(c_v1),y_array(c_v2),0.,phase1,phase2,time1,time2,amplitudes,dispersions,g)
-        if vel(1) < 0.0001 .AND. vel(2) < 0.0001
+        if (vel(1) < 0.0001) .AND. (vel(2) < 0.0001) then
             velarray(c_v1,c_v2) = 1
         else 
             velarray(c_v1,c_v2) = 0
@@ -87,7 +87,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     do c_v2 = 1, 1000
 
         vel = velocity_pointML(x_array(c_v1),y_array(c_v2),t,phase1,phase2,time1,time2,amplitudes,dispersions,g)
-        if vel(1) < 0.0001 .AND. vel(2) < 0.0001
+        if (vel(1) < 0.0001) .AND. (vel(2) < 0.0001) then
             velarray(c_v1,c_v2) = 1
         else 
             velarray(c_v1,c_v2) = 0
