@@ -1,0 +1,32 @@
+passivetracers.f90:66:39:
+
+   63 |     do c_v1 = 1, 1000
+      |                     2                  
+......
+   66 |         vel = velocity_pointML(x_array(c_v1),y_array(c_v2),t0,phase1,phase2,time1,time2,amplitudes,dispersions,g)
+      |                                       1
+Warning: Array reference at (1) out of bounds (1000 > 128) in loop beginning at (2)
+passivetracers.f90:66:53:
+
+   64 |     do c_v2 = 1, 1000
+      |                     2                                
+   65 | 
+   66 |         vel = velocity_pointML(x_array(c_v1),y_array(c_v2),t0,phase1,phase2,time1,time2,amplitudes,dispersions,g)
+      |                                                     1
+Warning: Array reference at (1) out of bounds (1000 > 128) in loop beginning at (2)
+passivetracers.f90:90:39:
+
+   87 |     do c_v1 = 1, 1000
+      |                     2                  
+......
+   90 |         vel = velocity_pointML(x_array(c_v1),y_array(c_v2),t,phase1,phase2,time1,time2,amplitudes,dispersions,g)
+      |                                       1
+Warning: Array reference at (1) out of bounds (1000 > 128) in loop beginning at (2)
+passivetracers.f90:90:53:
+
+   88 |     do c_v2 = 1, 1000
+      |                     2                                
+   89 | 
+   90 |         vel = velocity_pointML(x_array(c_v1),y_array(c_v2),t,phase1,phase2,time1,time2,amplitudes,dispersions,g)
+      |                                                     1
+Warning: Array reference at (1) out of bounds (1000 > 128) in loop beginning at (2)

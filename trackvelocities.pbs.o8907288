@@ -1,0 +1,13 @@
+ gamma=    0.00000000    
+        2500  particles: cluster big data
+ time :    1751.87695    
+
+============================================
+
+        Job resource usage summary 
+
+                 Memory (GB)    NCPUs
+ Requested  :        64            32
+ Used       :         0 (peak)  30.47 (ave)
+
+============================================

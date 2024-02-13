@@ -9,7 +9,7 @@ contains
 function vel_passive(timesteps, phase1, phase2, time1, time2, N_part, g) result(partavg)
 
 real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), velocity(2), parts(2)
-    real(dp) :: t_array(timesteps), x_array(128), y_array(128), modx, mody
+    real(dp) :: t_array(timesteps), x_array(1000), y_array(1000), modx, mody
     real(dp) :: linx(N_part), liny(N_part), partx(N_part,N_part), party(N_part,N_part)
     real(dp) :: dispersions(65,65), amplitudes(65,65)
     real(dp) :: g, vel(2)
