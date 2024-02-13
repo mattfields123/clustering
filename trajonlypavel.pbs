@@ -31,4 +31,4 @@ OMP_NUM_THREADS=32 ./executearray
 
 mkdir $EPHEMERAL/testcase2
 cp * $EPHEMERAL/testcase2
-
+cp partavg.dat $HOME/work/clustering/smalltesting

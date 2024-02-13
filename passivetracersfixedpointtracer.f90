@@ -13,7 +13,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     real(dp) :: linx(N_part), liny(N_part), partx(N_part,N_part), party(N_part,N_part)
     real(dp) :: dispersions(65,65), amplitudes(65,65)
     real(dp) :: g, vel(2)
-    integer :: velarray(1000,1000)
+    real(dp), allocatable :: velarray(:,:)
     real(dp), allocatable :: partavg(:)
     integer :: c_v1, c_v2
     real :: dt = 0.25
