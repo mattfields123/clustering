@@ -20,6 +20,7 @@ for x in range(11):
     y = linregress(t[1000:10000],array[x,1000:10000])
 
     arr[x] = y.slope
+print(arr[8])
 t0 = [0.01,0.1,0.5,1,2,3,4,8,16,32,64] # gamma
 t0b = [0.01,0.1,0.5,1,2,3,4,8,16,32,64] # gamma
 
