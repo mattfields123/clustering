@@ -9,11 +9,15 @@ contains
 function vel_passive(timesteps, phase1, phase2, time1, time2, N_part, g) result(partavg)
 
 real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), velocity(2), parts(2)
-    real(dp) :: t_array(timesteps), x_array(1000), y_array(1000), modx, mody
+    real(dp) :: t_array(timesteps), modx, mody
     real(dp) :: linx(N_part), liny(N_part), partx(N_part,N_part), party(N_part,N_part)
     real(dp) :: dispersions(65,65), amplitudes(65,65)
     real(dp) :: g, vel(2)
+    real(dp) :: threshold = 0.001
+
     real(dp), allocatable :: partavg(:)
+    real(dp), allocatable :: x_array(:)
+    real(dp), allocatable :: y_array(:)
     integer :: c_v1, c_v2
     real :: dt = 0.25
     integer :: counter_x, counter_y, counter_t, timesteps
@@ -23,13 +27,14 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     integer :: beg1,end1
     real(dp) :: t0 = 0.
     integer :: counter_i
-    
+    integer :: vel_domain = 1000
 
     allocate(partavg(timesteps+1))
-    
+    allocate(x_array(vel_domain))
+    allocate(y_array(vel_domain))
 
-    x_array = linspace(-5.0,5.0,1000)
-    y_array = linspace(-5.0,5.0,1000)
+    x_array = linspace(-5.0,5.0,vel_domain)
+    y_array = linspace(-5.0,5.0,vel_domain)
     t_array = linspace(0.,(timesteps-1)*dt,timesteps)
  
     linx = linspace(-5.0,(N_part-1.)/(0.1*N_part)-5.0,N_part)
@@ -63,11 +68,12 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     
     counter_i = 0
 
-    do c_v1 = 1, 1000
-    do c_v2 = 1, 1000
+    do c_v1 = 1, vel_domain
+    do c_v2 = 1, vel_domain
 
         vel = velocity_pointML(x_array(c_v1),y_array(c_v2),t0,phase1,phase2,time1,time2,amplitudes,dispersions,g)
-        if (vel(1) < 10e-15 .AND. vel(2) < 10e-15) then
+        
+        if ((abs(vel(1)) < threshold) .AND. (abs(vel(2)) < threshold)) then
             write(4,*) x_array(c_v1), y_array(c_v2)
             counter_i = counter_i + 1
         end if
@@ -85,13 +91,15 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     
 
     counter_i = 0 
-    do c_v1 = 1, 1000
-    do c_v2 = 1, 1000
+    do c_v1 = 1, vel_domain
+    do c_v2 = 1, vel_domain
 
         vel = velocity_pointML(x_array(c_v1),y_array(c_v2),t,phase1,phase2,time1,time2,amplitudes,dispersions,g)
-        if (vel(1) < 10e-15 .AND. vel(2) < 10e-15) then
+        
+        if ((abs(vel(1)) < threshold) .AND. (abs(vel(2)) < threshold)) then
             write(4,*) x_array(c_v1), y_array(c_v2)
             counter_i = counter_i + 1
+            print*, abs(vel(1)), abs(vel(2)), 'yes'
         end if
     end do
     end do

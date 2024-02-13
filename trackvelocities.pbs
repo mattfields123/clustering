@@ -33,6 +33,6 @@ cp partx.dat $HOME/work/partfiles/testvelocity/test
 cp party.dat $HOME/work/partfiles/testvelocity/test
 cp partavg.dat $HOME/work/partfiles/testvelocity/test
 cp fixedpoint.dat $HOME/work/partfiles/testvelocity/test
-
+cp lengthvelocity.dat $HOME/work/partfiles/testvelocity/test
 
 

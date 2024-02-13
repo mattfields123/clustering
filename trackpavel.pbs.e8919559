@@ -1,0 +1,19 @@
+passivetracers.f90:98:13:
+
+   98 |         print vel, 'no'
+      |             1
+Warning: Legacy Extension: Non-character in FORMAT tag at (1)
+At line 98 of file passivetracers.f90 (unit = 6, file = 'stdout')
+Fortran runtime error: Missing initial left parenthesis in format
+švµ#æŽ¿ëuZ"Xo¢¿
+^
+
+Error termination. Backtrace:
+#0  0x14af0e7fa6b7 in data_transfer_init
+	at ../../../gcc-11.2.0/libgfortran/io/transfer.c:2998
+#1  0x404d0e in ???
+#2  0x405dcc in ???
+#3  0x405eb4 in ???
+#4  0x14af0d5c4492 in ???
+#5  0x400f0d in ???
+#6  0xffffffffffffffff in ???
