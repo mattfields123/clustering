@@ -13,7 +13,6 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     real(dp) :: linx(N_part), liny(N_part), partx(N_part,N_part), party(N_part,N_part)
     real(dp) :: dispersions(65,65), amplitudes(65,65)
     real(dp) :: g, vel(2)
-    real(dp), allocatable :: velarray(:,:)
     real(dp), allocatable :: partavg(:)
     integer :: c_v1, c_v2
     real :: dt = 0.25
@@ -23,8 +22,11 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     real :: rate
     integer :: beg1,end1
     real(dp) :: t0 = 0.
+    integer :: counter_i
+    
 
-    allocate(partavg(timesteps+1))
+    allocate(length_array_vel(timesteps+1))
+    
 
     x_array = linspace(-5.0,5.0,1000)
     y_array = linspace(-5.0,5.0,1000)
@@ -39,7 +41,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     open(2,file='partx.dat')
     open(3,file='party.dat')
     open(4,file='fixedpoint.dat')
-
+    open(5,file='lengthvelocity.dat')
 
 
 
@@ -59,21 +61,20 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     call dispersion_relation_array(dispersions)
     call amplitudes_array(amplitudes)
     
-    
+    counter_i = 0
+
     do c_v1 = 1, 1000
     do c_v2 = 1, 1000
 
         vel = velocity_pointML(x_array(c_v1),y_array(c_v2),t0,phase1,phase2,time1,time2,amplitudes,dispersions,g)
         if (vel(1) < 0.0001 .AND. vel(2) < 0.0001) then
-            velarray(c_v1,c_v2) = 1
-        else 
-            velarray(c_v1,c_v2) = 0
+            write(4,*) x_array(c_v1), y_array(c_v2)
+            counter_i = counter_i + 1
         end if
     end do
     end do
 
-    write(4,*) velarray
-
+    write(5,*) counter_i
 
     do counter_t = 1,timesteps
     
@@ -83,21 +84,19 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     call MaduLawrence_loop(time2, phase2, t, vu)
     
 
-    !$OMP PARALLEL DO private(vel)
+    counter_i = 0 
     do c_v1 = 1, 1000
     do c_v2 = 1, 1000
 
         vel = velocity_pointML(x_array(c_v1),y_array(c_v2),t,phase1,phase2,time1,time2,amplitudes,dispersions,g)
         if (vel(1) < 0.0001 .AND. vel(2) < 0.0001) then
-            velarray(c_v1,c_v2) = 1
-        else 
-            velarray(c_v1,c_v2) = 0
+            write(4,*) x_array(cv_1), y_array(cv_2)
+            counter_i = counter_i + 1
         end if
     end do
     end do
-    !$OMP END PARALLEL DO
-
-    write(4,*) velarray
+    
+    write(5,*) counter_i
     
 
 

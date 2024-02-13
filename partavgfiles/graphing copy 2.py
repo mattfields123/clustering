@@ -10,10 +10,10 @@ with open("/Users/bunny/Documents/msci/mscigit/partavgfiles/partavg.dat") as fil
 
 
 
-t = np.linspace(0,10000*0.05,10001)
+t = np.linspace(0,10000*0.01,10001)
 
 print(np.shape(array))
-array = array*400
+# array = array*400
 arr = np.zeros(11)
 
 for x in range(11):
