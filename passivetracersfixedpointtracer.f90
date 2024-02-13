@@ -25,7 +25,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     integer :: counter_i
     
 
-    allocate(length_array_vel(timesteps+1))
+    allocate(partavg(timesteps+1))
     
 
     x_array = linspace(-5.0,5.0,1000)
@@ -67,7 +67,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     do c_v2 = 1, 1000
 
         vel = velocity_pointML(x_array(c_v1),y_array(c_v2),t0,phase1,phase2,time1,time2,amplitudes,dispersions,g)
-        if (vel(1) < 0.0001 .AND. vel(2) < 0.0001) then
+        if (vel(1) < 10e-15 .AND. vel(2) < 10e-15) then
             write(4,*) x_array(c_v1), y_array(c_v2)
             counter_i = counter_i + 1
         end if
@@ -89,8 +89,8 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     do c_v2 = 1, 1000
 
         vel = velocity_pointML(x_array(c_v1),y_array(c_v2),t,phase1,phase2,time1,time2,amplitudes,dispersions,g)
-        if (vel(1) < 0.0001 .AND. vel(2) < 0.0001) then
-            write(4,*) x_array(cv_1), y_array(cv_2)
+        if (vel(1) < 10e-15 .AND. vel(2) < 10e-15) then
+            write(4,*) x_array(c_v1), y_array(c_v2)
             counter_i = counter_i + 1
         end if
     end do
