@@ -99,7 +99,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
         if ((abs(vel(1)) < threshold) .AND. (abs(vel(2)) < threshold)) then
             write(4,*) x_array(c_v1), y_array(c_v2)
             counter_i = counter_i + 1
-            print*, abs(vel(1)), abs(vel(2)), 'yes'
+            
         end if
     end do
     end do

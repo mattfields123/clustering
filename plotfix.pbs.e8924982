@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/var/tmp/pbs.8924982.pbs/plotfixed.py", line 20, in <module>
+    fixedpoint.reshape(tsteps+1,1000*1000)
+ValueError: cannot reshape array of size 5398 into shape (51,1000000)

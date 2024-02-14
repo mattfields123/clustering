@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/tmp/pbs.8925010.pbs/plotfixed.py", line 58, in <module>
+    anim.save('anim.mp4', writer=writervideo)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/site-packages/matplotlib/animation.py", line 1105, in save
+    anim._draw_next_frame(d, blit=False)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/site-packages/matplotlib/animation.py", line 1140, in _draw_next_frame
+    self._draw_frame(framedata)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/site-packages/matplotlib/animation.py", line 1768, in _draw_frame
+    self._drawn_artists = self._func(framedata, *self._args)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/pbs.8925010.pbs/plotfixed.py", line 47, in update_plot
+    plt.scatter(400*fixedpoint[ii,lengthvelocity[ii]:lengthvelocity[ii+1]])
+                    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: slice indices must be integers or None or have an __index__ method
