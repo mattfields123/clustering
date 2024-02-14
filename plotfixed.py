@@ -29,6 +29,9 @@ party.reshape(tsteps+1,N_part**2)
 
 partx = np.fmod(partx+1000,10)-5
 party = np.fmod(party+1000,10)-5
+fixedpoint = np.fmod(fixedpoint+1000,10)-5
+
+
 
 
 fig = plt.figure(figsize=(12, 12))
@@ -44,7 +47,7 @@ def update_plot(ii):
     plt.xlabel('X (km)')
     plt.ylabel('Y (km)')
     plt.scatter(400*partx[ii,:],400*party[ii,:],c='black',s=0.1)
-    plt.scatter(400*fixedpoint[int(lengthvelocity[ii]):int(lengthvelocity[ii+1]),0],400*fixedpoint[int(lengthvelocity[ii]):int(lengthvelocity[ii+1]),1])
+    plt.scatter(400*fixedpoint[int(lengthvelocity[ii]):int(lengthvelocity[ii]+lengthvelocity[ii+1]),0],400*fixedpoint[int(lengthvelocity[ii]):int(lengthvelocity[ii] + lengthvelocity[ii+1]),1])
     plt.xlim(-2000, 2000)
     plt.ylim(-2000, 2000)
 
