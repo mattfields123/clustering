@@ -1,6 +1,6 @@
 program velocitytest
 use constants
-use parameterslarge
+use parameters
 use admin
 use rossby_wave
 use velocity
@@ -28,8 +28,8 @@ real(dp), allocatable :: t_array(:)
 real(dp), allocatable :: x_array(:), y_array(:)
 real(dp) :: vel(2), t, x, y, time1(65,65), time2(65,65), phase1(65,65), phase2(65,65), dispersions(65,65), amplitudes(65,65)
 integer :: t_c, x_c, y_c
-real(dp) :: dt = 0.25,g=0.
-
+real(dp) :: g=0.
+real :: dt = 0.25
 
 
 t_array = linspace(0.,(tsteps-1)*dt,tsteps)
@@ -76,5 +76,5 @@ end do
 end subroutine velocitycomp
 
 
-end program velocity test
+end program velocitytest
 

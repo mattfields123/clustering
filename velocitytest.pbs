@@ -20,6 +20,7 @@ gfortran -c random.f90
 gfortran -c rossby_wave_attributes.f90
 gfortran -c rossby_wave.f90
 gfortran -fopenmp velocity.f90 -c
+gfortran -fopenmp velocitytest.f90 -c
 gfortran -fopenmp constants.o parameters.o rossby_wave_attributes.o rossby_wave.o admin.o random.o velocity.o velocitytest.o -o velocitytest
 OMP_NUM_THREADS=32 ./velocitytest
 
