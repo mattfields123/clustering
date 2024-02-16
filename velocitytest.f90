@@ -8,7 +8,7 @@ use velocity
 integer :: tsteps, meshsize
 
 meshsize = 10
-tsteps = 10
+tsteps = 100
 
 call velocitycomp(meshsize,tsteps)
 
@@ -61,10 +61,12 @@ do y_c = 1, meshsize
 
 y = y_array(y_c)
 
-vel = velocity_pointML(x_array(x_c),y_array(y_c),t,phase1,phase2,time1,time2,amplitudes,dispersions,g)
+!vel = velocity_pointML(x_array(x_c),y_array(y_c),t,phase1,phase2,time1,time2,amplitudes,dispersions,g)
+
+vel = velocity_pointML(x,y,t,phase1,phase2,time1,time2,amplitudes,dispersions,g)
         
 
-write(1,*) vel
+write(1,*) vel(1)
 
 
 
