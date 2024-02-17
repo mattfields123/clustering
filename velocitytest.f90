@@ -68,7 +68,9 @@ y = y_array(y_c)
 
 !vel = velocity_pointML(x_array(x_c),y_array(y_c),t,phase1,phase2,time1,time2,amplitudes,dispersions,g)
 
-vel = velocity_pointML(x,y,t,phase1,phase2,time1,time2,amplitudes,dispersions,g)
+! vel = velocity_pointML(x,y,t,phase1,phase2,time1,time2,amplitudes,dispersions,g)
+vel(1) = cos(x+y-t)
+
         
 vel_array(x_c,y_c) = vel(1)
 
