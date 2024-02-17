@@ -7,7 +7,7 @@ use velocity
 
 integer :: tsteps, meshsize
 
-meshsize = 10
+meshsize = 100
 tsteps = 100
 
 call velocitycomp(meshsize,tsteps)
@@ -30,6 +30,12 @@ real(dp) :: vel(2), t, x, y, time1(65,65), time2(65,65), phase1(65,65), phase2(6
 integer :: t_c, x_c, y_c
 real(dp) :: g=0.
 real :: dt = 0.25
+real(dp), allocatable :: vel_array(:,:)
+
+allocate(t_array(tsteps))
+allocate(x_array(meshsize))
+allocate(y_array(meshsize))
+allocate(vel_array(meshsize,meshsize))
 
 
 t_array = linspace(0.,(tsteps-1)*dt,tsteps)
@@ -51,8 +57,7 @@ t = t_array(t_c)
 call MaduLawrence_loop(time1, phase1, t, vu)
 call MaduLawrence_loop(time2, phase2, t, vu)
     
-
-
+!$OMP PARALLEL DO private(vel)
 do x_c = 1, meshsize
 
 x = x_array(x_c)
@@ -65,15 +70,23 @@ y = y_array(y_c)
 
 vel = velocity_pointML(x,y,t,phase1,phase2,time1,time2,amplitudes,dispersions,g)
         
+vel_array(x_c,y_c) = vel(1)
 
-write(1,*) vel(1)
+
 
 
 
 
 end do
 end do
+!$OMP END PARALLEL DO
+
+write(1,*) vel_array
+
+
 end do
+
+
 
 end subroutine velocitycomp
 

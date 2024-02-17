@@ -1,0 +1,29 @@
+velocitytest.f90:35:9:
+
+   35 | allocate t_array(tsteps)
+      |         1
+Error: Syntax error in ALLOCATE statement at (1)
+velocitytest.f90:36:9:
+
+   36 | allocate x_array(meshsize)
+      |         1
+Error: Syntax error in ALLOCATE statement at (1)
+velocitytest.f90:37:9:
+
+   37 | allocate y_array(meshsize)
+      |         1
+Error: Syntax error in ALLOCATE statement at (1)
+velocitytest.f90:38:9:
+
+   38 | allocate vel_array(meshsize,meshsize)
+      |         1
+Error: Syntax error in ALLOCATE statement at (1)
+velocitytest.f90:82:16:
+
+   82 | !$OMP PARALLEL END DO
+      |                1
+Error: Failed to match clause at (1)
+/bin/ld: cannot find velocitytest.o: No such file or directory
+collect2: error: ld returned 1 exit status
+/var/spool/PBS/mom_priv/jobs/8944661.pbs.SC: line 25: ./velocitytest: No such file or directory
+cp: cannot stat 'velocities.dat': No such file or directory
