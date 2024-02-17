@@ -29,9 +29,15 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     integer :: counter_i
     integer :: vel_domain = 1000
 
+    real(dp), allocatable :: fixedpointlocation(:,:)
+    integer, allocatable :: fixedpointnumbers(:) 
+
     allocate(partavg(timesteps+1))
     allocate(x_array(vel_domain))
     allocate(y_array(vel_domain))
+    allocate(fixedpointlocation(timesteps,300))
+    allocate(fixedpointnumbers(tsteps))
+
 
     x_array = linspace(-5.0,5.0,vel_domain)
     y_array = linspace(-5.0,5.0,vel_domain)
