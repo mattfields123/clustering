@@ -43,8 +43,8 @@ allocate(vel_array(meshsize,meshsize))
 allocate(fixed_array(meshsize,meshsize))
 
 t_array = linspace(0.,(tsteps-1)*dt,tsteps)
-x_array = linspace(-5.,5.,meshsize)
-y_array = linspace(-5.,5.,meshsize)
+x_array = linspace(-2.,2.,meshsize)
+y_array = linspace(-2.,2.,meshsize)
 
 
 call dispersion_relation_array(dispersions)
