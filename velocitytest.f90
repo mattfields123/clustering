@@ -31,7 +31,7 @@ real(dp), allocatable :: x_array(:), y_array(:)
 real(dp) :: vel(2), t, x, y, time1(65,65), time2(65,65), phase1(65,65), phase2(65,65), dispersions(65,65), amplitudes(65,65)
 integer :: t_c, x_c, y_c
 real(dp) :: g=0.
-real :: dt = 0.25
+real :: dt = 0.01
 real(dp), allocatable :: vel_array(:,:)
 real(dp), allocatable :: fixed_array(:,:)
 real(dp) :: thresh
