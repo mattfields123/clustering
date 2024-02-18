@@ -26,4 +26,4 @@ OMP_NUM_THREADS=32 ./velocitytest
 
 
 cp velocities.dat $HOME/work/clustering/veltest
-
+cp fixed.dat $HOME/work/clustering/veltest
