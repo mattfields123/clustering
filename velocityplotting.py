@@ -8,8 +8,8 @@ with open('/Users/bunny/Documents/msci/mscigit/veltest/velocities.dat') as file_
 
 
 
-tsteps = 100
-meshsize = 100
+tsteps = 5
+meshsize = 500
 
 
 
@@ -43,13 +43,13 @@ def update_plot(ii):
     plt.cla()
     plt.xlabel('X (km)')
     plt.ylabel('Y (km)')
-    c = plt.imshow(velocities[ii].transpose())
+    c = plt.imshow(velocities[ii].transpose(),origin='lower',extent=[-2,2,-2,2])
     
 
 
 anim = FuncAnimation(fig,
                      update_plot,
-                     frames=np.arange(0, 100),
+                     frames=np.arange(0, tsteps),
                      init_func=init_func)
 
 
