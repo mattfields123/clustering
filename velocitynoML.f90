@@ -26,7 +26,7 @@ contains
         l_array = linspace(-3.2,3.2,65)
         velocity = (/0.,0./)
         
-        !$OMP PARALLEL DO private(psi1,psi2,k,l) reduction(+:velocity)
+        !$OMP PARALLEL DO private(psi1,psi2,k,l,c_k,c_l) reduction(+:velocity)
         do c_k = 1, 65
         k = k_array(c_k)
         do c_l = 1, 65

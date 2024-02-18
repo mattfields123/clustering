@@ -55,7 +55,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     call MaduLawrence_loop(time1, phase1, t, vu)
     call MaduLawrence_loop(time2, phase2, t, vu)
     
-    !$OMP PARALLEL DO private(parts,modx,mody)
+    !$OMP PARALLEL DO private(parts,modx,mody,c_n2x,c_n2y)
     do c_n2x = 1, N_part
         do c_n2y = 1, N_part
 
