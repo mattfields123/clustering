@@ -9,7 +9,7 @@ integer :: tsteps, meshsize
 real(dp) :: thresh
 meshsize = 500
 tsteps = 5
-thresh = 0.1
+thresh = 0.01
 
 
 call velocitycomp(meshsize,tsteps,thresh)
