@@ -60,8 +60,10 @@ t = t_array(t_c)
 
 call MaduLawrence_loop(time1, phase1, t, vu)
 call MaduLawrence_loop(time2, phase2, t, vu)
+
+print*,t
     
-!$OMP PARALLEL DO private(vel)
+!$OMP PARALLEL DO private(x_c,y_c,x,y,vel)
 do x_c = 1, meshsize
 
 x = x_array(x_c)
@@ -89,8 +91,14 @@ END IF
 
 
 end do
+
 end do
 !$OMP END PARALLEL DO
+
+print*,vel_array(40,30)
+print*,x_array(40)
+print*,y_array(30)
+
 
 write(1,*) vel_array
 
