@@ -59,6 +59,6 @@ anim = FuncAnimation(fig,
 
 
 
-writervideo = FFMpegWriter(fps=20)
+writervideo = FFMpegWriter(fps=5)
 anim.save('fixedxprofile.mp4', writer=writervideo)
 
