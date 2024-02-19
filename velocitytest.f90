@@ -8,7 +8,7 @@ use velocity
 integer :: tsteps, meshsize
 real(dp) :: thresh
 meshsize = 500
-tsteps = 5
+tsteps = 100
 thresh = 0.01
 
 
@@ -31,7 +31,7 @@ real(dp), allocatable :: x_array(:), y_array(:)
 real(dp) :: vel(2), t, x, y, time1(65,65), time2(65,65), phase1(65,65), phase2(65,65), dispersions(65,65), amplitudes(65,65)
 integer :: t_c, x_c, y_c
 real(dp) :: g=0.
-real :: dt = 0.01
+real :: dt = 0.25
 real(dp), allocatable :: vel_array(:,:)
 real(dp), allocatable :: fixed_array(:,:)
 real(dp) :: thresh
@@ -43,8 +43,8 @@ allocate(vel_array(meshsize,meshsize))
 allocate(fixed_array(meshsize,meshsize))
 
 t_array = linspace(0.,(tsteps-1)*dt,tsteps)
-x_array = linspace(-2.,2.,meshsize)
-y_array = linspace(-2.,2.,meshsize)
+x_array = linspace(-5.,5.,meshsize)
+y_array = linspace(-5.,5.,meshsize)
 
 
 call dispersion_relation_array(dispersions)

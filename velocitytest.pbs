@@ -25,5 +25,5 @@ gfortran -fopenmp constants.o parameters.o rossby_wave_attributes.o rossby_wave.
 OMP_NUM_THREADS=32 ./velocitytest
 
 
-cp velocities.dat $HOME/work/clustering/veltest
-cp fixed.dat $HOME/work/clustering/veltest
+cp velocities.dat $HOME/work/partfiles/veltest
+cp fixed.dat $HOME/work/partfiles/veltest

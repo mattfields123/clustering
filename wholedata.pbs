@@ -29,6 +29,6 @@ OMP_NUM_THREADS=256 ./executearray
 
 
 cp * $EPHEMERAL/testcase2
-cp partavg.dat $HOME/work/partfiles/bigcluster/gamma0_250kparticles/delta01/test
-cp partx.dat $HOME/work/partfiles/bigcluster/gamma0_250kparticles/delta01/test
-cp party.dat $HOME/work/partfiles/bigcluster/gamma0_250kparticles/delta01/test
+cp partavg.dat $HOME/work/partfiles/bigcluster/test
+cp partx.dat $HOME/work/partfiles/bigcluster/test
+cp party.dat $HOME/work/partfiles/bigcluster/test

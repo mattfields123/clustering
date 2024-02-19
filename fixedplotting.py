@@ -2,13 +2,16 @@ import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib.animation import FuncAnimation, FFMpegWriter
 
-with open('/Users/bunny/Documents/msci/mscigit/veltest/fixed.dat') as file_name:
+# with open('/Users/bunny/Documents/msci/mscigit/veltest/fixed.dat') as file_name:
+#   velocities = np.loadtxt(file_name)
+
+with open('fixed.dat') as file_name:
     velocities = np.loadtxt(file_name)
 
 
 
 
-tsteps = 5
+tsteps = 100
 meshsize = 500
 
 
@@ -57,5 +60,5 @@ anim = FuncAnimation(fig,
 
 
 writervideo = FFMpegWriter(fps=20)
-anim.save('mscigit/fixedxprofile.mp4', writer=writervideo)
+anim.save('fixedxprofile.mp4', writer=writervideo)
 
