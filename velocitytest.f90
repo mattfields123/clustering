@@ -8,7 +8,7 @@ use velocity
 integer :: tsteps, meshsize
 real(dp) :: thresh
 meshsize = 500
-tsteps = 100
+tsteps = 400
 thresh = 0.01
 
 

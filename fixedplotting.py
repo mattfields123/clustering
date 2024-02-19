@@ -11,7 +11,7 @@ with open('fixed.dat') as file_name:
 
 
 
-tsteps = 100
+tsteps = 400
 meshsize = 500
 
 
@@ -59,6 +59,6 @@ anim = FuncAnimation(fig,
 
 
 
-writervideo = FFMpegWriter(fps=5)
+writervideo = FFMpegWriter(fps=20)
 anim.save('fixedxprofile.mp4', writer=writervideo)
 
