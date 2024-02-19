@@ -46,7 +46,7 @@ def update_plot(ii):
     plt.cla()
     plt.xlabel('X (km)')
     plt.ylabel('Y (km)')
-    c = plt.imshow(velocities[ii].transpose(),origin='lower',extent=[-2,2,-2,2])
+    c = plt.imshow(velocities[ii].transpose(),origin='lower',extent=[-5,5,-5,5])
     
 
 
