@@ -13,11 +13,12 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     real(dp) :: linx(N_part), liny(N_part), partx(N_part,N_part), party(N_part,N_part)
     real(dp) :: dispersions(65,65), amplitudes(65,65)
     real(dp) :: g, vel(2)
-    real(dp) :: threshold = 0.001
+    real(dp) :: threshold = 0.01
 
     real(dp), allocatable :: partavg(:)
     real(dp), allocatable :: x_array(:)
     real(dp), allocatable :: y_array(:)
+    integer, allocatable :: fixed(:,:)
     integer :: c_v1, c_v2
     real :: dt = 0.25
     integer :: counter_x, counter_y, counter_t, timesteps
@@ -25,8 +26,6 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     integer :: beginning,end
     real :: rate
     integer :: beg1,end1
-    real(dp) :: t0 = 0.
-    integer :: counter_i
     integer :: vel_domain = 1000
 
     real(dp), allocatable :: fixedpointlocation(:,:)
@@ -35,8 +34,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     allocate(partavg(timesteps+1))
     allocate(x_array(vel_domain))
     allocate(y_array(vel_domain))
-    allocate(fixedpointlocation(timesteps,300))
-    allocate(fixedpointnumbers(tsteps))
+    allocate(fixed(vel_domain,vel_domain))
 
 
     x_array = linspace(-5.0,5.0,vel_domain)
@@ -52,7 +50,6 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     open(2,file='partx.dat')
     open(3,file='party.dat')
     open(4,file='fixedpoint.dat')
-    open(5,file='lengthvelocity.dat')
 
 
 
@@ -71,22 +68,6 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     
     call dispersion_relation_array(dispersions)
     call amplitudes_array(amplitudes)
-    
-    counter_i = 0
-
-    do c_v1 = 1, vel_domain
-    do c_v2 = 1, vel_domain
-
-        vel = velocity_pointML(x_array(c_v1),y_array(c_v2),t0,phase1,phase2,time1,time2,amplitudes,dispersions,g)
-        
-        if ((abs(vel(1)) < threshold) .AND. (abs(vel(2)) < threshold)) then
-            write(4,*) x_array(c_v1), y_array(c_v2)
-            counter_i = counter_i + 1
-        end if
-    end do
-    end do
-
-    write(5,*) counter_i
 
     do counter_t = 1,timesteps
     
@@ -95,24 +76,22 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     call MaduLawrence_loop(time1, phase1, t, vu)
     call MaduLawrence_loop(time2, phase2, t, vu)
     
-
-    counter_i = 0 
+    !$OMP PARALLEL DO private(c_v1,c_v2,vel)
     do c_v1 = 1, vel_domain
     do c_v2 = 1, vel_domain
 
         vel = velocity_pointML(x_array(c_v1),y_array(c_v2),t,phase1,phase2,time1,time2,amplitudes,dispersions,g)
         
-        if ((abs(vel(1)) < threshold) .AND. (abs(vel(2)) < threshold)) then
-            write(4,*) x_array(c_v1), y_array(c_v2)
-            counter_i = counter_i + 1
-            
-        end if
-    end do
-    end do
-    
-    write(5,*) counter_i
-    
+        IF ((abs(vel(1)) < threshold) .AND. (abs(vel(2)) < threshold)) then
+            fixed(c_v1,c_v2) = 1
+        ELSE
+            fixed(c_v1,c_v2) = 0
+        END IF
 
+
+    end do
+    end do
+    !OMP END PARALLEL DO
 
 
     !$OMP PARALLEL DO private(parts,modx,mody,c_n2x,c_n2y)
@@ -129,6 +108,8 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     partavg(counter_t+1) = sum(partx)/(N_part**2)
     write(2,*) partx
     write(3,*) party
+    write(4,*) fixed
+
     end do
    
     print*, N_part**2, ' particles: cluster big data'
