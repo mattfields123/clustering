@@ -46,10 +46,18 @@ t_array = linspace(0.,(tsteps-1)*dt,tsteps)
 x_array = linspace(-5.,5.,meshsize)
 y_array = linspace(-5.,5.,meshsize)
 
+time1 = vu*random_matrix(65,65)
+time2 = vu*random_matrix(65,65)
+
+phase1 = tau*random_matrix(65,65)
+phase2 = tau*random_matrix(65,65)
+
 
 call dispersion_relation_array(dispersions)
 call amplitudes_array(amplitudes)
     
+
+
 
 open(1,file='velocities.dat')
 open(2,file='fixed.dat')
@@ -61,7 +69,7 @@ t = t_array(t_c)
 call MaduLawrence_loop(time1, phase1, t, vu)
 call MaduLawrence_loop(time2, phase2, t, vu)
 
-print*,t
+! print*,t
     
 !$OMP PARALLEL DO private(x_c,y_c,x,y,vel)
 do x_c = 1, meshsize
