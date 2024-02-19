@@ -13,7 +13,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     real(dp) :: linx(N_part), liny(N_part), partx(N_part,N_part), party(N_part,N_part)
     real(dp) :: dispersions(65,65), amplitudes(65,65)
     real(dp) :: g, vel(2)
-    real(dp) :: threshold = 0.01
+    real(dp) :: threshold = 0.0001
 
     real(dp), allocatable :: partavg(:)
     real(dp), allocatable :: x_array(:)
@@ -27,14 +27,17 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     real :: rate
     integer :: beg1,end1
     integer :: vel_domain = 1000
-
-    real(dp), allocatable :: fixedpointlocation(:,:)
+    integer :: counter_i=0
+    
+    real(dp), allocatable :: fixedpointlocation(:,:,2)
     integer, allocatable :: fixedpointnumbers(:) 
 
     allocate(partavg(timesteps+1))
     allocate(x_array(vel_domain))
     allocate(y_array(vel_domain))
     allocate(fixed(vel_domain,vel_domain))
+    allocate(fixedpointlocation(timesteps,10000,2))
+    allocate(fixedpointnumbers(:))
 
 
     x_array = linspace(-5.0,5.0,vel_domain)
@@ -50,7 +53,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     open(2,file='partx.dat')
     open(3,file='party.dat')
     open(4,file='fixedpoint.dat')
-
+    open(5,file='counters.dat')
 
 
     do counter_n1x = 1, N_part
@@ -76,7 +79,9 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     call MaduLawrence_loop(time1, phase1, t, vu)
     call MaduLawrence_loop(time2, phase2, t, vu)
     
-    !$OMP PARALLEL DO private(c_v1,c_v2,vel)
+    counter_i = 0
+
+    !$OMP PARALLEL DO private(c_v1,c_v2,vel) reduction(+:counter_i)
     do c_v1 = 1, vel_domain
     do c_v2 = 1, vel_domain
 
@@ -84,6 +89,9 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
         
         IF ((abs(vel(1)) < threshold) .AND. (abs(vel(2)) < threshold)) then
             fixed(c_v1,c_v2) = 1
+            counter_i = counter_i + 1
+            fixedpointlocation(counter_t,counter_i,1) = x_array(c_v1)
+            fixedpointlocation(counter_t,counter_i,2) = y_array(c_v2)
         ELSE
             fixed(c_v1,c_v2) = 0
         END IF
@@ -92,7 +100,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     end do
     end do
     !OMP END PARALLEL DO
-
+    fixedpointnumber(counter_t) = counter_i
 
     !$OMP PARALLEL DO private(parts,modx,mody,c_n2x,c_n2y)
     do c_n2x = 1, N_part
@@ -108,7 +116,8 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     partavg(counter_t+1) = sum(partx)/(N_part**2)
     write(2,*) partx
     write(3,*) party
-    write(4,*) fixed
+    write(4,*) fixedpointlocation
+    write(5,*) fixedpointnumber
 
     end do
    
