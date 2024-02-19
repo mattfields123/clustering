@@ -95,9 +95,9 @@ end do
 end do
 !$OMP END PARALLEL DO
 
-print*,vel_array(40,30)
-print*,x_array(40)
-print*,y_array(30)
+! print*,vel_array(40,30)
+! print*,x_array(40)
+! print*,y_array(30)
 
 
 write(1,*) vel_array
