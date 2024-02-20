@@ -3,7 +3,7 @@ import numpy as np
 from matplotlib.animation import FuncAnimation, FFMpegWriter
 
 N_part = 500
-tsteps = 50
+tsteps = 1000
 
 with open("partx.dat") as file_name:
     partx = np.loadtxt(file_name)
@@ -13,7 +13,7 @@ with open("party.dat") as file_name:
 
 with open("fixedpoint.dat") as file_name:
     fixedpoint = np.loadtxt(file_name)
-with open("lengthvelocity.dat") as file_name:
+with open("counters.dat") as file_name:
     lengthvelocity = np.loadtxt(file_name)
 
 print(fixedpoint.shape)
@@ -21,8 +21,6 @@ print(fixedpoint.shape)
 
 
 print(lengthvelocity)
-lenvel = np.zeros(tsteps+2)
-lenvel[1:tsteps+2] = lengthvelocity
 
 partx.reshape(tsteps+1,N_part**2)
 party.reshape(tsteps+1,N_part**2)
