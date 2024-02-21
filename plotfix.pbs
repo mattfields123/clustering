@@ -10,7 +10,7 @@ cp $HOME/work/clustering/plotfixed.py $TMPDIR
 cp $HOME/work/partfiles/testvelocity/test/partx.dat $TMPDIR
 cp $HOME/work/partfiles/testvelocity/test/party.dat $TMPDIR
 cp $HOME/work/partfiles/testvelocity/test/partavg.dat $TMPDIR
-cp $HOME/work/partfiles/testvelocity/test/lengthvelocity.dat $TMPDIR
+cp $HOME/work/partfiles/testvelocity/test/counters.dat $TMPDIR
 cp $HOME/work/partfiles/testvelocity/test/fixedpoint.dat $TMPDIR
 
 

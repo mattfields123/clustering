@@ -23,7 +23,7 @@ print(fixedpoint.shape)
 print(lengthvelocity)
 
 
-fixedpoint.reshape(tsteps,200,2)
+fixedpoint.reshape(tsteps,10000,2)
 partx.reshape(tsteps+1,N_part**2)
 party.reshape(tsteps+1,N_part**2)
 

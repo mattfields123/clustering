@@ -1,11 +1,11 @@
-#PBS -l select=1:ncpus=4:mem=64gb
+#PBS -l select=1:ncpus=32:mem=64gb
 #PBS -l walltime=23:55:00
 #PBS -q pqberloff
 
 module load gcc/11.2.0
 
 
-cp $HOME/work/clustering/parameterslarge.f90 $TMPDIR/parameters.f90
+cp $HOME/work/clustering/parameters.f90 $TMPDIR/parameters.f90
 cp $HOME/work/clustering/constantsbeta32.f90 $TMPDIR/constants.f90
 cp $HOME/work/clustering/rossby_wave_attributes.f90 $TMPDIR
 cp $HOME/work/clustering/rossby_wave.f90 $TMPDIR
@@ -27,12 +27,12 @@ gfortran -fopenmp particle.f90 -c
 gfortran -fopenmp passivetracers.f90 -c
 gfortran -fopenmp executearray.f90 -c
 gfortran -fopenmp constants.o parameters.o rossby_wave_attributes.o rossby_wave.o admin.o random.o velocity.o particle.o passivetracers.o executearray.o -o executearray
-OMP_NUM_THREADS=4 ./executearray
+OMP_NUM_THREADS=32 ./executearray
 
-cp partx.dat $HOME/work/partfiles/testvelocity/test
-cp party.dat $HOME/work/partfiles/testvelocity/test
-cp partavg.dat $HOME/work/partfiles/testvelocity/test
-cp fixedpoint.dat $HOME/work/partfiles/testvelocity/test
-cp counters.dat $HOME/work/partfiles/testvelocity/test
+cp partx.dat $HOME/work/partfiles/testvelocity/pavel
+cp party.dat $HOME/work/partfiles/testvelocity/pavel
+cp partavg.dat $HOME/work/partfiles/testvelocity/pavel
+cp fixedpoint.dat $HOME/work/partfiles/testvelocity/pavel
+cp counters.dat $HOME/work/partfiles/testvelocity/pavel
 
 

@@ -48,7 +48,12 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     liny = linspace(-5.0,(N_part-1.)/(0.1*N_part)-5.0,N_part)
 
         print*, 'gamma= ', gamma    
-    
+        print*, 'tsteps =', timesteps
+        print*, 'N_part = ', N_part
+        print*, 'threshold = ',threshold
+
+
+ 
     call system_clock(beginning, rate)
     open(2,file='partx.dat')
     open(3,file='party.dat')
@@ -113,9 +118,10 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     partavg(counter_t+1) = sum(partx)/(N_part**2)
     write(2,*) partx
     write(3,*) party
-    write(4,*) fixedpointlocation
     end do
 
+
+    write(5,*) fixedpointlocation
     write(5,*) fixedpointnumbers
 
     print*, N_part**2, ' particles: cluster big data'
