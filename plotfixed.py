@@ -57,7 +57,7 @@ def update_plot(ii):
     plt.xlabel('X (km)')
     plt.ylabel('Y (km)')
     plt.scatter(400*partx[ii+1,:],400*party[ii+1,:],c='black',s=0.1)
-    plt.scatter(400*fixedpoint[ii,0:int(lengthvelocity[ii]),0],400*fixedpoint[ii,0:int(lengthvelocity[ii]),1])
+    plt.scatter(400*fixedpoint[ii,0:int(lengthvelocity[ii]),0],400*fixedpoint[ii,0:int(lengthvelocity[ii]),1],c='red')
     plt.xlim(-2000, 2000)
     plt.ylim(-2000, 2000)
 

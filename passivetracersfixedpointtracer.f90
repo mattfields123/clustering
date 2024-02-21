@@ -26,7 +26,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     integer :: beginning,end
     real :: rate
     integer :: beg1,end1
-    integer :: vel_domain = 1000
+    integer :: vel_domain = 10000
     integer :: counter_i=0
     
     real(dp), allocatable :: fixedpointlocation(:,:,:)
@@ -36,7 +36,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     allocate(x_array(vel_domain))
     allocate(y_array(vel_domain))
     allocate(fixed(vel_domain,vel_domain))
-    allocate(fixedpointlocation(timesteps,1000,2))
+    allocate(fixedpointlocation(timesteps,5000,2))
     allocate(fixedpointnumbers(timesteps))
 
 
@@ -101,8 +101,9 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
 
     end do
     end do
-    !OMP END PARALLEL DO
-    fixedpointnumbers(counter_t) = counter_i
+    !$OMP END PARALLEL DO
+    
+    fixedpointnumbers(counter_t+1) = counter_i
 
     !$OMP PARALLEL DO private(parts,modx,mody,c_n2x,c_n2y)
     do c_n2x = 1, N_part
