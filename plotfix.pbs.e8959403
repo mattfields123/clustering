@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/var/tmp/pbs.8959403.pbs/plotfixed.py", line 16, in <module>
+    with open("lengthvelocity.dat") as file_name:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'lengthvelocity.dat'
+cp: cannot stat 'anim.mp4': No such file or directory

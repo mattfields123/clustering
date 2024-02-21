@@ -36,7 +36,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     allocate(x_array(vel_domain))
     allocate(y_array(vel_domain))
     allocate(fixed(vel_domain,vel_domain))
-    allocate(fixedpointlocation(timesteps,200,2))
+    allocate(fixedpointlocation(timesteps,1000,2))
     allocate(fixedpointnumbers(timesteps))
 
 
