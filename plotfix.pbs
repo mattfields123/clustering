@@ -19,6 +19,6 @@ cp $HOME/work/partfiles/testvelocity/test/fixedpoint.dat $TMPDIR
 
 python plotfixed.py
 
-cp anim.mp4 $HOME/work/clustering/fixedpoints.mp4
+cp anim.mp4 $HOME/work/clustering/fixedpoint.mp4
 
 

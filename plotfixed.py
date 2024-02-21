@@ -2,8 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.animation import FuncAnimation, FFMpegWriter
 
-N_part = 100
-tsteps = 50
+N_part = 500
+tsteps = 1000
 
 with open("partx.dat") as file_name:
     partx = np.loadtxt(file_name)
@@ -64,7 +64,7 @@ def update_plot(ii):
 
 anim = FuncAnimation(fig,
                      update_plot,
-                     frames=np.arange(0, 50),
+                     frames=np.arange(0, 100),
                      init_func=init_func)
 
 writervideo = FFMpegWriter(fps=20)
