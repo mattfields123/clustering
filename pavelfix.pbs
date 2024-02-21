@@ -1,0 +1,24 @@
+#PBS -l select=1:ncpus=4:mem=64gb
+#PBS -l walltime=23:55:00
+
+
+module load anaconda3/personal
+
+
+cp $HOME/work/clustering/plotfixed.py $TMPDIR
+
+cp $HOME/work/partfiles/testvelocity/pavel/partx.dat $TMPDIR
+cp $HOME/work/partfiles/testvelocity/pavel/party.dat $TMPDIR
+cp $HOME/work/partfiles/testvelocity/pavel/partavg.dat $TMPDIR
+cp $HOME/work/partfiles/testvelocity/pavel/counters.dat $TMPDIR
+cp $HOME/work/partfiles/testvelocity/pavel/fixedpoint.dat $TMPDIR
+
+
+
+
+
+python plotfixed.py
+
+cp anim.mp4 $HOME/work/clustering/fixedpoints.mp4
+
+

@@ -1,0 +1,16 @@
+ gamma=    1.00000000    
+ tsteps =          50
+ N_part =          100
+ threshold =    9.9999997764825821E-003
+       10000  particles: cluster big data
+ time :    888.976990    
+
+============================================
+
+        Job resource usage summary 
+
+                 Memory (GB)    NCPUs
+ Requested  :        64            32
+ Used       :         0 (peak)  27.34 (ave)
+
+============================================
