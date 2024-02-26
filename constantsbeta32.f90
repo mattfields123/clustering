@@ -5,7 +5,7 @@ module constants
     real :: pi = 4*atan(1.)
     real :: tau = 8*atan(1.)
     ! real :: g = 3.92e8
-    real :: Rd = 0.1 
+    real :: Rd = 100
     real :: beta = 32
     ! real :: f = 400
 end module constants

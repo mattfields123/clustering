@@ -29,6 +29,6 @@ OMP_NUM_THREADS=256 ./executearray
 
 
 cp * $EPHEMERAL/testcase2
-cp partavg.dat $HOME/work/partfiles/bigcluster/g1d1vinfa1
-cp partx.dat $HOME/work/partfiles/bigcluster/g1d1vinfa1
-cp party.dat $HOME/work/partfiles/bigcluster/g1d1vinfa1
+cp partavg.dat $HOME/work/partfiles/bigcluster/g1d1vinfa1/rd100
+cp partx.dat $HOME/work/partfiles/bigcluster/g1d1vinfa1/rd100
+cp party.dat $HOME/work/partfiles/bigcluster/g1d1vinfa1/rd100
