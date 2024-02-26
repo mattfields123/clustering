@@ -13,7 +13,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     real(dp) :: linx(N_part), liny(N_part), partx(N_part,N_part), party(N_part,N_part)
     real(dp) :: dispersions(65,65), amplitudes(65,65)
     real(dp) :: g, vel(2)
-    real(dp) :: threshold = 0.001
+    real(dp) :: threshold = 0.01
 
     real(dp), allocatable :: partavg(:)
     real(dp), allocatable :: x_array(:)
@@ -26,19 +26,21 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     integer :: beginning,end
     real :: rate
     integer :: beg1,end1
-    integer :: vel_domain = 10000
+    integer :: vel_domain = 1000
     integer :: counter_i=0
     
     real(dp), allocatable :: fixedpointlocation(:,:,:)
     integer, allocatable :: fixedpointnumbers(:) 
-
+    real(dp), allocatable :: uvel(:,:)
+    real(dp), allocatable :: vvel(:,:)
     allocate(partavg(timesteps+1))
     allocate(x_array(vel_domain))
     allocate(y_array(vel_domain))
     allocate(fixed(vel_domain,vel_domain))
     allocate(fixedpointlocation(timesteps,5000,2))
     allocate(fixedpointnumbers(timesteps))
-
+    allocate(uvel(vel_domain,vel_domain))
+    allocate(vvel(vel_domain,vel_domain))
 
     x_array = linspace(-5.0,5.0,vel_domain)
     y_array = linspace(-5.0,5.0,vel_domain)
@@ -59,7 +61,8 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     open(3,file='party.dat')
     open(4,file='fixedpoint.dat')
     open(5,file='counters.dat')
-
+    open(6,file='uvel.dat')
+    open(7,file='vvel.dat')
 
     do counter_n1x = 1, N_part
         do counter_n1y = 1, N_part
@@ -97,7 +100,8 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
             fixedpointlocation(counter_t,counter_i,1) = x_array(c_v1)
             fixedpointlocation(counter_t,counter_i,2) = y_array(c_v2)
         END IF
-
+        uvel = vel(1)
+        vvel = vel(2)
 
     end do
     end do
@@ -119,6 +123,11 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     partavg(counter_t+1) = sum(partx)/(N_part**2)
     write(2,*) partx
     write(3,*) party
+    write(6,*) uvel
+    write(7,*) vvel
+    
+        print*, 'timestep : ', counter_t
+        
     end do
 
 

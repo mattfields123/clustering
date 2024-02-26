@@ -34,3 +34,7 @@ cp party.dat $HOME/work/partfiles/testvelocity/testfine
 cp partavg.dat $HOME/work/partfiles/testvelocity/testfine
 cp fixedpoint.dat $HOME/work/partfiles/testvelocity/testfine
 cp counters.dat $HOME/work/partfiles/testvelocity/testfine
+cp uvel.dat $HOME/work/partfiles/testvelocity/testfine
+cp vvel.dat $HOMe/work/partfiles/testvelocity/testfine
+
+
