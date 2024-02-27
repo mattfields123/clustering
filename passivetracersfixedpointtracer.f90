@@ -102,8 +102,19 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
             fixedpointlocation(counter_t,counter_i,1) = x_array(c_v1)
             fixedpointlocation(counter_t,counter_i,2) = y_array(c_v2)
         END IF
-        uvel(c_v1,c_v2) = vel(1)
-        vvel(c_v1,c_v2) = vel(2)
+       
+        IF (abs(vel(1)) < threshold) THEN
+                uvel(c_v1,c_v2) = 1.
+        ELSE
+                uvel(c_v1,c_v2) = 0.
+
+        END IF
+        IF (abs(vel(2)) < threshold) THEN
+                vvel(c_v1,c_v2) = 1.
+        ELSE 
+                vvel(c_v1,c_v2) = 0.  
+        END IF
+        
 
     end do
     end do
