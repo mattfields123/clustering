@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.animation import FuncAnimation, FFMpegWriter
 
-N_part = 500
+N_part = 100
 tsteps = 1000
 
 with open("partx.dat") as file_name:

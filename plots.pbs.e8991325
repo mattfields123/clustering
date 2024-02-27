@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/tmp/pbs.8991325.pbs/plotparticle.py", line 14, in <module>
+    partx.reshape(tsteps+1,N_part**2)
+ValueError: cannot reshape array of size 10010000 into shape (1001,250000)
+cp: cannot stat 'anim.mp4': No such file or directory
