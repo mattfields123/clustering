@@ -5,19 +5,19 @@
 module load anaconda3/personal
 
 
-cp $HOME/work/clustering/plotfixed.py $TMPDIR
+cp $HOME/work/clustering/plotimshowandparticle.py $TMPDIR
 
 cp $HOME/work/partfiles/testvelocity/pavel/partx.dat $TMPDIR
 cp $HOME/work/partfiles/testvelocity/pavel/party.dat $TMPDIR
 cp $HOME/work/partfiles/testvelocity/pavel/partavg.dat $TMPDIR
 cp $HOME/work/partfiles/testvelocity/pavel/counters.dat $TMPDIR
 cp $HOME/work/partfiles/testvelocity/pavel/fixedpoint.dat $TMPDIR
-cp $HOME/work/partfiles/testvelocity/pavel/uvel.dat $TMPDIR
+cp $HOME/work/partfiles/testvelocity/pavel/uvel.dat $TMPDIR/fixed.dat
 
 
 
 
-python plotfixed.py
+python plotimshowandparticle.py
 
 cp anim.mp4 $HOME/work/clustering/imshowpavel.mp4
 
