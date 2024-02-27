@@ -8,8 +8,8 @@ module load anaconda3/personal
 cp $HOME/work/clustering/plotparticle.py $TMPDIR
 
 
-cp $HOME/work/partfiles/testvelocity/testfine/smalln/partx.dat
-cp $HOME/work/partfiles/testvelocity/testfine/smalln/party.dat
+cp $HOME/work/partfiles/testvelocity/testfine/smalln/partx.dat $TMPDIR
+cp $HOME/work/partfiles/testvelocity/testfine/smalln/party.dat $TMPDIR
 
 
 
