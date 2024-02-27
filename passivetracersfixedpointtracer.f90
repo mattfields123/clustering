@@ -42,8 +42,8 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     allocate(uvel(vel_domain,vel_domain))
     allocate(vvel(vel_domain,vel_domain))
 
-    x_array = linspace(-5.0,5.0,vel_domain)
-    y_array = linspace(-5.0,5.0,vel_domain)
+    x_array = linspace(-5.0,(vel_domain-1.)/(0.1*vel_domain)-5.0,vel_domain)
+    y_array = linspace(-5.0,(vel_domain-1.)/(0.1*vel_domain)-5.0,vel_domain)
     t_array = linspace(0.,(timesteps-1)*dt,timesteps)
  
     linx = linspace(-5.0,(N_part-1.)/(0.1*N_part)-5.0,N_part)
@@ -102,8 +102,8 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
             fixedpointlocation(counter_t,counter_i,1) = x_array(c_v1)
             fixedpointlocation(counter_t,counter_i,2) = y_array(c_v2)
         END IF
- !       uvel(c_v1,c_v2) = vel(1)
-  !      vvel(c_v1,c_v2) = vel(2)
+        uvel(c_v1,c_v2) = vel(1)
+        vvel(c_v1,c_v2) = vel(2)
 
     end do
     end do
@@ -128,7 +128,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
    ! write(6,*) uvel
    ! write(7,*) vvel
     
-   !    print*, 'timestep : ', counter_t
+    print*, 'timestep : ', counter_t
         
     end do
 

@@ -3,7 +3,7 @@ import numpy as np
 from matplotlib.animation import FuncAnimation, FFMpegWriter
 
 N_part = 100
-tsteps = 1000
+tsteps = 50
 
 with open("partx.dat") as file_name:
     partx = np.loadtxt(file_name)
@@ -24,10 +24,13 @@ print(partx.shape)
 print(lengthvelocity)
 
 
+
 fixedpoint = fixedpoint.reshape(tsteps,5000,2,order='F')
 
 #partx.reshape(tsteps+1,N_part**2)
 #party.reshape(tsteps+1,N_part**2)
+
+print(fixedpoint[1,int(lengthvelocity[1]),1])
 
 
 partx = np.fmod(partx+1000,10)-5
@@ -42,7 +45,7 @@ print(party.shape)
 print(fixedpoint.shape)
 
 
-
+print(fixedpoint[1,int(lengthvelocity[1]),1])
 
 fig = plt.figure(figsize=(12, 12))
 axes = plt.subplot()
@@ -60,7 +63,7 @@ def update_plot(ii):
     plt.scatter(400*fixedpoint[ii,0:int(lengthvelocity[ii]),0],400*fixedpoint[ii,0:int(lengthvelocity[ii]),1],c='red')
     plt.xlim(-2000, 2000)
     plt.ylim(-2000, 2000)
-    print(int(lengthvelocity[ii]))
+    print(fixedpoint[ii,0:int(lengthvelocity[ii]),0])
 
 anim = FuncAnimation(fig,
                      update_plot,

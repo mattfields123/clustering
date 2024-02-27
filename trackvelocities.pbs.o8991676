@@ -1,0 +1,2006 @@
+ gamma=   0.100000001    
+ tsteps =        1000
+ N_part =          100
+ threshold =    9.9999997764825821E-003
+           1
+ timestep :            1
+           2
+ timestep :            2
+           3
+ timestep :            3
+           4
+ timestep :            4
+           5
+ timestep :            5
+           6
+ timestep :            6
+           7
+ timestep :            7
+           8
+ timestep :            8
+           9
+ timestep :            9
+          10
+ timestep :           10
+          11
+ timestep :           11
+          12
+ timestep :           12
+          13
+ timestep :           13
+          14
+ timestep :           14
+          15
+ timestep :           15
+          16
+ timestep :           16
+          17
+ timestep :           17
+          18
+ timestep :           18
+          19
+ timestep :           19
+          20
+ timestep :           20
+          21
+ timestep :           21
+          22
+ timestep :           22
+          23
+ timestep :           23
+          24
+ timestep :           24
+          25
+ timestep :           25
+          26
+ timestep :           26
+          27
+ timestep :           27
+          28
+ timestep :           28
+          29
+ timestep :           29
+          30
+ timestep :           30
+          31
+ timestep :           31
+          32
+ timestep :           32
+          33
+ timestep :           33
+          34
+ timestep :           34
+          35
+ timestep :           35
+          36
+ timestep :           36
+          37
+ timestep :           37
+          38
+ timestep :           38
+          39
+ timestep :           39
+          40
+ timestep :           40
+          41
+ timestep :           41
+          42
+ timestep :           42
+          43
+ timestep :           43
+          44
+ timestep :           44
+          45
+ timestep :           45
+          46
+ timestep :           46
+          47
+ timestep :           47
+          48
+ timestep :           48
+          49
+ timestep :           49
+          50
+ timestep :           50
+          51
+ timestep :           51
+          52
+ timestep :           52
+          53
+ timestep :           53
+          54
+ timestep :           54
+          55
+ timestep :           55
+          56
+ timestep :           56
+          57
+ timestep :           57
+          58
+ timestep :           58
+          59
+ timestep :           59
+          60
+ timestep :           60
+          61
+ timestep :           61
+          62
+ timestep :           62
+          63
+ timestep :           63
+          64
+ timestep :           64
+          65
+ timestep :           65
+          66
+ timestep :           66
+          67
+ timestep :           67
+          68
+ timestep :           68
+          69
+ timestep :           69
+          70
+ timestep :           70
+          71
+ timestep :           71
+          72
+ timestep :           72
+          73
+ timestep :           73
+          74
+ timestep :           74
+          75
+ timestep :           75
+          76
+ timestep :           76
+          77
+ timestep :           77
+          78
+ timestep :           78
+          79
+ timestep :           79
+          80
+ timestep :           80
+          81
+ timestep :           81
+          82
+ timestep :           82
+          83
+ timestep :           83
+          84
+ timestep :           84
+          85
+ timestep :           85
+          86
+ timestep :           86
+          87
+ timestep :           87
+          88
+ timestep :           88
+          89
+ timestep :           89
+          90
+ timestep :           90
+          91
+ timestep :           91
+          92
+ timestep :           92
+          93
+ timestep :           93
+          94
+ timestep :           94
+          95
+ timestep :           95
+          96
+ timestep :           96
+          97
+ timestep :           97
+          98
+ timestep :           98
+          99
+ timestep :           99
+         100
+ timestep :          100
+         101
+ timestep :          101
+         102
+ timestep :          102
+         103
+ timestep :          103
+         104
+ timestep :          104
+         105
+ timestep :          105
+         106
+ timestep :          106
+         107
+ timestep :          107
+         108
+ timestep :          108
+         109
+ timestep :          109
+         110
+ timestep :          110
+         111
+ timestep :          111
+         112
+ timestep :          112
+         113
+ timestep :          113
+         114
+ timestep :          114
+         115
+ timestep :          115
+         116
+ timestep :          116
+         117
+ timestep :          117
+         118
+ timestep :          118
+         119
+ timestep :          119
+         120
+ timestep :          120
+         121
+ timestep :          121
+         122
+ timestep :          122
+         123
+ timestep :          123
+         124
+ timestep :          124
+         125
+ timestep :          125
+         126
+ timestep :          126
+         127
+ timestep :          127
+         128
+ timestep :          128
+         129
+ timestep :          129
+         130
+ timestep :          130
+         131
+ timestep :          131
+         132
+ timestep :          132
+         133
+ timestep :          133
+         134
+ timestep :          134
+         135
+ timestep :          135
+         136
+ timestep :          136
+         137
+ timestep :          137
+         138
+ timestep :          138
+         139
+ timestep :          139
+         140
+ timestep :          140
+         141
+ timestep :          141
+         142
+ timestep :          142
+         143
+ timestep :          143
+         144
+ timestep :          144
+         145
+ timestep :          145
+         146
+ timestep :          146
+         147
+ timestep :          147
+         148
+ timestep :          148
+         149
+ timestep :          149
+         150
+ timestep :          150
+         151
+ timestep :          151
+         152
+ timestep :          152
+         153
+ timestep :          153
+         154
+ timestep :          154
+         155
+ timestep :          155
+         156
+ timestep :          156
+         157
+ timestep :          157
+         158
+ timestep :          158
+         159
+ timestep :          159
+         160
+ timestep :          160
+         161
+ timestep :          161
+         162
+ timestep :          162
+         163
+ timestep :          163
+         164
+ timestep :          164
+         165
+ timestep :          165
+         166
+ timestep :          166
+         167
+ timestep :          167
+         168
+ timestep :          168
+         169
+ timestep :          169
+         170
+ timestep :          170
+         171
+ timestep :          171
+         172
+ timestep :          172
+         173
+ timestep :          173
+         174
+ timestep :          174
+         175
+ timestep :          175
+         176
+ timestep :          176
+         177
+ timestep :          177
+         178
+ timestep :          178
+         179
+ timestep :          179
+         180
+ timestep :          180
+         181
+ timestep :          181
+         182
+ timestep :          182
+         183
+ timestep :          183
+         184
+ timestep :          184
+         185
+ timestep :          185
+         186
+ timestep :          186
+         187
+ timestep :          187
+         188
+ timestep :          188
+         189
+ timestep :          189
+         190
+ timestep :          190
+         191
+ timestep :          191
+         192
+ timestep :          192
+         193
+ timestep :          193
+         194
+ timestep :          194
+         195
+ timestep :          195
+         196
+ timestep :          196
+         197
+ timestep :          197
+         198
+ timestep :          198
+         199
+ timestep :          199
+         200
+ timestep :          200
+         201
+ timestep :          201
+         202
+ timestep :          202
+         203
+ timestep :          203
+         204
+ timestep :          204
+         205
+ timestep :          205
+         206
+ timestep :          206
+         207
+ timestep :          207
+         208
+ timestep :          208
+         209
+ timestep :          209
+         210
+ timestep :          210
+         211
+ timestep :          211
+         212
+ timestep :          212
+         213
+ timestep :          213
+         214
+ timestep :          214
+         215
+ timestep :          215
+         216
+ timestep :          216
+         217
+ timestep :          217
+         218
+ timestep :          218
+         219
+ timestep :          219
+         220
+ timestep :          220
+         221
+ timestep :          221
+         222
+ timestep :          222
+         223
+ timestep :          223
+         224
+ timestep :          224
+         225
+ timestep :          225
+         226
+ timestep :          226
+         227
+ timestep :          227
+         228
+ timestep :          228
+         229
+ timestep :          229
+         230
+ timestep :          230
+         231
+ timestep :          231
+         232
+ timestep :          232
+         233
+ timestep :          233
+         234
+ timestep :          234
+         235
+ timestep :          235
+         236
+ timestep :          236
+         237
+ timestep :          237
+         238
+ timestep :          238
+         239
+ timestep :          239
+         240
+ timestep :          240
+         241
+ timestep :          241
+         242
+ timestep :          242
+         243
+ timestep :          243
+         244
+ timestep :          244
+         245
+ timestep :          245
+         246
+ timestep :          246
+         247
+ timestep :          247
+         248
+ timestep :          248
+         249
+ timestep :          249
+         250
+ timestep :          250
+         251
+ timestep :          251
+         252
+ timestep :          252
+         253
+ timestep :          253
+         254
+ timestep :          254
+         255
+ timestep :          255
+         256
+ timestep :          256
+         257
+ timestep :          257
+         258
+ timestep :          258
+         259
+ timestep :          259
+         260
+ timestep :          260
+         261
+ timestep :          261
+         262
+ timestep :          262
+         263
+ timestep :          263
+         264
+ timestep :          264
+         265
+ timestep :          265
+         266
+ timestep :          266
+         267
+ timestep :          267
+         268
+ timestep :          268
+         269
+ timestep :          269
+         270
+ timestep :          270
+         271
+ timestep :          271
+         272
+ timestep :          272
+         273
+ timestep :          273
+         274
+ timestep :          274
+         275
+ timestep :          275
+         276
+ timestep :          276
+         277
+ timestep :          277
+         278
+ timestep :          278
+         279
+ timestep :          279
+         280
+ timestep :          280
+         281
+ timestep :          281
+         282
+ timestep :          282
+         283
+ timestep :          283
+         284
+ timestep :          284
+         285
+ timestep :          285
+         286
+ timestep :          286
+         287
+ timestep :          287
+         288
+ timestep :          288
+         289
+ timestep :          289
+         290
+ timestep :          290
+         291
+ timestep :          291
+         292
+ timestep :          292
+         293
+ timestep :          293
+         294
+ timestep :          294
+         295
+ timestep :          295
+         296
+ timestep :          296
+         297
+ timestep :          297
+         298
+ timestep :          298
+         299
+ timestep :          299
+         300
+ timestep :          300
+         301
+ timestep :          301
+         302
+ timestep :          302
+         303
+ timestep :          303
+         304
+ timestep :          304
+         305
+ timestep :          305
+         306
+ timestep :          306
+         307
+ timestep :          307
+         308
+ timestep :          308
+         309
+ timestep :          309
+         310
+ timestep :          310
+         311
+ timestep :          311
+         312
+ timestep :          312
+         313
+ timestep :          313
+         314
+ timestep :          314
+         315
+ timestep :          315
+         316
+ timestep :          316
+         317
+ timestep :          317
+         318
+ timestep :          318
+         319
+ timestep :          319
+         320
+ timestep :          320
+         321
+ timestep :          321
+         322
+ timestep :          322
+         323
+ timestep :          323
+         324
+ timestep :          324
+         325
+ timestep :          325
+         326
+ timestep :          326
+         327
+ timestep :          327
+         328
+ timestep :          328
+         329
+ timestep :          329
+         330
+ timestep :          330
+         331
+ timestep :          331
+         332
+ timestep :          332
+         333
+ timestep :          333
+         334
+ timestep :          334
+         335
+ timestep :          335
+         336
+ timestep :          336
+         337
+ timestep :          337
+         338
+ timestep :          338
+         339
+ timestep :          339
+         340
+ timestep :          340
+         341
+ timestep :          341
+         342
+ timestep :          342
+         343
+ timestep :          343
+         344
+ timestep :          344
+         345
+ timestep :          345
+         346
+ timestep :          346
+         347
+ timestep :          347
+         348
+ timestep :          348
+         349
+ timestep :          349
+         350
+ timestep :          350
+         351
+ timestep :          351
+         352
+ timestep :          352
+         353
+ timestep :          353
+         354
+ timestep :          354
+         355
+ timestep :          355
+         356
+ timestep :          356
+         357
+ timestep :          357
+         358
+ timestep :          358
+         359
+ timestep :          359
+         360
+ timestep :          360
+         361
+ timestep :          361
+         362
+ timestep :          362
+         363
+ timestep :          363
+         364
+ timestep :          364
+         365
+ timestep :          365
+         366
+ timestep :          366
+         367
+ timestep :          367
+         368
+ timestep :          368
+         369
+ timestep :          369
+         370
+ timestep :          370
+         371
+ timestep :          371
+         372
+ timestep :          372
+         373
+ timestep :          373
+         374
+ timestep :          374
+         375
+ timestep :          375
+         376
+ timestep :          376
+         377
+ timestep :          377
+         378
+ timestep :          378
+         379
+ timestep :          379
+         380
+ timestep :          380
+         381
+ timestep :          381
+         382
+ timestep :          382
+         383
+ timestep :          383
+         384
+ timestep :          384
+         385
+ timestep :          385
+         386
+ timestep :          386
+         387
+ timestep :          387
+         388
+ timestep :          388
+         389
+ timestep :          389
+         390
+ timestep :          390
+         391
+ timestep :          391
+         392
+ timestep :          392
+         393
+ timestep :          393
+         394
+ timestep :          394
+         395
+ timestep :          395
+         396
+ timestep :          396
+         397
+ timestep :          397
+         398
+ timestep :          398
+         399
+ timestep :          399
+         400
+ timestep :          400
+         401
+ timestep :          401
+         402
+ timestep :          402
+         403
+ timestep :          403
+         404
+ timestep :          404
+         405
+ timestep :          405
+         406
+ timestep :          406
+         407
+ timestep :          407
+         408
+ timestep :          408
+         409
+ timestep :          409
+         410
+ timestep :          410
+         411
+ timestep :          411
+         412
+ timestep :          412
+         413
+ timestep :          413
+         414
+ timestep :          414
+         415
+ timestep :          415
+         416
+ timestep :          416
+         417
+ timestep :          417
+         418
+ timestep :          418
+         419
+ timestep :          419
+         420
+ timestep :          420
+         421
+ timestep :          421
+         422
+ timestep :          422
+         423
+ timestep :          423
+         424
+ timestep :          424
+         425
+ timestep :          425
+         426
+ timestep :          426
+         427
+ timestep :          427
+         428
+ timestep :          428
+         429
+ timestep :          429
+         430
+ timestep :          430
+         431
+ timestep :          431
+         432
+ timestep :          432
+         433
+ timestep :          433
+         434
+ timestep :          434
+         435
+ timestep :          435
+         436
+ timestep :          436
+         437
+ timestep :          437
+         438
+ timestep :          438
+         439
+ timestep :          439
+         440
+ timestep :          440
+         441
+ timestep :          441
+         442
+ timestep :          442
+         443
+ timestep :          443
+         444
+ timestep :          444
+         445
+ timestep :          445
+         446
+ timestep :          446
+         447
+ timestep :          447
+         448
+ timestep :          448
+         449
+ timestep :          449
+         450
+ timestep :          450
+         451
+ timestep :          451
+         452
+ timestep :          452
+         453
+ timestep :          453
+         454
+ timestep :          454
+         455
+ timestep :          455
+         456
+ timestep :          456
+         457
+ timestep :          457
+         458
+ timestep :          458
+         459
+ timestep :          459
+         460
+ timestep :          460
+         461
+ timestep :          461
+         462
+ timestep :          462
+         463
+ timestep :          463
+         464
+ timestep :          464
+         465
+ timestep :          465
+         466
+ timestep :          466
+         467
+ timestep :          467
+         468
+ timestep :          468
+         469
+ timestep :          469
+         470
+ timestep :          470
+         471
+ timestep :          471
+         472
+ timestep :          472
+         473
+ timestep :          473
+         474
+ timestep :          474
+         475
+ timestep :          475
+         476
+ timestep :          476
+         477
+ timestep :          477
+         478
+ timestep :          478
+         479
+ timestep :          479
+         480
+ timestep :          480
+         481
+ timestep :          481
+         482
+ timestep :          482
+         483
+ timestep :          483
+         484
+ timestep :          484
+         485
+ timestep :          485
+         486
+ timestep :          486
+         487
+ timestep :          487
+         488
+ timestep :          488
+         489
+ timestep :          489
+         490
+ timestep :          490
+         491
+ timestep :          491
+         492
+ timestep :          492
+         493
+ timestep :          493
+         494
+ timestep :          494
+         495
+ timestep :          495
+         496
+ timestep :          496
+         497
+ timestep :          497
+         498
+ timestep :          498
+         499
+ timestep :          499
+         500
+ timestep :          500
+         501
+ timestep :          501
+         502
+ timestep :          502
+         503
+ timestep :          503
+         504
+ timestep :          504
+         505
+ timestep :          505
+         506
+ timestep :          506
+         507
+ timestep :          507
+         508
+ timestep :          508
+         509
+ timestep :          509
+         510
+ timestep :          510
+         511
+ timestep :          511
+         512
+ timestep :          512
+         513
+ timestep :          513
+         514
+ timestep :          514
+         515
+ timestep :          515
+         516
+ timestep :          516
+         517
+ timestep :          517
+         518
+ timestep :          518
+         519
+ timestep :          519
+         520
+ timestep :          520
+         521
+ timestep :          521
+         522
+ timestep :          522
+         523
+ timestep :          523
+         524
+ timestep :          524
+         525
+ timestep :          525
+         526
+ timestep :          526
+         527
+ timestep :          527
+         528
+ timestep :          528
+         529
+ timestep :          529
+         530
+ timestep :          530
+         531
+ timestep :          531
+         532
+ timestep :          532
+         533
+ timestep :          533
+         534
+ timestep :          534
+         535
+ timestep :          535
+         536
+ timestep :          536
+         537
+ timestep :          537
+         538
+ timestep :          538
+         539
+ timestep :          539
+         540
+ timestep :          540
+         541
+ timestep :          541
+         542
+ timestep :          542
+         543
+ timestep :          543
+         544
+ timestep :          544
+         545
+ timestep :          545
+         546
+ timestep :          546
+         547
+ timestep :          547
+         548
+ timestep :          548
+         549
+ timestep :          549
+         550
+ timestep :          550
+         551
+ timestep :          551
+         552
+ timestep :          552
+         553
+ timestep :          553
+         554
+ timestep :          554
+         555
+ timestep :          555
+         556
+ timestep :          556
+         557
+ timestep :          557
+         558
+ timestep :          558
+         559
+ timestep :          559
+         560
+ timestep :          560
+         561
+ timestep :          561
+         562
+ timestep :          562
+         563
+ timestep :          563
+         564
+ timestep :          564
+         565
+ timestep :          565
+         566
+ timestep :          566
+         567
+ timestep :          567
+         568
+ timestep :          568
+         569
+ timestep :          569
+         570
+ timestep :          570
+         571
+ timestep :          571
+         572
+ timestep :          572
+         573
+ timestep :          573
+         574
+ timestep :          574
+         575
+ timestep :          575
+         576
+ timestep :          576
+         577
+ timestep :          577
+         578
+ timestep :          578
+         579
+ timestep :          579
+         580
+ timestep :          580
+         581
+ timestep :          581
+         582
+ timestep :          582
+         583
+ timestep :          583
+         584
+ timestep :          584
+         585
+ timestep :          585
+         586
+ timestep :          586
+         587
+ timestep :          587
+         588
+ timestep :          588
+         589
+ timestep :          589
+         590
+ timestep :          590
+         591
+ timestep :          591
+         592
+ timestep :          592
+         593
+ timestep :          593
+         594
+ timestep :          594
+         595
+ timestep :          595
+         596
+ timestep :          596
+         597
+ timestep :          597
+         598
+ timestep :          598
+         599
+ timestep :          599
+         600
+ timestep :          600
+         601
+ timestep :          601
+         602
+ timestep :          602
+         603
+ timestep :          603
+         604
+ timestep :          604
+         605
+ timestep :          605
+         606
+ timestep :          606
+         607
+ timestep :          607
+         608
+ timestep :          608
+         609
+ timestep :          609
+         610
+ timestep :          610
+         611
+ timestep :          611
+         612
+ timestep :          612
+         613
+ timestep :          613
+         614
+ timestep :          614
+         615
+ timestep :          615
+         616
+ timestep :          616
+         617
+ timestep :          617
+         618
+ timestep :          618
+         619
+ timestep :          619
+         620
+ timestep :          620
+         621
+ timestep :          621
+         622
+ timestep :          622
+         623
+ timestep :          623
+         624
+ timestep :          624
+         625
+ timestep :          625
+         626
+ timestep :          626
+         627
+ timestep :          627
+         628
+ timestep :          628
+         629
+ timestep :          629
+         630
+ timestep :          630
+         631
+ timestep :          631
+         632
+ timestep :          632
+         633
+ timestep :          633
+         634
+ timestep :          634
+         635
+ timestep :          635
+         636
+ timestep :          636
+         637
+ timestep :          637
+         638
+ timestep :          638
+         639
+ timestep :          639
+         640
+ timestep :          640
+         641
+ timestep :          641
+         642
+ timestep :          642
+         643
+ timestep :          643
+         644
+ timestep :          644
+         645
+ timestep :          645
+         646
+ timestep :          646
+         647
+ timestep :          647
+         648
+ timestep :          648
+         649
+ timestep :          649
+         650
+ timestep :          650
+         651
+ timestep :          651
+         652
+ timestep :          652
+         653
+ timestep :          653
+         654
+ timestep :          654
+         655
+ timestep :          655
+         656
+ timestep :          656
+         657
+ timestep :          657
+         658
+ timestep :          658
+         659
+ timestep :          659
+         660
+ timestep :          660
+         661
+ timestep :          661
+         662
+ timestep :          662
+         663
+ timestep :          663
+         664
+ timestep :          664
+         665
+ timestep :          665
+         666
+ timestep :          666
+         667
+ timestep :          667
+         668
+ timestep :          668
+         669
+ timestep :          669
+         670
+ timestep :          670
+         671
+ timestep :          671
+         672
+ timestep :          672
+         673
+ timestep :          673
+         674
+ timestep :          674
+         675
+ timestep :          675
+         676
+ timestep :          676
+         677
+ timestep :          677
+         678
+ timestep :          678
+         679
+ timestep :          679
+         680
+ timestep :          680
+         681
+ timestep :          681
+         682
+ timestep :          682
+         683
+ timestep :          683
+         684
+ timestep :          684
+         685
+ timestep :          685
+         686
+ timestep :          686
+         687
+ timestep :          687
+         688
+ timestep :          688
+         689
+ timestep :          689
+         690
+ timestep :          690
+         691
+ timestep :          691
+         692
+ timestep :          692
+         693
+ timestep :          693
+         694
+ timestep :          694
+         695
+ timestep :          695
+         696
+ timestep :          696
+         697
+ timestep :          697
+         698
+ timestep :          698
+         699
+ timestep :          699
+         700
+ timestep :          700
+         701
+ timestep :          701
+         702
+ timestep :          702
+         703
+ timestep :          703
+         704
+ timestep :          704
+         705
+ timestep :          705
+         706
+ timestep :          706
+         707
+ timestep :          707
+         708
+ timestep :          708
+         709
+ timestep :          709
+         710
+ timestep :          710
+         711
+ timestep :          711
+         712
+ timestep :          712
+         713
+ timestep :          713
+         714
+ timestep :          714
+         715
+ timestep :          715
+         716
+ timestep :          716
+         717
+ timestep :          717
+         718
+ timestep :          718
+         719
+ timestep :          719
+         720
+ timestep :          720
+         721
+ timestep :          721
+         722
+ timestep :          722
+         723
+ timestep :          723
+         724
+ timestep :          724
+         725
+ timestep :          725
+         726
+ timestep :          726
+         727
+ timestep :          727
+         728
+ timestep :          728
+         729
+ timestep :          729
+         730
+ timestep :          730
+         731
+ timestep :          731
+         732
+ timestep :          732
+         733
+ timestep :          733
+         734
+ timestep :          734
+         735
+ timestep :          735
+         736
+ timestep :          736
+         737
+ timestep :          737
+         738
+ timestep :          738
+         739
+ timestep :          739
+         740
+ timestep :          740
+         741
+ timestep :          741
+         742
+ timestep :          742
+         743
+ timestep :          743
+         744
+ timestep :          744
+         745
+ timestep :          745
+         746
+ timestep :          746
+         747
+ timestep :          747
+         748
+ timestep :          748
+         749
+ timestep :          749
+         750
+ timestep :          750
+         751
+ timestep :          751
+         752
+ timestep :          752
+         753
+ timestep :          753
+         754
+ timestep :          754
+         755
+ timestep :          755
+         756
+ timestep :          756
+         757
+ timestep :          757
+         758
+ timestep :          758
+         759
+ timestep :          759
+         760
+ timestep :          760
+         761
+ timestep :          761
+         762
+ timestep :          762
+         763
+ timestep :          763
+         764
+ timestep :          764
+         765
+ timestep :          765
+         766
+ timestep :          766
+         767
+ timestep :          767
+         768
+ timestep :          768
+         769
+ timestep :          769
+         770
+ timestep :          770
+         771
+ timestep :          771
+         772
+ timestep :          772
+         773
+ timestep :          773
+         774
+ timestep :          774
+         775
+ timestep :          775
+         776
+ timestep :          776
+         777
+ timestep :          777
+         778
+ timestep :          778
+         779
+ timestep :          779
+         780
+ timestep :          780
+         781
+ timestep :          781
+         782
+ timestep :          782
+         783
+ timestep :          783
+         784
+ timestep :          784
+         785
+ timestep :          785
+         786
+ timestep :          786
+         787
+ timestep :          787
+         788
+ timestep :          788
+         789
+ timestep :          789
+         790
+ timestep :          790
+         791
+ timestep :          791
+         792
+ timestep :          792
+         793
+ timestep :          793
+         794
+ timestep :          794
+         795
+ timestep :          795
+         796
+ timestep :          796
+         797
+ timestep :          797
+         798
+ timestep :          798
+         799
+ timestep :          799
+         800
+ timestep :          800
+         801
+ timestep :          801
+         802
+ timestep :          802
+         803
+ timestep :          803
+         804
+ timestep :          804
+         805
+ timestep :          805
+         806
+ timestep :          806
+         807
+ timestep :          807
+         808
+ timestep :          808
+         809
+ timestep :          809
+         810
+ timestep :          810
+         811
+ timestep :          811
+         812
+ timestep :          812
+         813
+ timestep :          813
+         814
+ timestep :          814
+         815
+ timestep :          815
+         816
+ timestep :          816
+         817
+ timestep :          817
+         818
+ timestep :          818
+         819
+ timestep :          819
+         820
+ timestep :          820
+         821
+ timestep :          821
+         822
+ timestep :          822
+         823
+ timestep :          823
+         824
+ timestep :          824
+         825
+ timestep :          825
+         826
+ timestep :          826
+         827
+ timestep :          827
+         828
+ timestep :          828
+         829
+ timestep :          829
+         830
+ timestep :          830
+         831
+ timestep :          831
+         832
+ timestep :          832
+         833
+ timestep :          833
+         834
+ timestep :          834
+         835
+ timestep :          835
+         836
+ timestep :          836
+         837
+ timestep :          837
+         838
+ timestep :          838
+         839
+ timestep :          839
+         840
+ timestep :          840
+         841
+ timestep :          841
+         842
+ timestep :          842
+         843
+ timestep :          843
+         844
+ timestep :          844
+         845
+ timestep :          845
+         846
+ timestep :          846
+         847
+ timestep :          847
+         848
+ timestep :          848
+         849
+ timestep :          849
+         850
+ timestep :          850
+         851
+ timestep :          851
+         852
+ timestep :          852
+         853
+ timestep :          853
+         854
+ timestep :          854
+         855
+ timestep :          855
+         856
+ timestep :          856
+         857
+ timestep :          857
+         858
+ timestep :          858
+         859
+ timestep :          859
+         860
+ timestep :          860
+         861
+ timestep :          861
+         862
+ timestep :          862
+         863
+ timestep :          863
+         864
+ timestep :          864
+         865
+ timestep :          865
+         866
+ timestep :          866
+         867
+ timestep :          867
+         868
+ timestep :          868
+         869
+ timestep :          869
+         870
+ timestep :          870
+         871
+ timestep :          871
+         872
+ timestep :          872
+         873
+ timestep :          873
+         874
+ timestep :          874
+         875
+ timestep :          875
+         876
+ timestep :          876
+         877
+ timestep :          877
+         878
+ timestep :          878
+         879
+ timestep :          879
+         880
+ timestep :          880
+         881
+ timestep :          881
+         882
+ timestep :          882
+         883
+ timestep :          883
+         884
+ timestep :          884
+         885
+ timestep :          885
+         886
+ timestep :          886
+         887
+ timestep :          887
+         888
+ timestep :          888
+         889
+ timestep :          889
+         890
+ timestep :          890
+         891
+ timestep :          891
+         892
+ timestep :          892
+         893
+ timestep :          893
+         894
+ timestep :          894
+         895
+ timestep :          895
+         896
+ timestep :          896
+         897
+ timestep :          897
+         898
+ timestep :          898
+         899
+ timestep :          899
+         900
+ timestep :          900
+         901
+ timestep :          901
+         902
+ timestep :          902
+         903
+ timestep :          903
+         904
+ timestep :          904
+         905
+ timestep :          905
+         906
+ timestep :          906
+         907
+ timestep :          907
+         908
+ timestep :          908
+         909
+ timestep :          909
+         910
+ timestep :          910
+         911
+ timestep :          911
+         912
+ timestep :          912
+         913
+ timestep :          913
+         914
+ timestep :          914
+         915
+ timestep :          915
+         916
+ timestep :          916
+         917
+ timestep :          917
+         918
+ timestep :          918
+         919
+ timestep :          919
+         920
+ timestep :          920
+         921
+ timestep :          921
+         922
+ timestep :          922
+         923
+ timestep :          923
+         924
+ timestep :          924
+         925
+ timestep :          925
+         926
+ timestep :          926
+         927
+ timestep :          927
+         928
+ timestep :          928
+         929
+ timestep :          929
+         930
+ timestep :          930
+         931
+ timestep :          931
+         932
+ timestep :          932
+         933
+ timestep :          933
+         934
+ timestep :          934
+         935
+ timestep :          935
+         936
+ timestep :          936
+         937
+ timestep :          937
+         938
+ timestep :          938
+         939
+ timestep :          939
+         940
+ timestep :          940
+         941
+ timestep :          941
+         942
+ timestep :          942
+         943
+ timestep :          943
+         944
+ timestep :          944
+         945
+ timestep :          945
+         946
+ timestep :          946
+         947
+ timestep :          947
+         948
+ timestep :          948
+         949
+ timestep :          949
+         950
+ timestep :          950
+         951
+ timestep :          951
+         952
+ timestep :          952
+         953
+ timestep :          953
+         954
+ timestep :          954
+         955
+ timestep :          955
+         956
+ timestep :          956
+         957
+ timestep :          957
+         958
+ timestep :          958
+         959
+ timestep :          959
+         960
+ timestep :          960
+         961
+ timestep :          961
+         962
+ timestep :          962
+         963
+ timestep :          963
+         964
+ timestep :          964
+         965
+ timestep :          965
+         966
+ timestep :          966
+         967
+ timestep :          967
+         968
+ timestep :          968
+         969
+ timestep :          969
+         970
+ timestep :          970
+         971
+ timestep :          971
+         972
+ timestep :          972
+         973
+ timestep :          973
+         974
+ timestep :          974
+         975
+ timestep :          975
+         976
+ timestep :          976
+         977
+ timestep :          977
+         978
+ timestep :          978
+         979
+ timestep :          979
+         980
+ timestep :          980
+         981
+ timestep :          981
+         982
+ timestep :          982
+         983
+ timestep :          983
+         984
+ timestep :          984
+         985
+ timestep :          985
+         986
+ timestep :          986
+         987
+ timestep :          987
+         988
+ timestep :          988
+         989
+ timestep :          989
+         990
+ timestep :          990
+         991
+ timestep :          991
+         992
+ timestep :          992
+         993
+ timestep :          993
+         994
+ timestep :          994
+         995
+ timestep :          995
+         996
+ timestep :          996
+         997
+ timestep :          997
+         998
+ timestep :          998
+         999
+ timestep :          999
+        1000
+ timestep :         1000
+       10000  particles: cluster big data
+ time :    252.753006    
