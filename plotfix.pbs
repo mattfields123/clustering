@@ -7,11 +7,11 @@ module load anaconda3/personal
 
 cp $HOME/work/clustering/plotfixed.py $TMPDIR
 
-cp $HOME/work/partfiles/testvelocity/test/partx.dat $TMPDIR
-cp $HOME/work/partfiles/testvelocity/test/party.dat $TMPDIR
-cp $HOME/work/partfiles/testvelocity/test/partavg.dat $TMPDIR
-cp $HOME/work/partfiles/testvelocity/test/counters.dat $TMPDIR
-cp $HOME/work/partfiles/testvelocity/test/fixedpoint.dat $TMPDIR
+cp $HOME/work/partfiles/testvelocity/testfine/smalln/partx.dat $TMPDIR
+cp $HOME/work/partfiles/testvelocity/testfine/smalln/party.dat $TMPDIR
+cp $HOME/work/partfiles/testvelocity/testfine/smalln/partavg.dat $TMPDIR
+cp $HOME/work/partfiles/testvelocity/testfine/smalln/counters.dat $TMPDIR
+cp $HOME/work/partfiles/testvelocity/testfine/smalln/fixedpoint.dat $TMPDIR
 
 
 
@@ -19,6 +19,6 @@ cp $HOME/work/partfiles/testvelocity/test/fixedpoint.dat $TMPDIR
 
 python plotfixed.py
 
-cp anim.mp4 $HOME/work/clustering/fixedpoint.mp4
+cp anim.mp4 $HOME/work/clustering/fixedpointg1d1.mp4
 
 

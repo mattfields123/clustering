@@ -1,0 +1,11 @@
+cp: cannot stat '/rds/general/user/mf620/home/work/partfiles/testvelocity/test/smalln/partx.dat': No such file or directory
+cp: cannot stat '/rds/general/user/mf620/home/work/partfiles/testvelocity/test/smalln/party.dat': No such file or directory
+cp: cannot stat '/rds/general/user/mf620/home/work/partfiles/testvelocity/test/smalln/partavg.dat': No such file or directory
+cp: cannot stat '/rds/general/user/mf620/home/work/partfiles/testvelocity/test/smalln/counters.dat': No such file or directory
+cp: cannot stat '/rds/general/user/mf620/home/work/partfiles/testvelocity/test/smalln/fixedpoint.dat': No such file or directory
+Traceback (most recent call last):
+  File "/tmp/pbs.8991171.pbs/plotfixed.py", line 8, in <module>
+    with open("partx.dat") as file_name:
+         ^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'partx.dat'
+cp: cannot stat 'anim.mp4': No such file or directory

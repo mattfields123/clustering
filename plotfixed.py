@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.animation import FuncAnimation, FFMpegWriter
 
-N_part = 500
+N_part = 100
 tsteps = 1000
 
 with open("partx.dat") as file_name:
@@ -24,7 +24,7 @@ print(partx.shape)
 print(lengthvelocity)
 
 
-fixedpoint = fixedpoint.reshape(tsteps,1000,2,order='F')
+fixedpoint = fixedpoint.reshape(tsteps,5000,2,order='F')
 
 #partx.reshape(tsteps+1,N_part**2)
 #party.reshape(tsteps+1,N_part**2)

@@ -61,8 +61,8 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     open(3,file='party.dat')
     open(4,file='fixedpoint.dat')
     open(5,file='counters.dat')
-    open(6,file='uvel.dat')
-    open(7,file='vvel.dat')
+!    open(6,file='uvel.dat')
+!    open(7,file='vvel.dat')
 
     do counter_n1x = 1, N_part
         do counter_n1y = 1, N_part
@@ -102,8 +102,8 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
             fixedpointlocation(counter_t,counter_i,1) = x_array(c_v1)
             fixedpointlocation(counter_t,counter_i,2) = y_array(c_v2)
         END IF
-        uvel(c_v1,c_v2) = vel(1)
-        vvel(c_v1,c_v2) = vel(2)
+ !       uvel(c_v1,c_v2) = vel(1)
+  !      vvel(c_v1,c_v2) = vel(2)
 
     end do
     end do
@@ -125,8 +125,8 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     partavg(counter_t+1) = sum(partx)/(N_part**2)
     write(2,*) partx
     write(3,*) party
-    write(6,*) uvel
-    write(7,*) vvel
+   ! write(6,*) uvel
+   ! write(7,*) vvel
     
    !    print*, 'timestep : ', counter_t
         
