@@ -3,7 +3,7 @@ import numpy as np
 from matplotlib.animation import FuncAnimation, FFMpegWriter
 
 N_part = 100
-tsteps = 50
+tsteps = 5
 
 with open("partx.dat") as file_name:
     partx = np.loadtxt(file_name)

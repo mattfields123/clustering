@@ -11,8 +11,8 @@ with open('fixed.dat') as file_name:
 
 
 
-tsteps = 1000
-meshsize = 100
+tsteps = 5
+meshsize = 1000
 
 
 
