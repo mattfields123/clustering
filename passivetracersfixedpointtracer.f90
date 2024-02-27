@@ -33,6 +33,8 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     integer, allocatable :: fixedpointnumbers(:) 
     real(dp), allocatable :: uvel(:,:)
     real(dp), allocatable :: vvel(:,:)
+    integer, allocatable :: bothvel(:,:)
+
     allocate(partavg(timesteps+1))
     allocate(x_array(vel_domain))
     allocate(y_array(vel_domain))
@@ -41,6 +43,8 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     allocate(fixedpointnumbers(timesteps))
     allocate(uvel(vel_domain,vel_domain))
     allocate(vvel(vel_domain,vel_domain))
+    allocate(bothvel(vel_domain,vel_domain))    
+
 
     x_array = linspace(-5.0,(vel_domain-1.)/(0.1*vel_domain)-5.0,vel_domain)
     y_array = linspace(-5.0,(vel_domain-1.)/(0.1*vel_domain)-5.0,vel_domain)
@@ -63,6 +67,8 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     open(7,file='counters.dat')
     open(8,file='uvel.dat')
     open(9,file='vvel.dat')
+    open(10,file='bothvel.dat')    
+
 
     do counter_n1x = 1, N_part
         do counter_n1y = 1, N_part
@@ -90,7 +96,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     call MaduLawrence_loop(time2, phase2, t, vu)
     
     counter_i = 0
-
+    bothvel = 0
     !$OMP PARALLEL DO private(c_v1,c_v2,vel) reduction(+:counter_i)
     do c_v1 = 1, vel_domain
     do c_v2 = 1, vel_domain
@@ -101,17 +107,23 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
             counter_i = counter_i + 1 
             fixedpointlocation(counter_t,counter_i,1) = x_array(c_v1)
             fixedpointlocation(counter_t,counter_i,2) = y_array(c_v2)
+            bothvel(c_v1,c_v2) = 3
         END IF
        
         IF (abs(vel(1)) < threshold) THEN
                 uvel(c_v1,c_v2) = 1.
+                IF (bothvel(c_v1,c_v2) /= 3) THEN
+                        bothvel(c_v1,c_v2) = 1
+                END IF
         ELSE
                 uvel(c_v1,c_v2) = 0.
-
         END IF
         IF (abs(vel(2)) < threshold) THEN
                 vvel(c_v1,c_v2) = 1.
-        ELSE 
+                IF (bothvel(c_v1,c_v2) /= 3) THEN
+                        bothvel(c_v1,c_v2)
+                END IF
+        ELSE i
                 vvel(c_v1,c_v2) = 0.  
         END IF
         
@@ -138,7 +150,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     write(3,*) party
     write(8,*) uvel
     write(9,*) vvel
-    
+    write(10,*) bothvel
     print*, 'timestep : ', counter_t
         
     end do
