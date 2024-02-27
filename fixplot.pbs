@@ -6,8 +6,8 @@ module load anaconda3/personal
 
 
 cp $HOME/work/clustering/fixedplotting.py $TMPDIR
-cp $HOME/work/partfiles/veltest/fixed.dat $TMPDIR
+cp $HOME/work/partfiles/testvelocity/testfine/smalln/fixedpoint.dat $TMPDIR/fixed.dat
 
 python fixedplotting.py
 
-cp fixedxprofile.mp4 $HOME/work/clustering/fixedxprofile.mp4
+cp fixedxprofile.mp4 $HOME/work/clustering/fixedxprofiletest.mp4

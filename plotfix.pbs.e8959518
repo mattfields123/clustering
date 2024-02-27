@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/var/tmp/pbs.8959518.pbs/plotfixed.py", line 16, in <module>
-    with open("counters.dat") as file_name:
-         ^^^^^^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: 'counters.dat'
-cp: cannot stat 'anim.mp4': No such file or directory

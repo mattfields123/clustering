@@ -26,7 +26,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     integer :: beginning,end
     real :: rate
     integer :: beg1,end1
-    integer :: vel_domain = 1000
+    integer :: vel_domain = 100
     integer :: counter_i=0
     
     real(dp), allocatable :: fixedpointlocation(:,:,:)
@@ -81,7 +81,9 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     call amplitudes_array(amplitudes)
 
     do counter_t = 1,timesteps
-    
+   
+        print*, counter_t
+ 
     t = t_array(counter_t)
     
     call MaduLawrence_loop(time1, phase1, t, vu)
@@ -100,8 +102,8 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
             fixedpointlocation(counter_t,counter_i,1) = x_array(c_v1)
             fixedpointlocation(counter_t,counter_i,2) = y_array(c_v2)
         END IF
-        uvel = vel(1)
-        vvel = vel(2)
+        uvel(c_v1,c_v2) = vel(1)
+        vvel(c_v1,c_v2) = vel(2)
 
     end do
     end do
@@ -126,7 +128,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     write(6,*) uvel
     write(7,*) vvel
     
-        print*, 'timestep : ', counter_t
+   !    print*, 'timestep : ', counter_t
         
     end do
 
