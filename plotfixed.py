@@ -67,7 +67,7 @@ def update_plot(ii):
 
 anim = FuncAnimation(fig,
                      update_plot,
-                     frames=np.arange(0, 100),
+                     frames=np.arange(0, 500),
                      init_func=init_func)
 
 writervideo = FFMpegWriter(fps=20)
