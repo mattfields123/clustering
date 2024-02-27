@@ -76,8 +76,8 @@ def update_plot(ii):
     c = plt.imshow(velocities[ii].transpose(),origin='lower',zorder=1)
     plt.scatter(400*partx[ii+1,:],400*party[ii+1,:],c='black',s=0.1,zorder=2)
     plt.scatter(400*fixedpoint[ii,0:int(lengthvelocity[ii]),0],400*fixedpoint[ii,0:int(lengthvelocity[ii]),1],c='red',zorder=3)
-    plt.xlim(-2000, 2000)
-    plt.ylim(-2000, 2000)
+    # plt.xlim(-2000, 2000)
+    # plt.ylim(-2000, 2000)
     plt.show()
     print(fixedpoint[ii,0:int(lengthvelocity[ii]),0])
 
