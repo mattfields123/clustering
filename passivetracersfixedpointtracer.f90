@@ -121,9 +121,9 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
         IF (abs(vel(2)) < threshold) THEN
                 vvel(c_v1,c_v2) = 1.
                 IF (bothvel(c_v1,c_v2) /= 3) THEN
-                        bothvel(c_v1,c_v2)
+                        bothvel(c_v1,c_v2) = 2
                 END IF
-        ELSE i
+        ELSE
                 vvel(c_v1,c_v2) = 0.  
         END IF
         

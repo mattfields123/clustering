@@ -78,6 +78,7 @@ def update_plot(ii):
     plt.scatter(400*fixedpoint[ii,0:int(lengthvelocity[ii]),0],400*fixedpoint[ii,0:int(lengthvelocity[ii]),1],c='red',zorder=3)
     plt.xlim(-2000, 2000)
     plt.ylim(-2000, 2000)
+    plt.show()
     print(fixedpoint[ii,0:int(lengthvelocity[ii]),0])
 
 anim = FuncAnimation(fig,

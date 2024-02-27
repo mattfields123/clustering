@@ -36,6 +36,7 @@ cp fixedpoint.dat $HOME/work/partfiles/testvelocity/pavel
 cp counters.dat $HOME/work/partfiles/testvelocity/pavel
 cp uvel.dat $HOME/work/partfiles/testvelocity/pavel
 cp vvel.dat $HOME/work/partfiles/testvelocity/pavel
+cp bothvel.dat $HOME/work/partfiles/testvelocity/pavel
 
 
 
