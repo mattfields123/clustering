@@ -62,7 +62,7 @@ print(fixedpoint[1,int(lengthvelocity[1]),1])
 
 fig = plt.figure(figsize=(12, 12))
 axes = plt.subplot()
-c = plt.imshow(velocities[0],zorder=1)
+c = plt.imshow(velocities[0],zorder=1,origin='lower',extent=[-2000,2000,-2000,2000],cmap='twilight')
 fig.colorbar(c)
 
 def init_func():
@@ -73,7 +73,7 @@ def update_plot(ii):
     plt.cla()
     plt.xlabel('X (km)')
     plt.ylabel('Y (km)')
-    c = plt.imshow(velocities[ii].transpose(),origin='lower',zorder=1,extent=[-2000,2000,-2000,2000],cmap='Set1')
+    c = plt.imshow(velocities[ii].transpose(),origin='lower',zorder=1,extent=[-2000,2000,-2000,2000],cmap='twilight')
     a = plt.scatter(400*partx[ii+1,:],400*party[ii+1,:],c='black',s=100,zorder=2)
     b = plt.scatter(400*fixedpoint[ii,0:int(lengthvelocity[ii]),0],400*fixedpoint[ii,0:int(lengthvelocity[ii]),1],c='red',zorder=3)
     plt.xlim(-2000, 2000)
