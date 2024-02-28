@@ -12,7 +12,7 @@ cp $HOME/work/partfiles/testvelocity/pavel/party.dat $TMPDIR
 cp $HOME/work/partfiles/testvelocity/pavel/partavg.dat $TMPDIR
 cp $HOME/work/partfiles/testvelocity/pavel/counters.dat $TMPDIR
 cp $HOME/work/partfiles/testvelocity/pavel/fixedpoint.dat $TMPDIR
-cp $HOME/work/partfiles/testvelocity/pavel/uvel.dat $TMPDIR/fixed.dat
+cp $HOME/work/partfiles/testvelocity/pavel/bothvel.dat $TMPDIR/fixed.dat
 
 
 
