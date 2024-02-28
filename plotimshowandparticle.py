@@ -38,27 +38,27 @@ print(lengthvelocity)
 velocities = velocities.reshape(tsteps,meshsize,meshsize)
 print(velocities.shape)
 
-fixedpoint = fixedpoint.reshape(tsteps,5000,2,order='F')
+#fixedpoint = fixedpoint.reshape(tsteps,5000,2,order='F')
 
 #partx.reshape(tsteps+1,N_part**2)
 #party.reshape(tsteps+1,N_part**2)
 
-print(fixedpoint[1,int(lengthvelocity[1]),1])
+#print(fixedpoint[1,int(lengthvelocity[1]),1])
 
 
 partx = np.fmod(partx+1000,10)-5
 party = np.fmod(party+1000,10)-5
-fixedpoint = np.fmod(fixedpoint+1000,10)-5
+#fixedpoint = np.fmod(fixedpoint+1000,10)-5
 
 
 print(partx.shape)
 
 print(party.shape)
 
-print(fixedpoint.shape)
+#print(fixedpoint.shape)
 
 
-print(fixedpoint[1,int(lengthvelocity[1]),1])
+#print(fixedpoint[1,int(lengthvelocity[1]),1])
 
 fig = plt.figure(figsize=(12, 12))
 axes = plt.subplot()
@@ -78,7 +78,7 @@ def update_plot(ii):
     # b = plt.scatter(400*fixedpoint[ii,0:int(lengthvelocity[ii]),0],400*fixedpoint[ii,0:int(lengthvelocity[ii]),1],c='red',zorder=3)
     plt.xlim(-2000, 2000)
     plt.ylim(-2000, 2000)
-    print(fixedpoint[ii,0:int(lengthvelocity[ii]),0])
+#    print(fixedpoint[ii,0:int(lengthvelocity[ii]),0])
 
 anim = FuncAnimation(fig,
                      update_plot,
