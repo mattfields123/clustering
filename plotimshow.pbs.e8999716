@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/var/tmp/pbs.8999716.pbs/plotimshowandparticle.py", line 46, in <module>
-    print(fixedpoint[1,int(lengthvelocity[1]),1])
-          ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-IndexError: too many indices for array: array is 1-dimensional, but 3 were indexed
-cp: cannot stat 'anim.mp4': No such file or directory

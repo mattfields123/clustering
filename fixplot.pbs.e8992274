@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/var/tmp/pbs.8992274.pbs/fixedplotting.py", line 20, in <module>
-    velocities = velocities.reshape(tsteps,meshsize,meshsize)
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ValueError: cannot reshape array of size 10000000 into shape (5,1000,1000)
-cp: cannot stat 'fixedxprofile.mp4': No such file or directory

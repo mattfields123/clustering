@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/var/tmp/pbs.8999681.pbs/plotimshowandparticle.py", line 46, in <module>
-    print(fixedpoint[1,int(lengthvelocity[1]),1])
-          ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-IndexError: index 5059 is out of bounds for axis 1 with size 5000
-cp: cannot stat 'anim.mp4': No such file or directory

@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/var/tmp/pbs.8991750.pbs/plotfixed.py", line 28, in <module>
-    fixedpoint = fixedpoint.reshape(tsteps,5000,2,order='F')
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ValueError: cannot reshape array of size 500000 into shape (1000,5000,2)
-cp: cannot stat 'anim.mp4': No such file or directory

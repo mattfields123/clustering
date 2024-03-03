@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/var/tmp/pbs.8996079.pbs/plotimshowandparticle.py", line 17, in <module>
-    with open('fixed.dat') as file_name:
-         ^^^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: 'fixed.dat'
-cp: cannot stat 'anim.mp4': No such file or directory

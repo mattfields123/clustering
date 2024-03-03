@@ -1,7 +1,0 @@
-cp: cannot stat '/rds/general/user/mf620/home/work/partfiles/testvelocity/testfine/pavel/uvel.dat': No such file or directory
-Traceback (most recent call last):
-  File "/var/tmp/pbs.8992311.pbs/fixedplotting.py", line 8, in <module>
-    with open('uvel.dat') as file_name:
-         ^^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: 'uvel.dat'
-cp: cannot stat 'fixedxprofile.mp4': No such file or directory
