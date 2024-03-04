@@ -1,0 +1,35 @@
+passivetracers.f90:121:21:
+
+  121 |     write(8,*) stream
+      |                     1
+Error: Function ‘stream’ requires an argument list at (1)
+passivetracers.f90:122:18:
+
+  122 |     write(9,*) pot
+      |                  1
+Error: Function ‘pot’ requires an argument list at (1)
+passivetracers.f90:100:8:
+
+  100 |         stream(c_v1,c_v2) = streamfunction(x_array(c_v1),y_array(c_v2),t,phase1,phase2,time1,time2,amplitudes,dispersions,g)
+      |        1
+Error: Function ‘stream’ at (1) has no IMPLICIT type
+passivetracers.f90:101:8:
+
+  101 |         pot(c_v1,c_v2) = potentialfunction(x_array(c_v1),y_array(c_v2),t,phase1,phase2,time1,time2,amplitudes,dispersions,g)
+      |        1
+Error: Function ‘pot’ at (1) has no IMPLICIT type
+executearray.f90:2:5:
+
+    2 | use passivetracers
+      |     1
+Fatal Error: Cannot open module file ‘passivetracers.mod’ for reading at (1): No such file or directory
+compilation terminated.
+/bin/ld: cannot find passivetracers.o: No such file or directory
+/bin/ld: cannot find executearray.o: No such file or directory
+collect2: error: ld returned 1 exit status
+/var/spool/PBS/mom_priv/jobs/9029272.pbs.SC: line 30: ./executearray: No such file or directory
+cp: cannot stat 'partx.dat': No such file or directory
+cp: cannot stat 'party.dat': No such file or directory
+cp: cannot stat 'partavg.dat': No such file or directory
+cp: cannot stat 'stream.dat': No such file or directory
+cp: cannot stat 'pot.dat': No such file or directory

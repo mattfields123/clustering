@@ -26,13 +26,15 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     integer :: beginning,end
     real :: rate
     integer :: beg1,end1
-    integer :: vel_domain = 1000
+    integer :: vel_domain = 100
     integer :: counter_i=0
     
+
+
     real(dp), allocatable :: fixedpointlocation(:,:,:)
     integer, allocatable :: fixedpointnumbers(:) 
-    real(dp), allocatable :: uvel(:,:)
-    real(dp), allocatable :: vvel(:,:)
+    real(dp), allocatable :: stream(:,:)
+    real(dp), allocatable :: pot(:,:)
     integer, allocatable :: bothvel(:,:)
 
     allocate(partavg(timesteps+1))
@@ -41,8 +43,8 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     allocate(fixed(vel_domain,vel_domain))
     allocate(fixedpointlocation(timesteps,8000,2))
     allocate(fixedpointnumbers(timesteps))
-    allocate(uvel(vel_domain,vel_domain))
-    allocate(vvel(vel_domain,vel_domain))
+    allocate(stream(vel_domain,vel_domain))
+    allocate(pot(vel_domain,vel_domain))
     allocate(bothvel(vel_domain,vel_domain))    
 
 

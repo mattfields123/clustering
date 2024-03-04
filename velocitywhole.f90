@@ -60,7 +60,7 @@ function streamfunction(x, y, t, phase1, phase2, time1, time2, amplitudes, dispe
       
         k_array = linspace(-3.2,3.2,65)
         l_array = linspace(-3.2,3.2,65)
-        velocity = (/0.,0./)
+        velocity = 0.
         
         !$OMP PARALLEL DO private(psi1,psi2,k,l,c_k,c_l) reduction(+:velocity)
         do c_k = 1, 65
@@ -90,7 +90,7 @@ function potentialfunction(x, y, t, phase1, phase2, time1, time2, amplitudes, di
       
         k_array = linspace(-3.2,3.2,65)
         l_array = linspace(-3.2,3.2,65)
-        velocity = (/0.,0./)
+        velocity = 0.
         
         !$OMP PARALLEL DO private(psi1,psi2,k,l,c_k,c_l) reduction(+:velocity)
         do c_k = 1, 65
