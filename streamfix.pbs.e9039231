@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/var/tmp/pbs.9039231.pbs/fixedpointpot.py", line 51, in <module>
+    psi[0] = PSI[t_i,t_j,k]
+             ~~~^^^^^^^^^^^
+IndexError: too many indices for array: array is 2-dimensional, but 3 were indexed
+cp: cannot stat 'fixeddata.dat': No such file or directory
