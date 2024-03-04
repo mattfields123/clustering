@@ -11,4 +11,5 @@ cp $HOME/work/partfiles/testvelocity/pavel/data/smalltest/pot.dat $TMPDIR
 
 python fixedpointpot.py
 
-cp fixeddata.dat $HOME/work/partfiles/testvelocity/pavel/data/smalltest
+cp fpoints_x.dat $HOME/work/partfiles/testvelocity/pavel/data/smalltest
+cp fpoints_y.dat $HOME/work/partfiles/testvelocity/pavel/data/smalltest
