@@ -63,9 +63,22 @@ for i in range(vel_domain-2):
 
             A,B,C,D,E,F = coefficients
 
+            matcoef = np.zeros((2,2))
+            matcoef[0,0] = 2*A
+            matcoef[0,1] = C
+            matcoef[1,0] = C
+            matcoef[1,1] = 2*B
 
-            x_fix = (2*B*D-E*C)/(C**2-4*A*B)
-            y_fix = (2*A*E-D*C)/(C**2-4*A*B)
+            nonhom = np.zeros(2)
+            nonhom[0] = -D
+            nonhom[1] = -E
+            matcoefinv = np.linalg.inv(matcoef)
+            xy = np.matmul(matcoefinv,nonhom)
+            x_fix = xy[0]
+            y_fix = xy[1]
+
+            # x_fix = (2*B*D-E*C)/(C**2-4*A*B)
+            # y_fix = (2*A*E-D*C)/(C**2-4*A*B)
             
             if x[t_i-1] <= x_fix <= x[t_i+1]:
                 if y[t_j-1] <= y_fix <= y[t_j+1]:
