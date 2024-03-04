@@ -1,0 +1,14 @@
+#PBS -l select=1:ncpus=32:mem=64gb
+#PBS -l walltime=23:55:00
+#PBS -q pqberloff
+
+module load anaconda3/personal
+
+
+cp $HOME/work/clustering/fpfind/fixedpointpot.py $TMPDIR
+cp $HOME/work/partfiles/testvelocity/pavel/data/smalltest/stream.dat $TMPDIR
+cp $HOME/work/partfiles/testvelocity/pavel/data/smalltest/pot.dat $TMPDIR
+
+python fixedpointpot.py
+
+cp fixeddata.dat $HOME/work/partfiles/testvelocity/pavel/data/smalltest
