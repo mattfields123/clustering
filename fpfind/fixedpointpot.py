@@ -57,12 +57,12 @@ for k in range(tsteps):
             matrix = np.zeros((6,6))
             psi = np.zeros(6)
 
-            psi[0] = PSI[t_i,t_j,k]
-            psi[1] = PSI[t_i+1,t_j,k]
-            psi[2] = PSI[t_i,t_j+1,k]
-            psi[3] = PSI[t_i-1,t_j,k]
-            psi[4] = PSI[t_i,t_j-1,k]
-            psi[5] = PSI[t_i-1,t_j-1,k]
+            psi[0] = PSI[k,t_i,t_j]
+            psi[1] = PSI[k,t_i+1,t_j]
+            psi[2] = PSI[k,t_i,t_j+1]
+            psi[3] = PSI[k,t_i-1,t_j]
+            psi[4] = PSI[k,t_i,t_j-1]
+            psi[5] = PSI[k,t_i-1,t_j-1]
 
 
             matrix[0] = parabola(x[t_i],y[t_j])
@@ -74,12 +74,12 @@ for k in range(tsteps):
 
             phi = np.zeros(6)
 
-            phi[0] = PHI[t_i,t_j,k]
-            phi[1] = PHI[t_i+1,t_j,k]
-            phi[2] = PHI[t_i,t_j+1,k]
-            phi[3] = PHI[t_i-1,t_j,k]
-            phi[4] = PHI[t_i,t_j-1,k]
-            phi[5] = PHI[t_i-1,t_j-1,k]
+            phi[0] = PHI[k,t_i,t_j]
+            phi[1] = PHI[k,t_i+1,t_j]
+            phi[2] = PHI[k,t_i,t_j+1]
+            phi[3] = PHI[k,t_i-1,t_j]
+            phi[4] = PHI[k,t_i,t_j-1]
+            phi[5] = PHI[k,t_i-1,t_j-1]
 
             if np.linalg.det(matrix) != 0:
 
