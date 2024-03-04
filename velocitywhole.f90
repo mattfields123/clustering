@@ -39,7 +39,10 @@ contains
         end do
         !$OMP END PARALLEL DO
         
-        velocity = ...
+        velocity(1) = velocity(1) + (tausol*l - taupot*k*delta)*psi1 
+        velocity(1) = velocity(1) - taupot*(1-delta)*k*psi2
+        velocity(2) = velocity(2) - (tausol*k + taupot*l*delta)*psi1 
+        velocity(2) = velocity(2) - taupot*l*(1-delta)*psi2
 
         velocity = velocity/scaling
     
