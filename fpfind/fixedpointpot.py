@@ -2,6 +2,9 @@
 import numpy as np
 from matplotlib import pyplot as plt
 from time import time
+import pickle
+
+
 with open('stream.dat') as file_name:
     PSI = np.loadtxt(file_name)
 
@@ -9,11 +12,17 @@ with open('pot.dat') as file_name:
     PHI = np.loadtxt(file_name)
 
 vel_domain = 100
+tsteps = 500
+
+
+PSI = PSI.reshape((tsteps,vel_domain,vel_domain))
+PHI = PHI.reshape((tsteps,vel_domain,vel_domain))
+
 
 # uvel = np.zeros((vel_domain,vel_domain))
 # vvel = np.zeros((vel_domain,vel_domain))
 
-tsteps = 500
+
 
 x = y = np.linspace(-5,5,vel_domain)
 # t = np.linspace(0,5,tsteps)
@@ -106,7 +115,13 @@ for k in range(tsteps):
     overall_array_x.append(fpoints_x)            
     overall_array_y.append(fpoints_y)
 
+with open('fpoints_x.dat','wb') as fp:
+    pickle.dump(overall_array_x, fp)
+with open('fpoints_y.dat','wb') as fp:
+    pickle.dump(overall_array_y, fp)
+
+
 print((time()-t0))
-plt.scatter(overall_array_x[4],overall_array_y[4])
-plt.imshow(PHI[:,:,4].transpose(),extent=[-5,5,-5,5],origin='lower')
-plt.show()
+
+
+
