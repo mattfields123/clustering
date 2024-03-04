@@ -45,7 +45,7 @@ t0 = time()
 overall_array_x = []
 overall_array_y = []
 
-for k in range(10):
+for k in range(500):
     fpoints_x = []
     fpoints_y = []
     for i in range(vel_domain-2):
