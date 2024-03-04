@@ -97,8 +97,8 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     do c_v1 = 1, vel_domain
     do c_v2 = 1, vel_domain
 
-        stream(c_v1) = streamfunction(x_array(c_v1),y_array(c_v2),t,phase1,phase2,time1,time2,amplitudes,dispersions,g)
-        pot(c_v2) = potentialfunction(x_array(c_v1),y_array(c_v2),t,phase1,phase2,time1,time2,amplitudes,dispersions,g)
+        stream(c_v1,c_v2) = streamfunction(x_array(c_v1),y_array(c_v2),t,phase1,phase2,time1,time2,amplitudes,dispersions,g)
+        pot(c_v1,c_v2) = potentialfunction(x_array(c_v1),y_array(c_v2),t,phase1,phase2,time1,time2,amplitudes,dispersions,g)
     end do
     end do
     !$OMP END PARALLEL DO
