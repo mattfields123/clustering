@@ -6,8 +6,8 @@ module load anaconda3/personal
 
 
 cp $HOME/work/clustering/fpfind/plotfixed.py $TMPDIR
-cp $HOME/work/partfiles/testvelocity/pavel/data/smalltest/fpoints_x.dat $TMPDIR
-cp $HOME/work/partfiles/testvelocity/pavel/data/smalltest/fpoints_y.dat $TMPDIR
+cp $HOME/work/partfiles/testvelocity/pavel/data/smalltest/fpoints_x.pickle $TMPDIR
+cp $HOME/work/partfiles/testvelocity/pavel/data/smalltest/fpoints_y.pickle $TMPDIR
 
 cp $HOME/work/partfiles/testvelocity/pavel/data/smalltest/partx.dat $TMPDIR
 cp $HOME/work/partfiles/testvelocity/pavel/data/smalltest/party.dat $TMPDIR
