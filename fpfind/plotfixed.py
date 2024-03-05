@@ -11,13 +11,13 @@ with open("partx.dat") as file_name:
 with open("party.dat") as file_name:
     party = np.loadtxt(file_name)
 
-with open("fpoint_x.dat",'rb') as file_name:
+with open("fpoints_x.dat",'rb') as file_name:
     fpoint_x = pickle.load(file_name)
-with open("fpoint_y.dat",'rb') as file_name:
+with open("fpoints_y.dat",'rb') as file_name:
     fpoint_y = pickle.load(file_name)
 
 
-
+print('read files')
 
 
 
