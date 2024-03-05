@@ -2,7 +2,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 from time import time
-import pickle
+
 
 
 with open('stream.dat') as file_name:
@@ -44,6 +44,9 @@ t0 = time()
 
 overall_array_x = []
 overall_array_y = []
+
+
+
 
 for k in range(500):
     fpoints_x = []
@@ -115,10 +118,55 @@ for k in range(500):
     overall_array_x.append(fpoints_x)            
     overall_array_y.append(fpoints_y)
 
-with open('fpoints_x.pickle','wb') as fp:
-    pickle.dump(overall_array_x, fp)
-with open('fpoints_y.pickle','wb') as fp:
-    pickle.dump(overall_array_y, fp)
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib.animation import FuncAnimation, FFMpegWriter
+
+N_part = 100
+tsteps = 500
+
+with open("partx.dat") as file_name:
+    partx = np.loadtxt(file_name)
+
+with open("party.dat") as file_name:
+    party = np.loadtxt(file_name)
+
+partx = np.fmod(partx+1000,10)-5
+party = np.fmod(party+1000,10)-5
+
+
+print(partx.shape)
+
+print(party.shape)
+
+fig = plt.figure(figsize=(12, 12))
+axes = plt.subplot()
+
+
+def init_func():
+    plt.cla()
+
+
+def update_plot(ii):
+    plt.cla()
+    plt.xlabel('X (km)')
+    plt.ylabel('Y (km)')
+    plt.scatter(400*partx[ii+1,:],400*party[ii+1,:],c='black',s=0.1)
+    plt.scatter(400*overall_array_x[ii],400*overall_array_y[ii],c='red')
+    plt.xlim(-2000, 2000)
+    plt.ylim(-2000, 2000)
+  
+
+anim = FuncAnimation(fig,
+                     update_plot,
+                     frames=np.arange(0, 500),
+                     init_func=init_func)
+
+writervideo = FFMpegWriter(fps=20)
+anim.save('anim.mp4', writer=writervideo)
+
+
+
 
 
 print((time()-t0))
