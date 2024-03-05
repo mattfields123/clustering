@@ -8,8 +8,12 @@ module load anaconda3/personal
 cp $HOME/work/clustering/fpfind/fixedpointpot.py $TMPDIR
 cp $HOME/work/partfiles/testvelocity/pavel/data/smalltest/stream.dat $TMPDIR
 cp $HOME/work/partfiles/testvelocity/pavel/data/smalltest/pot.dat $TMPDIR
+cp $HOME/work/partfiles/testvelocity/pavel/data/smalltest/partx.dat $TMPDIR
+cp $HOME/work/partfiles/testvelocity/pavel/data/smalltest/party.dat $TMPDIR
+
+
 
 python fixedpointpot.py
 
-cp fpoints_x.pickle $HOME/work/partfiles/testvelocity/pavel/data/smalltest
-cp fpoints_y.pickle $HOME/work/partfiles/testvelocity/pavel/data/smalltest
+cp anim.mp4 $HOME/work/clustering/fpfind
+
