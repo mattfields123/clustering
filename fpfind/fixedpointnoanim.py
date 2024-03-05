@@ -11,7 +11,7 @@ with open('stream.dat') as file_name:
 with open('pot.dat') as file_name:
     PHI = np.loadtxt(file_name)
 
-vel_domain = 1000
+vel_domain = 100
 tsteps = 500
 
 
@@ -118,6 +118,7 @@ for k in range(500):
     overall_array_x.append(fpoints_x)            
     overall_array_y.append(fpoints_y)
     print(len(fpoints_x))
+    print(fpoints_x[5])
 
 
 

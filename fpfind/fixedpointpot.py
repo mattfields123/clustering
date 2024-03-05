@@ -115,8 +115,11 @@ for k in range(500):
                     if y[t_j-1] <= y_fix <= y[t_j+1]:
                         fpoints_x.append(x_fix)
                         fpoints_y.append(y_fix)
-    overall_array_x.append(fpoints_x)            
-    overall_array_y.append(fpoints_y)
+        fpoints_x_array = np.array(fpoints_x)
+        fpoints_y_array = np.array(fpoints_y)
+
+    overall_array_x.append(fpoints_x_array)     
+    overall_array_y.append(fpoints_y_array)
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -159,7 +162,7 @@ def update_plot(ii):
 
 anim = FuncAnimation(fig,
                      update_plot,
-                     frames=np.arange(0, 500),
+                     frames=np.arange(0, 50),
                      init_func=init_func)
 
 writervideo = FFMpegWriter(fps=20)

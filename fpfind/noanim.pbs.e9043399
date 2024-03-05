@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/var/tmp/pbs.9043399.pbs/fixedpointnoanim.py", line 121, in <module>
+    print(fixedpoints_x[5])
+          ^^^^^^^^^^^^^
+NameError: name 'fixedpoints_x' is not defined. Did you mean: 'fpoints_x'?
