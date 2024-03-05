@@ -11,7 +11,7 @@ with open('stream.dat') as file_name:
 with open('pot.dat') as file_name:
     PHI = np.loadtxt(file_name)
 
-vel_domain = 100
+vel_domain = 1000
 tsteps = 500
 
 
