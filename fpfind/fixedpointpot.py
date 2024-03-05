@@ -48,7 +48,7 @@ overall_array_y = []
 
 
 
-for k in range(500):
+for k in range(tsteps):
     fpoints_x = []
     fpoints_y = []
     for i in range(vel_domain-2):
@@ -155,14 +155,14 @@ def update_plot(ii):
     plt.xlabel('X (km)')
     plt.ylabel('Y (km)')
     plt.scatter(400*partx[ii+1,:],400*party[ii+1,:],c='black',s=0.1)
-    plt.scatter(400*overall_array_x[ii],400*overall_array_y[ii],c='red')
+    plt.scatter(400*overall_array_x[ii],400*overall_array_y[ii],c='red',s=0.1)
     plt.xlim(-2000, 2000)
     plt.ylim(-2000, 2000)
   
 
 anim = FuncAnimation(fig,
                      update_plot,
-                     frames=np.arange(0, 50),
+                     frames=np.arange(0, 500),
                      init_func=init_func)
 
 writervideo = FFMpegWriter(fps=20)
