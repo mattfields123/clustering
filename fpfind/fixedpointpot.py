@@ -115,9 +115,9 @@ for k in range(500):
     overall_array_x.append(fpoints_x)            
     overall_array_y.append(fpoints_y)
 
-with open('fpoints_x.dat','wb') as fp:
+with open('fpoints_x.pickle','wb') as fp:
     pickle.dump(overall_array_x, fp)
-with open('fpoints_y.dat','wb') as fp:
+with open('fpoints_y.pickle','wb') as fp:
     pickle.dump(overall_array_y, fp)
 
 
