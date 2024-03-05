@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/var/tmp/pbs.9040211.pbs/fixedpointnoanim.py", line 18, in <module>
+    PSI = PSI.reshape((tsteps,vel_domain,vel_domain))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: cannot reshape array of size 500000000 into shape (500,100,100)
