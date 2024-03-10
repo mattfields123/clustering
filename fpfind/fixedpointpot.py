@@ -45,12 +45,27 @@ t0 = time()
 overall_array_x = []
 overall_array_y = []
 
+overall_array_x_stable = []
+overall_array_y_stable = []
+overall_array_x_unstable = []
+overall_array_y_unstable = []
+overall_array_x_saddle = []
+overall_array_y_saddle = []
 
 
 
 for k in range(tsteps):
     fpoints_x = []
     fpoints_y = []
+
+    fpoints_stable_x = []
+    fpoints_stable_y = []
+    fpoints_unstable_x = []
+    fpoints_unstable_y = []
+    fpoints_saddle_x = []
+    fpoints_saddle_y = []
+
+
     for i in range(vel_domain-2):
         for j in range(vel_domain-2):
             
@@ -106,6 +121,8 @@ for k in range(tsteps):
                 matcoef[1,1] = -2*B1 + C2
 
                 
+
+                
                 matcoefinv = np.linalg.inv(matcoef)
                 xy = np.matmul(matcoefinv,nonhom)
                 x_fix = xy[0]
@@ -113,13 +130,43 @@ for k in range(tsteps):
                 
                 if x[t_i-1] <= x_fix <= x[t_i+1]:
                     if y[t_j-1] <= y_fix <= y[t_j+1]:
-                        fpoints_x.append(x_fix)
-                        fpoints_y.append(y_fix)
+                        DET = np.linalg.det(matcoef)
+                        TR = np.trace(matcoef)
+
+                        if DET > 0:
+                            if TR < 0:
+                                fpoints_stable_x.append(x_fix)
+                                fpoints_stable_y.append(y_fix)
+
+                            if TR > 0:
+                                fpoints_unstable_x.append(x_fix)
+                                fpoints_unstable_y.append(y_fix)
+                        elif DET < 0:
+                            fpoints_saddle_x.append(x_fix)
+                            fpoints_saddle_y.append(y_fix)
+        
         fpoints_x_array = np.array(fpoints_x)
         fpoints_y_array = np.array(fpoints_y)
 
-    overall_array_x.append(fpoints_x_array)     
-    overall_array_y.append(fpoints_y_array)
+        fpoints_stable_x_array = np.array(fpoints_stable_x)
+        fpoints_stable_y_array = np.array(fpoints_stable_y)
+
+        fpoints_unstable_x_array = np.array(fpoints_unstable_x)
+        fpoints_unstable_y_array = np.array(fpoints_unstable_y)
+
+        fpoints_saddle_x_array = np.array(fpoints_saddle_x)
+        fpoints_saddle_y_array = np.array(fpoints_saddle_y)
+
+
+
+    overall_array_x_unstable.append(fpoints_stable_x_array)     
+    overall_array_y_unstable.append(fpoints_stable_y_array)
+
+    overall_array_x_unstable.append(fpoints_unstable_x_array)     
+    overall_array_y_unstable.append(fpoints_unstable_y_array)
+    
+    overall_array_x_saddle.append(fpoints_saddle_x_array)     
+    overall_array_y_saddle.append(fpoints_saddle_y_array)
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -155,7 +202,11 @@ def update_plot(ii):
     plt.xlabel('X (km)')
     plt.ylabel('Y (km)')
     plt.scatter(400*partx[ii+1,:],400*party[ii+1,:],c='black',s=0.1)
-    plt.scatter(400*overall_array_x[ii],400*overall_array_y[ii],c='red',s=0.1)
+    plt.scatter(400*overall_array_x_stable[ii],400*overall_array_y_stable[ii],c='red',s=0.5)
+    plt.scatter(400*overall_array_x_unstable[ii],400*overall_array_y_unstable[ii],c='green',s=0.5)
+    plt.scatter(400*overall_array_x_saddle[ii],400*overall_array_y_saddle[ii],c='blue',s=0.5)
+
+
     plt.xlim(-2000, 2000)
     plt.ylim(-2000, 2000)
   
