@@ -58,12 +58,12 @@ for k in range(tsteps):
     fpoints_x = []
     fpoints_y = []
 
-    fpoints_stable_x = [-5]
-    fpoints_stable_y = [-5]
-    fpoints_unstable_x = [-5]
-    fpoints_unstable_y = [-5]
-    fpoints_saddle_x = [-5]
-    fpoints_saddle_y = [-5]
+    fpoints_stable_x = []
+    fpoints_stable_y = []
+    fpoints_unstable_x = []
+    fpoints_unstable_y = []
+    fpoints_saddle_x = []
+    fpoints_saddle_y = []
 
 
     for i in range(vel_domain-2):
@@ -159,14 +159,16 @@ for k in range(tsteps):
 
 
 
-    overall_array_x_unstable.append(fpoints_stable_x_array)     
-    overall_array_y_unstable.append(fpoints_stable_y_array)
+    overall_array_x_stable.append(fpoints_stable_x_array)     
+    overall_array_y_stable.append(fpoints_stable_y_array)
 
     overall_array_x_unstable.append(fpoints_unstable_x_array)     
     overall_array_y_unstable.append(fpoints_unstable_y_array)
     
     overall_array_x_saddle.append(fpoints_saddle_x_array)     
     overall_array_y_saddle.append(fpoints_saddle_y_array)
+
+
 
 import matplotlib.pyplot as plt
 import numpy as np
