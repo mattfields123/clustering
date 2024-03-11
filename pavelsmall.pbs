@@ -29,11 +29,11 @@ gfortran -fopenmp executearray.f90 -c
 gfortran -fopenmp constants.o parameters.o rossby_wave_attributes.o rossby_wave.o admin.o random.o velocity.o particle.o passivetracers.o executearray.o -o executearray
 OMP_NUM_THREADS=32 ./executearray
 
-cp partx.dat $HOME/work/partfiles/testvelocity/pavel/data/smalltest
-cp party.dat $HOME/work/partfiles/testvelocity/pavel/data/smalltest
-cp partavg.dat $HOME/work/partfiles/testvelocity/pavel/data/smalltest
-cp stream.dat $HOME/work/partfiles/testvelocity/pavel/data/smalltest
-cp pot.dat $HOME/work/partfiles/testvelocity/pavel/data/smalltest
+cp partx.dat $HOME/work/partfiles/testvelocity/pavel/data/smalltest0101
+cp party.dat $HOME/work/partfiles/testvelocity/pavel/data/smalltest0101
+cp partavg.dat $HOME/work/partfiles/testvelocity/pavel/data/smalltest0101
+cp stream.dat $HOME/work/partfiles/testvelocity/pavel/data/smalltest0101
+cp pot.dat $HOME/work/partfiles/testvelocity/pavel/data/smalltest0101
 
 
 

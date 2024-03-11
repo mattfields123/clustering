@@ -58,12 +58,12 @@ for k in range(tsteps):
     fpoints_x = []
     fpoints_y = []
 
-    fpoints_stable_x = []
-    fpoints_stable_y = []
-    fpoints_unstable_x = []
-    fpoints_unstable_y = []
-    fpoints_saddle_x = []
-    fpoints_saddle_y = []
+    fpoints_stable_x = [-5]
+    fpoints_stable_y = [-5]
+    fpoints_unstable_x = [-5]
+    fpoints_unstable_y = [-5]
+    fpoints_saddle_x = [-5]
+    fpoints_saddle_y = [-5]
 
 
     for i in range(vel_domain-2):
