@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/var/tmp/pbs.9043541.pbs/fixedpointpot.py", line 120, in <module>
-    overall_array_x[k] = np.array(fpoints_x)            
-    ~~~~~~~~~~~~~~~^^^
-IndexError: list assignment index out of range
-cp: cannot stat 'anim.mp4': No such file or directory

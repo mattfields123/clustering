@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/var/tmp/pbs.9039555.pbs/plotfixed.py", line 14, in <module>
-    with open("fpoint_x.dat",'rb') as file_name:
-         ^^^^^^^^^^^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: 'fpoint_x.dat'
-cp: cannot stat 'anim.mp4': No such file or directory

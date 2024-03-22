@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/var/tmp/pbs.9039993.pbs/fixedpointpot.py", line 128, in <module>
-    with open("partx.dat") as file_name:
-         ^^^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: 'partx.dat'
-cp: cannot stat 'anim.mp4': No such file or directory

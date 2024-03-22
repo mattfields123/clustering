@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/var/tmp/pbs.9043581.pbs/fixedpointpot.py", line 120, in <module>
-    overall_array_x[k] = np.array(fpoints_x)            
-    ~~~~~~~~~~~~~~~^^^
-IndexError: too many indices for array: array is 0-dimensional, but 1 were indexed
-cp: cannot stat 'anim.mp4': No such file or directory
