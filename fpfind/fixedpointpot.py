@@ -229,7 +229,7 @@ anim = FuncAnimation(fig,
                      init_func=init_func)
 
 writervideo = FFMpegWriter(fps=20)
-anim.save('anim0102.mp4', writer=writervideo)
+anim.save('anim.mp4', writer=writervideo)
 
 # plt.cla()
 # plt.xlabel('X (km)')
