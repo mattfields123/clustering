@@ -5,35 +5,35 @@ from time import time
 
 
 
-# with open('stream.dat') as file_name:
-#     PSI = np.loadtxt(file_name)
+with open('stream.dat') as file_name:
+    PSI = np.loadtxt(file_name)
 
-# with open('pot.dat') as file_name:
-#     PHI = np.loadtxt(file_name)
+with open('pot.dat') as file_name:
+    PHI = np.loadtxt(file_name)
 
 vel_domain = 100
-tsteps = 1
+tsteps = 500
 
-t = np.linspace(0,5,tsteps)
+# t = np.linspace(0,5,tsteps)
 x = np.linspace(-5,5,vel_domain)
 y = np.linspace(-5,5,vel_domain)
 
 
-T,X,Y = np.meshgrid(t,x,y,indexing='ij')
-print(T.shape)
+# T,X,Y = np.meshgrid(t,x,y,indexing='ij')
+# print(T.shape)
 
 
-PSI = np.cos(X) + np.sin(Y)
-PHI = np.sin(0*X+0*Y+0*T)
+#PSI = np.cos(X) + np.sin(Y)
+#PHI = np.sin(0*X+0*Y+0*T)
 
 print(PSI.shape)
 print(PHI.shape)
-# PSI = PSI.reshape((tsteps,vel_domain,vel_domain))
-# PHI = PHI.reshape((tsteps,vel_domain,vel_domain))
+PSI = PSI.reshape((tsteps,vel_domain,vel_domain))
+PHI = PHI.reshape((tsteps,vel_domain,vel_domain))
 
 
-# uvel = np.zeros((vel_domain,vel_domain))
-# vvel = np.zeros((vel_domain,vel_domain))
+uvel = np.zeros((vel_domain,vel_domain))
+vvel = np.zeros((vel_domain,vel_domain))
 
 
 # t = np.linspace(0,5,tsteps)
@@ -187,19 +187,19 @@ from matplotlib.animation import FuncAnimation, FFMpegWriter
 
 N_part = 100
 
-# with open("partx.dat") as file_name:
-#     partx = np.loadtxt(file_name)
+with open("partx.dat") as file_name:
+    partx = np.loadtxt(file_name)
 
-# with open("party.dat") as file_name:
-#     party = np.loadtxt(file_name)
+with open("party.dat") as file_name:
+    party = np.loadtxt(file_name)
 
-# partx = np.fmod(partx+1000,10)-5
-# party = np.fmod(party+1000,10)-5
+partx = np.fmod(partx+1000,10)-5
+party = np.fmod(party+1000,10)-5
 
 
-# print(partx.shape)
+print(partx.shape)
 
-# print(party.shape)
+print(party.shape)
 
 fig = plt.figure(figsize=(12, 12))
 axes = plt.subplot()
@@ -213,37 +213,37 @@ def update_plot(ii):
     plt.cla()
     plt.xlabel('X (km)')
     plt.ylabel('Y (km)')
-    # plt.scatter(400*partx[ii+1,:],400*party[ii+1,:],c='black',s=0.1)
-    plt.scatter(400*overall_array_x_stable[ii],400*overall_array_y_stable[ii],c='red',s=0.5)
-    plt.scatter(400*overall_array_x_unstable[ii],400*overall_array_y_unstable[ii],c='green',s=0.5)
-    plt.scatter(400*overall_array_x_saddle[ii],400*overall_array_y_saddle[ii],c='blue',s=0.5)
+    plt.scatter(400*partx[ii+1,:],400*party[ii+1,:],c='black',s=0.1)
+    plt.scatter(400*overall_array_y_stable[ii],400*overall_array_x_stable[ii],c='red',s=0.5)
+    plt.scatter(400*overall_array_y_unstable[ii],400*overall_array_x_unstable[ii],c='green',s=0.5)
+    plt.scatter(400*overall_array_y_saddle[ii],400*overall_array_x_saddle[ii],c='blue',s=0.5)
 
 
     plt.xlim(-2000, 2000)
     plt.ylim(-2000, 2000)
   
 
-# anim = FuncAnimation(fig,
-#                      update_plot,
-#                      frames=np.arange(0, tsteps),
-#                      init_func=init_func)
+anim = FuncAnimation(fig,
+                     update_plot,
+                     frames=np.arange(0, tsteps),
+                     init_func=init_func)
 
-# writervideo = FFMpegWriter(fps=20)
-# anim.save('test.mp4', writer=writervideo)
+writervideo = FFMpegWriter(fps=20)
+anim.save('anim0102.mp4', writer=writervideo)
 
-plt.cla()
-plt.xlabel('X (km)')
-plt.ylabel('Y (km)')
-# plt.scatter(400*partx[ii+1,:],400*party[ii+1,:],c='black',s=0.1)
-plt.scatter(400*overall_array_x_stable[0],400*overall_array_y_stable[0],c='red',s=0.5)
-plt.scatter(400*overall_array_x_unstable[0],400*overall_array_y_unstable[0],c='green',s=0.5)
-plt.scatter(400*overall_array_x_saddle[0],400*overall_array_y_saddle[0],c='blue',s=0.5)
-plt.imshow(PSI[0].transpose(),extent=[-2000,2000,-2000,2000],origin='lower')
+# plt.cla()
+# plt.xlabel('X (km)')
+# plt.ylabel('Y (km)')
+# # plt.scatter(400*partx[ii+1,:],400*party[ii+1,:],c='black',s=0.1)
+# plt.scatter(400*overall_array_x_stable[0],400*overall_array_y_stable[0],c='red',s=0.5)
+# plt.scatter(400*overall_array_x_unstable[0],400*overall_array_y_unstable[0],c='green',s=0.5)
+# plt.scatter(400*overall_array_x_saddle[0],400*overall_array_y_saddle[0],c='blue',s=0.5)
+# plt.imshow(PSI[0].transpose(),extent=[-2000,2000,-2000,2000],origin='lower')
 
-plt.xlim(-2000, 2000)
-plt.ylim(-2000, 2000)
+# plt.xlim(-2000, 2000)
+# plt.ylim(-2000, 2000)
   
-plt.show()
+# plt.show()
 
 
 
