@@ -15,5 +15,5 @@ cp $HOME/work/partfiles/testvelocity/pavel/data/smalltest0101/party.dat $TMPDIR
 
 python fixedpointpot.py
 
-cp anim.mp4 $HOME/work/clustering/fpfind/anim0101.mp4
+cp anim.mp4 $HOME/work/clustering/fpfind/anim0101all.mp4
 
