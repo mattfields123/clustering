@@ -167,7 +167,9 @@ for k in range(tsteps):
         fpoints_saddle_x_array = np.array(fpoints_saddle_x)
         fpoints_saddle_y_array = np.array(fpoints_saddle_y)
 
-
+        print('stable numer = ',len(fpoints_stable_x))
+        print('unstable numer = ',len(fpoints_unstable_x))
+        print('saddle numer = ',len(fpoints_saddle_x))
 
     overall_array_x_stable.append(fpoints_stable_x_array)     
     overall_array_y_stable.append(fpoints_stable_y_array)
