@@ -148,7 +148,6 @@ def compute_fixed(k):
                 y_fix = xy[1]
             
                 if abs(x[t_i]-x_fix) < 5/vel_domain and abs(y[t_j]-y_fix) < 5/vel_domain:
-                    if 
                         DET = np.linalg.det(matcoef)
                         TR = np.trace(matcoef)
 
