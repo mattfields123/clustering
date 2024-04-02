@@ -147,7 +147,7 @@ def compute_fixed(k):
                 x_fix = xy[0]
                 y_fix = xy[1]
             
-                if (x[t_i]-x_fix)**2 + (y[t_i]-y_fix) < 10/vel_domain:
+                if (x[t_i]-x_fix)**2 + (y[t_j]-y_fix) < 10/vel_domain:
                         DET = np.linalg.det(matcoef)
                         TR = np.trace(matcoef)
 
@@ -163,21 +163,21 @@ def compute_fixed(k):
                             fpoints_saddle_x.append(x_fix)
                             fpoints_saddle_y.append(y_fix)
         
-        fpoints_x_array = np.array(fpoints_x)
-        fpoints_y_array = np.array(fpoints_y)
+    fpoints_x_array = np.array(fpoints_x)
+    fpoints_y_array = np.array(fpoints_y)
 
-        fpoints_stable_x_array = np.array(fpoints_stable_x)
-        fpoints_stable_y_array = np.array(fpoints_stable_y)
+    fpoints_stable_x_array = np.array(fpoints_stable_x)
+    fpoints_stable_y_array = np.array(fpoints_stable_y)
 
-        fpoints_unstable_x_array = np.array(fpoints_unstable_x)
-        fpoints_unstable_y_array = np.array(fpoints_unstable_y)
+    fpoints_unstable_x_array = np.array(fpoints_unstable_x)
+    fpoints_unstable_y_array = np.array(fpoints_unstable_y)
 
-        fpoints_saddle_x_array = np.array(fpoints_saddle_x)
-        fpoints_saddle_y_array = np.array(fpoints_saddle_y)
+    fpoints_saddle_x_array = np.array(fpoints_saddle_x)
+    fpoints_saddle_y_array = np.array(fpoints_saddle_y)
 
-        print('stable numer = ',len(fpoints_stable_x))
-        print('unstable numer = ',len(fpoints_unstable_x))
-        print('saddle numer = ',len(fpoints_saddle_x))
+    print('stable numer = ',len(fpoints_stable_x))
+    print('unstable numer = ',len(fpoints_unstable_x))
+    print('saddle numer = ',len(fpoints_saddle_x))
 
     overall_array_x_stable.append(fpoints_stable_x_array)     
     overall_array_y_stable.append(fpoints_stable_y_array)
