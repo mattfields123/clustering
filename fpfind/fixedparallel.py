@@ -178,16 +178,6 @@ def compute_fixed(k):
     print('stable numer = ',len(fpoints_stable_x))
     print('unstable numer = ',len(fpoints_unstable_x))
     print('saddle numer = ',len(fpoints_saddle_x))
-
-    overall_array_x_stable.append(fpoints_stable_x_array)     
-    overall_array_y_stable.append(fpoints_stable_y_array)
-
-    overall_array_x_unstable.append(fpoints_unstable_x_array)     
-    overall_array_y_unstable.append(fpoints_unstable_y_array)
-    
-    overall_array_x_saddle.append(fpoints_saddle_x_array)     
-    overall_array_y_saddle.append(fpoints_saddle_y_array)
-
     return fpoints_stable_x_array,fpoints_stable_y_array,fpoints_unstable_x_array,fpoints_unstable_y_array,fpoints_saddle_x_array,fpoints_saddle_y_array
 
 pool = mp.Pool(30)
@@ -229,9 +219,9 @@ def update_plot(ii):
     plt.xlabel('X (km)')
     plt.ylabel('Y (km)')
     plt.scatter(400*partx[ii+1,:],400*party[ii+1,:],c='black',s=0.1)
-    plt.scatter(400*overall_array_y_stable[ii],400*overall_array_x_stable[ii],c='red',s=0.5)
-    plt.scatter(400*overall_array_y_unstable[ii],400*overall_array_x_unstable[ii],c='green',s=0.5)
-    plt.scatter(400*overall_array_y_saddle[ii],400*overall_array_x_saddle[ii],c='blue',s=0.5)
+    plt.scatter(400*overall_array_y_stable[ii],400*overall_array_x_stable[ii],c='red',s=10,alpha=0.5)
+    plt.scatter(400*overall_array_y_unstable[ii],400*overall_array_x_unstable[ii],c='green',s=10,alpha=0.5)
+    plt.scatter(400*overall_array_y_saddle[ii],400*overall_array_x_saddle[ii],c='blue',s=10,alpha=0.5)
 
 
     plt.xlim(-2000, 2000)
