@@ -3,7 +3,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 from time import time
 
-
+time1 = time()
 
 with open('stream.dat') as file_name:
     PSI = np.loadtxt(file_name)
@@ -182,6 +182,8 @@ for k in range(tsteps):
 
 
 
+print('time to compute : ',time()-time1)
+
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.animation import FuncAnimation, FFMpegWriter
@@ -231,6 +233,9 @@ anim = FuncAnimation(fig,
 
 writervideo = FFMpegWriter(fps=20)
 anim.save('anim.mp4', writer=writervideo)
+
+
+
 
 # plt.cla()
 # plt.xlabel('X (km)')
