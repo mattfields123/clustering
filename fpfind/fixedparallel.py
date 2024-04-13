@@ -184,6 +184,9 @@ pool = mp.Pool(30)
 
 overall_array_x_stable,overall_array_y_stable,overall_array_x_unstable,overall_array_y_unstable,overall_array_x_saddle,overall_array_y_saddle = zip(*pool.map(compute_fixed,range(0,tsteps)))
 
+combined_fixed_points = [overall_array_x_stable,overall_array_y_stable,overall_array_x_unstable,overall_array_y_unstable,overall_array_x_saddle,overall_array_y_saddle]
+
+
 print('time to compute: ',time()-time1)
 
 import matplotlib.pyplot as plt
@@ -205,6 +208,34 @@ party = np.fmod(party+1000,10)-5
 print(partx.shape)
 
 print(party.shape)
+
+
+
+def field_radius(tstep):
+    particles_in_vicinity = []
+    for l in range(len(combined_fixed_points[0][tstep])):
+        counter_l = 0
+        for i in range(N_part):
+            for j in range(N_part):
+                    if (partx[tstep, i] - combined_fixed_points[0][tstep][l])**2 + (party[tstep,j]-combined_fixed_points[1][tstep][l])**2 < 1:
+                        counter_l = counter_l + 1
+        particles_in_vicinity.append(counter_l)
+    return particles_in_vicinity
+
+
+fields_metric = zip(*pool.map(field_radius,range(0,tsteps)))
+
+
+print(fields_metric)
+
+
+
+
+
+
+
+
+
 
 fig = plt.figure(figsize=(12, 12))
 axes = plt.subplot()
