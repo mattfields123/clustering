@@ -88,7 +88,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
 
     do counter_t = 1,timesteps
    
-        print*, counter_t
+      !   print*, counter_t
  
     t = t_array(counter_t)
     
@@ -123,7 +123,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     write(8,*) stream
     write(9,*) pot
 
-    print*, 'timestep : ', counter_t
+    ! print*, 'timestep : ', counter_t
         
     end do
 

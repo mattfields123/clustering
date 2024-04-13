@@ -1,9 +1,11 @@
 #PBS -l select=1:ncpus=256:mem=64gb
-#PBS -l walltime=23:55:00
+#PBS -l walltime=71:55:00
+
+
 module load gcc/11.2.0
 
 
-cp $HOME/work/clustering/parameterslargepavel.f90 $TMPDIR/parameters.f90
+cp $HOME/work/clustering/parameters.f90 $TMPDIR/parameters.f90
 cp $HOME/work/clustering/constantsbeta32.f90 $TMPDIR/constants.f90
 cp $HOME/work/clustering/rossby_wave_attributes.f90 $TMPDIR
 cp $HOME/work/clustering/rossby_wave.f90 $TMPDIR
@@ -11,7 +13,7 @@ cp $HOME/work/clustering/admin.f90 $TMPDIR
 cp $HOME/work/clustering/random.f90 $TMPDIR
 cp $HOME/work/clustering/velocitywhole.f90 $TMPDIR/velocity.f90
 cp $HOME/work/clustering/particle.f90 $TMPDIR
-cp $HOME/work/clustering/passivetracers.f90 $TMPDIR/passivetracers.f90
+cp $HOME/work/clustering/passivetracersstreampotential.f90 $TMPDIR/passivetracers.f90
 cp $HOME/work/clustering/executedata.f90 $TMPDIR/executearray.f90
 
 gfortran -c constants.f90
@@ -27,8 +29,14 @@ gfortran -fopenmp executearray.f90 -c
 gfortran -fopenmp constants.o parameters.o rossby_wave_attributes.o rossby_wave.o admin.o random.o velocity.o particle.o passivetracers.o executearray.o -o executearray
 OMP_NUM_THREADS=256 ./executearray
 
-
-cp * $EPHEMERAL/testcase2
-cp partavg.dat $HOME/work/partfiles/bigcluster/g01d01vinfa1Npart500tsteps1000/rd01
 cp partx.dat $HOME/work/partfiles/bigcluster/g01d01vinfa1Npart500tsteps1000/rd01
 cp party.dat $HOME/work/partfiles/bigcluster/g01d01vinfa1Npart500tsteps1000/rd01
+cp partavg.dat $HOME/work/partfiles/bigcluster/g01d01vinfa1Npart500tsteps1000/rd01
+cp stream.dat $HOME/work/partfiles/bigcluster/g01d01vinfa1Npart500tsteps1000/rd01
+cp pot.dat $HOME/work/partfiles/bigcluster/g01d01vinfa1Npart500tsteps1000/rd01
+
+
+
+
+
+
