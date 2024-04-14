@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/tmp/pbs.9233426.pbs/fixedparallel.py", line 235, in <module>
+    print('sums',np.sum(fields_metric[0])/len(combined_fixed_points[0][200]),np.sum(fields_metric[1]/len(combined_fixed_points[2][200]),np.sum(fields_metric[2])/len(combined_fixed_points[4][200])))
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/site-packages/numpy/core/fromnumeric.py", line 2313, in sum
+    return _wrapreduction(a, np.add, 'sum', axis, dtype, out, keepdims=keepdims,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/site-packages/numpy/core/fromnumeric.py", line 88, in _wrapreduction
+    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'numpy.float64' object cannot be interpreted as an integer
+cp: cannot stat 'anim.mp4': No such file or directory
