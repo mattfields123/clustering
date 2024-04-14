@@ -232,7 +232,7 @@ fields_metric = field_radius(200)
 
 
 print(fields_metric)
-print('sums',np.sum(fields_metric[0])/len(combined_fixed_points[0]),np.sum(fields_metric[1]/len(combined_fixed_points[2]),np.sum(fields_metric[2])/len(combined_fixed_points[4])))
+print('sums',np.sum(fields_metric[0][200])/len(combined_fixed_points[0][200]),np.sum(fields_metric[1]/len(combined_fixed_points[2]),np.sum(fields_metric[2])/len(combined_fixed_points[4][200])))
 
 
 
