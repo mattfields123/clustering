@@ -153,15 +153,15 @@ def compute_fixed(k):
 
                         if DET > 0:
                             if TR < 0:
-                                fpoints_stable_x.append(x_fix)
-                                fpoints_stable_y.append(y_fix)
+                                fpoints_stable_x.append(y_fix)
+                                fpoints_stable_y.append(x_fix)
 
                             if TR > 0:
-                                fpoints_unstable_x.append(x_fix)
-                                fpoints_unstable_y.append(y_fix)
+                                fpoints_unstable_x.append(y_fix)
+                                fpoints_unstable_y.append(x_fix)
                         elif DET < 0:
-                            fpoints_saddle_x.append(x_fix)
-                            fpoints_saddle_y.append(y_fix)
+                            fpoints_saddle_x.append(y_fix)
+                            fpoints_saddle_y.append(x_fix)
         
     fpoints_x_array = np.array(fpoints_x)
     fpoints_y_array = np.array(fpoints_y)
