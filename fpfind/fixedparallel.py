@@ -225,7 +225,7 @@ def field_radius(tstep):
                             counter_l = counter_l + 1
             particles_in_vicinity.append(counter_l)
         particle_total.append(particles_in_vicinity)
-    return particles_in_vicinity
+    return particle_total
 
 
 fields_metric = field_radius(200)
