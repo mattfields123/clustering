@@ -232,6 +232,7 @@ fields_metric = field_radius(200)
 
 
 print(fields_metric)
+print('sums',np.sum(fields_metric[0]),np.sum(fields_metric[1],np.sum(fields_metric[2])))
 
 
 
