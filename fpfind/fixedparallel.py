@@ -217,7 +217,7 @@ def field_radius(tstep):
     for b in range(3):
         particles_in_vicinity = []
         a = 2*b
-        for l in range(len(combined_fixed_points[0][tstep])):
+        for l in range(len(combined_fixed_points[a][tstep])):
             counter_l = 0
             for i in range(N_part):
                 for j in range(N_part):
