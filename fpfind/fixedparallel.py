@@ -232,7 +232,7 @@ fields_metric = field_radius(200)
 
 
 print(fields_metric)
-print('sums',sum(fields_metric[0]),sum(fields_metric[1],sum(fields_metric[2])))
+print('sums',sum(fields_metric[0])/len(fields_metric[0]),sum(fields_metric[1])/len(fields_metric[1]),sum(fields_metric[2])/len(fields_metric[2]))
 
 
 
