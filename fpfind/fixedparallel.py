@@ -221,7 +221,7 @@ def field_radius(tstep):
             counter_l = 0
             for i in range(N_part):
                 for j in range(N_part):
-                        if (partx[tstep, i] - combined_fixed_points[a][tstep][l])**2 + (party[tstep,j]-combined_fixed_points[a+1][tstep][l])**2 < 1:
+                        if (partx[tstep, i] - combined_fixed_points[a][tstep][l])**2 + (party[tstep,j]-combined_fixed_points[a+1][tstep][l])**2 < 0.1:
                             counter_l = counter_l + 1
             particles_in_vicinity.append(counter_l)
         particle_total.append(particles_in_vicinity)
