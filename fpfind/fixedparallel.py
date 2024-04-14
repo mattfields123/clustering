@@ -223,7 +223,7 @@ def field_radius(tstep):
     return particles_in_vicinity
 
 
-fields_metric = zip(*pool.map(field_radius,range(0,tsteps)))
+fields_metric = field_radius(200)
 
 
 print(fields_metric)
