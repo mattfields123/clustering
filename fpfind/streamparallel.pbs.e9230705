@@ -1,0 +1,390 @@
+Process ForkPoolWorker-15:
+Process ForkPoolWorker-1:
+Process ForkPoolWorker-19:
+Process ForkPoolWorker-3:
+Process ForkPoolWorker-28:
+Process ForkPoolWorker-24:
+Process ForkPoolWorker-11:
+Process ForkPoolWorker-6:
+Process ForkPoolWorker-13:
+Process ForkPoolWorker-2:
+Process ForkPoolWorker-27:
+Process ForkPoolWorker-16:
+Process ForkPoolWorker-18:
+Process ForkPoolWorker-30:
+Process ForkPoolWorker-20:
+Process ForkPoolWorker-9:
+Process ForkPoolWorker-26:
+Process ForkPoolWorker-25:
+Process ForkPoolWorker-7:
+Process ForkPoolWorker-29:
+Process ForkPoolWorker-12:
+Process ForkPoolWorker-5:
+Process ForkPoolWorker-23:
+Process ForkPoolWorker-8:
+Process ForkPoolWorker-14:
+Process ForkPoolWorker-21:
+Process ForkPoolWorker-10:
+Process ForkPoolWorker-4:
+Process ForkPoolWorker-22:
+Process ForkPoolWorker-17:
+Traceback (most recent call last):
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+Traceback (most recent call last):
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+Traceback (most recent call last):
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+Traceback (most recent call last):
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+Traceback (most recent call last):
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+Traceback (most recent call last):
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+Traceback (most recent call last):
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/queues.py", line 367, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: Can't get attribute 'field_radius' on <module '__main__' from '/var/tmp/pbs.9230705.pbs/fixedparallel.py'>
