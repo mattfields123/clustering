@@ -1,0 +1,153 @@
+(500, 10000)
+(500, 10000)
+time to compute:  20.133301734924316
+(501, 10000)
+(501, 10000)
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 97, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22, 20, 0, 180, 0, 1057, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 118, 0, 0, 0, 92, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 240, 0, 0, 0, 0, 12, 0, 0, 192, 414, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 0, 0, 49, 374, 919, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 171, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 23, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0, 117, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22, 0, 0, 656, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 265, 855, 12, 0, 0, 145, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24, 4, 0, 23, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 31, 0, 0, 235, 0, 0, 0, 0, 0, 0, 0], [0, 489, 0, 0, 0, 0, 0, 0, 0, 0, 0, 59, 0, 0, 0, 0, 0, 149, 0, 35, 194, 12, 0, 0, 414, 12, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 34, 859, 0, 0, 0, 0, 0, 448, 584, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 288, 0, 0, 0, 0, 216, 248, 0, 0, 0, 0, 0, 23, 0, 0, 0, 0, 137, 0, 0, 0, 0, 0, 49, 0, 0, 0, 0, 0, 6, 0, 0, 290, 8, 0, 0, 0, 0, 46, 128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 15, 0, 0, 0, 0, 0, 0, 54, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 2, 0, 0, 0, 4, 164, 0, 0, 0, 0, 0, 0, 0, 22, 140, 0, 0, 0, 0, 0, 0, 25, 136, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 44, 0, 0, 4, 0, 124, 0, 0, 0, 0, 0, 0, 0, 0, 129, 0, 0, 0, 0, 0, 0, 0, 25, 15, 0, 69, 76, 0, 0, 0, 0, 0, 104, 0, 0, 98, 0, 0, 0, 0, 8, 0, 123, 79], [0, 43, 0, 0, 0, 0, 0, 0, 213, 306, 62, 0, 0, 0, 0, 0, 0, 133, 0, 0, 0, 0, 0, 0, 0, 65, 315, 15, 6, 0, 0, 204, 10, 0, 0, 0, 0, 0, 11, 0, 0, 0, 162, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 79, 94, 0, 0, 0, 505, 0, 0, 0, 0, 0, 0, 0, 0, 0, 513, 0, 0, 0, 0, 0, 0, 0, 33, 51, 0, 1028, 0, 0, 0, 68, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 76, 6, 0, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 356, 0, 0, 0, 0, 0, 0, 0, 150, 0, 0, 0, 396, 0, 0, 0, 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 0, 0, 590, 20, 0, 0, 0, 0, 0, 0, 12, 365, 0, 0, 0, 0, 299, 0, 0, 0, 0, 0, 154, 12, 0, 0, 0, 163, 0, 0, 0, 0, 0, 0, 274, 0, 0, 0, 0, 0, 9, 169, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 81, 104, 4, 0, 72, 203, 0, 0, 0, 0, 0, 0, 63, 206, 0, 0, 0, 0, 0, 0, 102, 133, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 146, 0, 0, 0, 16, 91, 0, 0, 0, 0, 0, 201, 0, 0, 0, 40, 0, 0, 0, 0, 0, 0, 383, 0, 0, 0, 107, 0, 0, 0, 0, 126, 0, 0, 0, 8, 0, 0, 0, 0, 0, 223, 0, 0, 222, 0, 0, 0, 0, 0, 0, 155, 14, 0, 0, 0, 4, 104, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 0, 0, 0, 0, 123, 0, 0, 0, 0, 0, 23, 0, 0, 0, 0, 0, 0, 0, 22, 0, 0, 0, 0, 0, 0, 187, 737, 0, 0, 0, 0, 0, 0, 0, 0, 40, 28, 0, 0, 0, 0, 107, 270, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 38, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 68, 0, 0, 0, 0, 29, 0, 0, 0, 117, 4, 0, 0, 0, 3, 0, 0, 0, 0, 70, 0, 0, 0, 0, 0, 0, 33, 258, 0, 0, 0, 0, 0, 0, 0, 0, 130, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 101, 183, 86, 2, 0, 0, 0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+sums 27.76068376068376 26.448559670781894 25.344064386317907
+126.33758878707886
+stable numer =  245
+unstable numer =  251
+saddle numer =  522
+stable numer =  234
+unstable numer =  254
+saddle numer =  515
+stable numer =  238
+unstable numer =  254
+saddle numer =  516
+stable numer =  231
+unstable numer =  257
+saddle numer =  512
+stable numer =  237
+unstable numer =  264
+saddle numer =  503
+stable numer =  223
+unstable numer =  255
+saddle numer =  527
+stable numer =  240
+unstable numer =  253
+saddle numer =  523
+stable numer =  244
+unstable numer =  249
+saddle numer =  513
+stable numer =  241
+unstable numer =  244
+saddle numer =  519
+stable numer =  243
+unstable numer =  249
+saddle numer =  518
+stable numer =  242
+unstable numer =  251
+saddle numer =  514
+stable numer =  239
+unstable numer =  248
+saddle numer =  504
+stable numer =  253
+unstable numer =  242
+saddle numer =  480
+stable numer =  240
+unstable numer =  243
+saddle numer =  497
+stable numer =  244
+unstable numer =  244
+saddle numer =  513
+stable numer =  234
+unstable numer =  252
+saddle numer =  517
+stable numer =  236
+unstable numer =  245
+saddle numer =  528
+stable numer =  239
+unstable numer =  259
+saddle numer =  509
+stable numer =  238
+unstable numer =  255
+saddle numer =  527
+stable numer =  237
+unstable numer =  246
+saddle numer =  518
+stable numer =  241
+unstable numer =  255
+saddle numer =  495
+stable numer =  245
+unstable numer =  251
+saddle numer =  501
+stable numer =  256
+unstable numer =  258
+saddle numer =  502
+stable numer =  239
+unstable numer =  257
+saddle numer =  510
+stable numer =  235
+unstable numer =  252
+saddle numer =  492
+stable numer =  247
+unstable numer =  250
+saddle numer =  518
+stable numer =  247
+unstable numer =  263
+saddle numer =  514
+stable numer =  244
+unstable numer =  254
+saddle numer =  498
+stable numer =  236
+unstable numer =  254
+saddle numer =  493
+stable numer =  240
+unstable numer =  258
+saddle numer =  499
+stable numer =  240
+unstable numer =  261
+saddle numer =  504
+stable numer =  252
+unstable numer =  258
+saddle numer =  492
+stable numer =  245
+unstable numer =  267
+saddle numer =  492
+stable numer =  234
+unstable numer =  258
+saddle numer =  494
+stable numer =  242
+unstable numer =  252
+saddle numer =  498
+stable numer =  235
+unstable numer =  245
+saddle numer =  519
+stable numer =  247
+unstable numer =  250
+saddle numer =  516
+stable numer =  253
+unstable numer =  246
+saddle numer =  519
+stable numer =  243
+unstable numer =  243
+saddle numer =  517
+stable numer =  244
+unstable numer =  246
+saddle numer =  509
+stable numer =  256
+unstable numer =  240
+saddle numer =  514
+stable numer =  257
+unstable numer =  253
+saddle numer =  519
+stable numer =  253
+unstable numer =  264
+saddle numer =  517
+stable numer =  247
+unstable numer =  254
+saddle numer =  493
+stable numer =  246
+unstable numer =  260
+saddle numer =  503
+
+============================================
+
+        Job resource usage summary 
+
+                 Memory (GB)    NCPUs
+ Requested  :        64             4
+ Used       :         5 (peak)   4.55 (ave)
+
+============================================
