@@ -131,13 +131,13 @@ def compute_fixed(k):
                 
                 matcoef = np.zeros((2,2))
                 nonhom = np.zeros(2)
-                nonhom[0] = -D2-E1
-                nonhom[1] = D1-E2
+                nonhom[0] = -D2 - E1
+                nonhom[1] = D1 - E2
 
-                matcoef[0,0] = C1+2*A2
-                matcoef[0,1] = C2+2*B1
+                matcoef[0,0] = C1 + 2*A2
+                matcoef[0,1] = C2 + 2*B1
                 matcoef[1,0] = C2 - 2*A1
-                matcoef[1,1] = 2*B2- C1
+                matcoef[1,1] = 2*B2 - C1
 
                 
 
@@ -155,7 +155,6 @@ def compute_fixed(k):
                             if TR < 0:
                                 fpoints_stable_x.append(x_fix)
                                 fpoints_stable_y.append(y_fix)
-
                             if TR > 0:
                                 fpoints_unstable_x.append(x_fix)
                                 fpoints_unstable_y.append(y_fix)
@@ -193,7 +192,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.animation import FuncAnimation, FFMpegWriter
 
-N_part = 100
+N_part = 200
 
 with open("partx.dat") as file_name:
     partx = np.loadtxt(file_name)
@@ -256,9 +255,9 @@ def update_plot(ii):
     plt.xlabel('X (km)')
     plt.ylabel('Y (km)')
     plt.scatter(400*partx[ii+1,:],400*party[ii+1,:],c='black',s=0.1)
-    plt.scatter(400*overall_array_x_stable[ii],400*overall_array_y_stable[ii],c='red',s=10,alpha=0.5)
-    plt.scatter(400*overall_array_x_unstable[ii],400*overall_array_y_unstable[ii],c='green',s=10,alpha=0.5)
-    plt.scatter(400*overall_array_x_saddle[ii],400*overall_array_y_saddle[ii],c='blue',s=10,alpha=0.5)
+    plt.scatter(400*overall_array_y_stable[ii],400*overall_array_x_stable[ii],c='red',s=10,alpha=0.5)
+    plt.scatter(400*overall_array_y_unstable[ii],400*overall_array_x_unstable[ii],c='green',s=10,alpha=0.5)
+    plt.scatter(400*overall_array_y_saddle[ii],400*overall_array_x_saddle[ii],c='blue',s=10,alpha=0.5)
 
 
     plt.xlim(-2000, 2000)
