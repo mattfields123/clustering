@@ -1,4 +1,4 @@
-#PBS -l select=1:ncpus=4:mem=64gb
+#PBS -l select=1:ncpus=32:mem=64gb
 #PBS -l walltime=23:55:00
 #PBS -q pqberloff
 
@@ -6,14 +6,15 @@ module load anaconda3/personal
 
 
 cp $HOME/work/clustering/fpfind/fixedparallel.py $TMPDIR
-cp $HOME/work/partfiles/testvelocity/pavel/data/smalltest0101/stream.dat $TMPDIR
-cp $HOME/work/partfiles/testvelocity/pavel/data/smalltest0101/pot.dat $TMPDIR
-cp $HOME/work/partfiles/testvelocity/pavel/data/smalltest0101/partx.dat $TMPDIR
-cp $HOME/work/partfiles/testvelocity/pavel/data/smalltest0101/party.dat $TMPDIR
+cp $HOME/work/partfiles/bigcluster/g01d01vinfa1Npart500tsteps1000/rd01/g1d1/stream.dat $TMPDIR
+cp $HOME/work/partfiles/bigcluster/g01d01vinfa1Npart500tsteps1000/rd01/g1d1/pot.dat $TMPDIR
+cp $HOME/work/partfiles/bigcluster/g01d01vinfa1Npart500tsteps1000/rd01/g1d1/partx.dat $TMPDIR
+cp $HOME/work/partfiles/bigcluster/g01d01vinfa1Npart500tsteps1000/rd01/g1d1/party.dat $TMPDIR
+
 
 
 
 python fixedparallel.py
 
-cp anim.mp4 $HOME/work/clustering/fpfind/anim0101allparallel.mp4
+cp anim.mp4 $HOME/work/clustering/fpfind/anim11allparallel.mp4
 
