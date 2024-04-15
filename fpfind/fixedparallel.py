@@ -14,7 +14,7 @@ with open('pot.dat') as file_name:
     PHI = np.loadtxt(file_name)
 
 vel_domain = 200
-tsteps = 1000
+tsteps = 500
 
 # t = np.linspace(0,5,tsteps)
 x = np.linspace(-5,5,vel_domain)
@@ -131,21 +131,21 @@ def compute_fixed(k):
                 
                 matcoef = np.zeros((2,2))
                 nonhom = np.zeros(2)
-                nonhom[0] = -D1-E2
-                nonhom[1] = E1-D2
+                nonhom[0] = -D2-E1
+                nonhom[1] = D1-E2
 
-                matcoef[0,0] = 2*A1+C2
-                matcoef[0,1] = C1+2*B2
-                matcoef[1,0] = -C1 + 2*A2
-                matcoef[1,1] = -2*B1 + C2
+                matcoef[0,0] = C1+2*A2
+                matcoef[0,1] = C2+2*B1
+                matcoef[1,0] = C2 - 2*A1
+                matcoef[1,1] = 2*B2- C1
 
                 
 
                 
                 matcoefinv = np.linalg.inv(matcoef)
                 xy = np.matmul(matcoefinv,nonhom)
-                x_fix = xy[1]
-                y_fix = xy[0]
+                x_fix = xy[0]
+                y_fix = xy[1]
             
                 if abs(x[t_i]-x_fix) < 5/vel_domain and abs(y[t_j]-y_fix) < 5/vel_domain:
                         DET = np.linalg.det(matcoef)
@@ -256,9 +256,9 @@ def update_plot(ii):
     plt.xlabel('X (km)')
     plt.ylabel('Y (km)')
     plt.scatter(400*partx[ii+1,:],400*party[ii+1,:],c='black',s=0.1)
-    plt.scatter(400*overall_array_y_stable[ii],400*overall_array_x_stable[ii],c='red',s=10,alpha=0.5)
-    plt.scatter(400*overall_array_y_unstable[ii],400*overall_array_x_unstable[ii],c='green',s=10,alpha=0.5)
-    plt.scatter(400*overall_array_y_saddle[ii],400*overall_array_x_saddle[ii],c='blue',s=10,alpha=0.5)
+    plt.scatter(400*overall_array_x_stable[ii],400*overall_array_y_stable[ii],c='red',s=10,alpha=0.5)
+    plt.scatter(400*overall_array_x_unstable[ii],400*overall_array_y_unstable[ii],c='green',s=10,alpha=0.5)
+    plt.scatter(400*overall_array_x_saddle[ii],400*overall_array_y_saddle[ii],c='blue',s=10,alpha=0.5)
 
 
     plt.xlim(-2000, 2000)
