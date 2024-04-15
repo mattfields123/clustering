@@ -14,7 +14,7 @@ with open('pot.dat') as file_name:
     PHI = np.loadtxt(file_name)
 
 vel_domain = 200
-tsteps = 500
+tsteps = 1000
 
 # t = np.linspace(0,5,tsteps)
 x = np.linspace(-5,5,vel_domain)
