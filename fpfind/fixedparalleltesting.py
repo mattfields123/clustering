@@ -13,20 +13,20 @@ with open('stream.dat') as file_name:
 with open('pot.dat') as file_name:
     PHI = np.loadtxt(file_name)
 
-vel_domain = 200
-tsteps = 1000
+vel_domain = 100
+tsteps = 3
 
 # t = np.linspace(0,5,tsteps)
 x = np.linspace(-5,5,vel_domain)
 y = np.linspace(-5,5,vel_domain)
 
 
-# T,X,Y = np.meshgrid(t,x,y,indexing='ij')
+T,X,Y = np.meshgrid(t,x,y,indexing='ij')
 # print(T.shape)
 
 
 #PSI = np.cos(X) + np.sin(Y)
-#PHI = np.sin(0*X+0*Y+0*T)
+PHI = np.cos(2*np.pi*X) + np.cos(2*np.pi*Y) + 0*T
 
 print(PSI.shape)
 print(PHI.shape)
