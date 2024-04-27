@@ -13,10 +13,10 @@ with open('stream.dat') as file_name:
 with open('pot.dat') as file_name:
     PHI = np.loadtxt(file_name)
 
-vel_domain = 100
+vel_domain = 10
 tsteps = 3
 
-# t = np.linspace(0,5,tsteps)
+t = np.linspace(0,5,tsteps)
 x = np.linspace(-5,5,vel_domain)
 y = np.linspace(-5,5,vel_domain)
 
