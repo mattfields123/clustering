@@ -26,6 +26,7 @@ T,X,Y = np.meshgrid(t,x,y,indexing='ij')
 
 
 #PSI = np.cos(X) + np.sin(Y)
+PSI = 0*X*T*Y
 PHI = np.cos(2*np.pi*X) + np.cos(2*np.pi*Y) + 0*T
 
 print(PSI.shape)
@@ -221,7 +222,7 @@ def field_radius(tstep):
     return particle_total
 
 
-fields_metric = field_radius(200)
+fields_metric = field_radius(2)
 
 
 print(fields_metric)

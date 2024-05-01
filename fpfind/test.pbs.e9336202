@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/var/tmp/pbs.9336202.pbs/fixedparalleltesting.py", line 225, in <module>
+    fields_metric = field_radius(200)
+                    ^^^^^^^^^^^^^^^^^
+  File "/var/tmp/pbs.9336202.pbs/fixedparalleltesting.py", line 214, in field_radius
+    for l in range(len(combined_fixed_points[a][tstep])):
+                       ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: tuple index out of range
+cp: cannot stat 'anim.mp4': No such file or directory

@@ -1,0 +1,24 @@
+(3, 100, 100)
+(3, 100, 100)
+time to compute:  9.953504085540771
+(501, 40000)
+(501, 40000)
+stable numer =  64
+unstable numer =  100
+saddle numer =  160
+stable numer =  64
+unstable numer =  100
+saddle numer =  160
+stable numer =  64
+unstable numer =  100
+saddle numer =  160
+
+============================================
+
+        Job resource usage summary 
+
+                 Memory (GB)    NCPUs
+ Requested  :        64            32
+ Used       :         2 (peak)   0.16 (ave)
+
+============================================
