@@ -1,0 +1,25 @@
+passivetracers.f90:65:10:
+
+   65 |     do x_c = 1,128
+      |          1
+Error: Symbol ‘x_c’ at (1) has no IMPLICIT type
+passivetracers.f90:66:14:
+
+   66 |         do y_c = 1,128
+      |              1
+Error: Symbol ‘y_c’ at (1) has no IMPLICIT type
+passivetracers.f90:69:49:
+
+   69 |             vel_sum = vel_sum + velocity_point_ML(x,y,t,phase1,phase2,time1,time2,amplitudes,dispersions,0.1)
+      |                                                 1
+Error: Function ‘velocity_point_ml’ at (1) has no IMPLICIT type
+executearray.f90:2:5:
+
+    2 | use passivetracers
+      |     1
+Fatal Error: Cannot open module file ‘passivetracers.mod’ for reading at (1): No such file or directory
+compilation terminated.
+/bin/ld: cannot find passivetracers.o: No such file or directory
+/bin/ld: cannot find executearray.o: No such file or directory
+collect2: error: ld returned 1 exit status
+/var/spool/PBS/mom_priv/jobs/9362737.pbs.SC: line 29: ./executearray: No such file or directory
