@@ -22,6 +22,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     real :: rate
     integer :: beg1,end1
     integer :: x_c,y_c
+    real(dp) :: vel_total(2)
     allocate(partavg(timesteps+1))
 
     x_array = linspace(-5.0,5.0,128)
@@ -34,27 +35,13 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
         print*, 'gamma= ', gamma    
     
     call system_clock(beginning, rate)
-    open(2,file='partx.dat')
-    open(3,file='party.dat')
-
-    do counter_n1x = 1, N_part
-        do counter_n1y = 1, N_part
-            partx(counter_n1x,counter_n1y) = linx(counter_n1x)
-            party(counter_n1x,counter_n1y) = liny(counter_n1y)
-        enddo
-    enddo
-
-    write(2,*) partx
-    write(3,*) party
-    
-    partavg(1) = sum(partx)/(N_part**2)
     
     
     call dispersion_relation_array(dispersions)
     call amplitudes_array(amplitudes)
     
     
-
+    vel_total = (/0.,0./)
     do counter_t = 1,timesteps
     vel_sum = (/0.,0./)
     t = t_array(counter_t)
@@ -70,10 +57,11 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
             
     end do
         end do
-    print*, vel_sum
+    vel_total = vel_total + vel_sum
     end do
     call system_clock(end)
-
+   
+    print*, vel_total/(128*128*timesteps)
     print *, "time : ", real(end-beginning) / real(rate)
 
 end function vel_passive
