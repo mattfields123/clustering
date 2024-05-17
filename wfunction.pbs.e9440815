@@ -1,0 +1,43 @@
+velocity.f90:68:11:
+
+   68 |         ML1 = w_function(t-time1,vu)
+      |           1
+Error: Symbol ‘ml1’ at (1) has no IMPLICIT type; did you mean ‘ml’?
+velocity.f90:69:11:
+
+   69 |         ML2 = w_function(t-time2,vu)
+      |           1
+Error: Symbol ‘ml2’ at (1) has no IMPLICIT type; did you mean ‘ml’?
+velocity.f90:68:25:
+
+   68 |         ML1 = w_function(t-time1,vu)
+      |                         1
+Error: Rank mismatch in argument ‘k’ at (1) (scalar and rank-2)
+velocity.f90:69:25:
+
+   69 |         ML2 = w_function(t-time2,vu)
+      |                         1
+Error: Rank mismatch in argument ‘k’ at (1) (scalar and rank-2)
+f951: Error: Cannot open file ‘particle.f90’
+<built-in>: Fatal Error: cannot open input file: particle.f90
+compilation terminated.
+passivetracers.f90:2:5:
+
+    2 | use particle
+      |     1
+Fatal Error: Cannot open module file ‘particle.mod’ for reading at (1): No such file or directory
+compilation terminated.
+executearray.f90:2:5:
+
+    2 | use passivetracers
+      |     1
+Fatal Error: Cannot open module file ‘passivetracers.mod’ for reading at (1): No such file or directory
+compilation terminated.
+/bin/ld: cannot find velocity.o: No such file or directory
+/bin/ld: cannot find particle.o: No such file or directory
+/bin/ld: cannot find passivetracers.o: No such file or directory
+/bin/ld: cannot find executearray.o: No such file or directory
+collect2: error: ld returned 1 exit status
+/var/spool/PBS/mom_priv/jobs/9440815.pbs.SC: line 29: ./executearray: No such file or directory
+cp: target '/rds/general/user/mf620/ephemeral/testcase2' is not a directory
+cp: cannot stat 'partdiff.dat': No such file or directory

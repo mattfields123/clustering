@@ -50,7 +50,7 @@ contains
         real(dp) :: x, y, t, k, l, psi1, psi2, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65)
         real(dp) :: velocity(2), k_array(65), l_array(65)
         real(dp) :: amplitudes(65,65), dispersions(65,65)
-        real(dp) :: g, tausol, taupot, ML
+        real(dp) :: g, tausol, taupot, ML1, ML2
         integer :: c_k, c_l
 
         tausol = 8*atan(1.)*(1-gamma) !relies on gamma
@@ -65,8 +65,8 @@ contains
         k = k_array(c_k)
         do c_l = 1, 65
         l = l_array(c_l)
-        ML1 = w_function(t-time1,vu)
-        ML2 = w_function(t-time2,vu)
+        ML1 = w_function(t-time1(c_k,c_l),vu)
+        ML2 = w_function(t-time2(c_k,c_l),vu)
         psi1 = ML1*amp_scaling*amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase1(c_k,c_l))
         psi2 = ML2*amp_scaling*amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase2(c_k,c_l))
      

@@ -1,5 +1,6 @@
 #PBS -l select=1:ncpus=32:mem=64gb
 #PBS -l walltime=23:55:00
+#PBS -q pqberloff
 module load gcc/11.2.0
 
 
