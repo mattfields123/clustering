@@ -6,13 +6,14 @@ from scipy.stats import linregress
 
 with open("/Users/bunny/Documents/msci/mscigit/filesforplots/gammasmallvalues.dat") as file_name:
     array = np.loadtxt(file_name)
+with open("/Users/bunny/Documents/msci/mscigit/filesforplots/gammalarge.dat") as file_name:
+    barray = np.loadtxt(file_name)
 
 
 
 
 
-
-print(np.shape(array))
+print(np.shape(barray))
 # array = array*400
 # barray = barray*400
 # array2 = array2*400
@@ -29,23 +30,29 @@ arr3 = np.zeros(11)
 
 for x in range(11):
     y = linregress(t[500:1000],array[x,500:1000])
-   
+    y1 = linregress(t[500:1000],barray[x,500:1000])
     arr[x] = y.slope
-
-t0b = [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1] # gamma large
+    barr[x] = y1.slope
+t0b = [0.2,0.25,0.3,0.35,0.45,0.5,0.6,0.7,0.8,0.9,1] # gamma large
 # t0 = [0.1,0.5,1,2,3,4,9,25,36,49,64] # amp
 t0 = [0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.1,0.15] # gamma
 
 
 logt = np.log10(t0)
 logx = np.log10(-arr)
-
+logt0b = np.log10(t0b)
+logxb = np.log10(-barr)
 print(t0,t0b)
-combinedt = logt
-combinedx = logx
-combinedt[0:10] = logt[1:11]
 
-combined = np.zeros((2,11))
+combinedt = np.zeros(22)
+combinedx = np.zeros(22)
+
+combinedt[0:11] = logt
+combinedx[0:11] = logx
+combinedt[11:22] = logt0b
+combinedx[11:22] = logxb
+
+combined = np.zeros((2,22))
 combined[0] = combinedt
 combined[1] = combinedx
 
@@ -55,7 +62,7 @@ smallx = []
 largex = []
 
 
-for r in range(11):
+for r in range(22):
     if  -2 < combined[0][r] < -1:
         smallgamma.append(combined[0,r])
         smallx.append(combined[1,r])
@@ -63,10 +70,12 @@ for r in range(11):
         largegamma.append(combined[0,r])
         largex.append(combined[1,r])
 print(smallgamma)
+print(largex,'largex')
 
+print(largegamma)
 smalllin = linregress(smallgamma,smallx)
 #largelin = linregress(largegamma,largex) add in when got more data
-largelin = linregress([0,1],[1,2])
+largelin = linregress(largegamma,largex)
 
 
 x_array = np.linspace(-2,-1,100)
