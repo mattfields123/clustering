@@ -18,29 +18,22 @@ module admin
 
     end function linspace
 
-    function MaduLawrence(k, N, mu) result(ML)
+    function w_function(k,b) result(ML)
         real(dp) :: k, ML, mu, a, b, N
-        
+        a = 0.25
         ML = 0
-        if ((mu > 0) .and. (mu .le. 0.5)) then
-            if (k == 0) then
-                ML = 0
-            else if (k < mu*N) then
-                a = mu*N*(1/k + 1/(k-mu*N))
-                ML = 1/(exp(a)+1)
-            else if (k .le. (1-mu)*N) then
-                ML = 1
-            else if (k < N) then
-                b = mu*N*(1/(N-k) + 1/((1-mu)*N-k))
-                ML = 1/(exp(b)+1)
-            else if (k == N) then
-                ML = 0
-            end if
+        if(k=0) then
+            ML = 0
+        else if(k < a) then 
+            ML = exp(1-(1/(1-(k-a)**2)))
+        else if((k>a) .and. (k<b-a)) then
+            ML = 1
+        else if(k>(b-a)) then
+            ML = exp(1-(1/(1-(k-b+a)**2)))
         else
             ML = 1
-        end if
-
-    end function MaduLawrence
+        end if            
+    end function w_function
     
     function okubo_class(div, Okw) result(classif)
         real(dp) :: div, Okw, lambda1, lambda2

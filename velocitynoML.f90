@@ -31,8 +31,8 @@ contains
         k = k_array(c_k)
         do c_l = 1, 65
         l = l_array(c_l)
-        psi1 = g*amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase1(c_k,c_l))
-        psi2 = g*amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase2(c_k,c_l))
+        psi1 = amp_scaling*amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase1(c_k,c_l))
+        psi2 = amp_scaling*amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase2(c_k,c_l))
      
         velocity(1) = velocity(1) + (tausol*l - taupot*k*delta)*psi1 
         velocity(1) = velocity(1) - taupot*(1-delta)*k*psi2
@@ -46,7 +46,44 @@ contains
     
     end function velocity_pointML
     
+    function velocity_pointML_include(x, y, t, phase1, phase2, time1, time2, amplitudes, dispersions, g) result(velocity)
+        real(dp) :: x, y, t, k, l, psi1, psi2, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65)
+        real(dp) :: velocity(2), k_array(65), l_array(65)
+        real(dp) :: amplitudes(65,65), dispersions(65,65)
+        real(dp) :: g, tausol, taupot, ML
+        integer :: c_k, c_l
+
+        tausol = 8*atan(1.)*(1-gamma) !relies on gamma
+        taupot = 8*atan(1.)*gamma !relies on gamma
+        
+        k_array = linspace(-3.2,3.2,65)
+        l_array = linspace(-3.2,3.2,65)
+        velocity = (/0.,0./)
+        
+        !$OMP PARALLEL DO private(psi1,psi2,k,l,c_k,c_l) reduction(+:velocity)
+        do c_k = 1, 65
+        k = k_array(c_k)
+        do c_l = 1, 65
+        l = l_array(c_l)
+        ML1 = w_function(t-time1,vu)
+        ML2 = w_function(t-time2,vu)
+        psi1 = ML1*amp_scaling*amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase1(c_k,c_l))
+        psi2 = ML2*amp_scaling*amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase2(c_k,c_l))
+     
+        velocity(1) = velocity(1) + (tausol*l - taupot*k*delta)*psi1 
+        velocity(1) = velocity(1) - taupot*(1-delta)*k*psi2
+        velocity(2) = velocity(2) - (tausol*k + taupot*l*delta)*psi1 
+        velocity(2) = velocity(2) - taupot*l*(1-delta)*psi2
+        end do
+        end do
+        !$OMP END PARALLEL DO
+        
+        velocity = velocity/scaling
     
+    end function velocity_pointML_include
+
+
+
     subroutine MaduLawrence_loop(time, phase, t, vu)
         real(dp) :: vu,  t, phase(65,65), time(65,65), div, ML
         integer :: counter_k, counter_l
