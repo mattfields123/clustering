@@ -22,7 +22,7 @@ module admin
         real(dp) :: k, ML, mu, a, b, N
         a = 0.25
         ML = 0
-        if(k=0) then
+        if(k==0) then
             ML = 0
         else if(k < a) then 
             ML = exp(1-(1/(1-(k-a)**2)))
