@@ -32,7 +32,7 @@ contains
         k4 = velocity_pointML_include(partx+k3(1)*dt,party+k3(2)*dt,t+dt,phase1,phase2,time1,time2,amplitudes,dispersions,g)
         parts = parts + dt*(k1+2*k2+2*k3+k4)/6
        
-    end function passive
+    end function passivewfunction
 
 
 

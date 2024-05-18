@@ -11,7 +11,7 @@ cp $HOME/work/clustering/rossby_wave.f90 $TMPDIR
 cp $HOME/work/clustering/admin.f90 $TMPDIR
 cp $HOME/work/clustering/random.f90 $TMPDIR
 cp $HOME/work/clustering/velocitynoML.f90 $TMPDIR/velocity.f90
-cp $HOME/work/clustering/particlewfunction.f90 $TMPDIR
+cp $HOME/work/clustering/particlewfunction.f90 $TMPDIR/particle.f90
 cp $HOME/work/clustering/passivetracerswfunction.f90 $TMPDIR/passivetracers.f90
 cp $HOME/work/clustering/executedata.f90 $TMPDIR/executearray.f90
 
