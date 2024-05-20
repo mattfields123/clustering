@@ -16,15 +16,19 @@ integer :: c_x, c_y, c_t, timesteps, grid
 real(dp) :: t_array(10)
 real(dp) :: t
 real :: dt
-real(dp) ::  g=0.1
-real(dp) :: nu=1.
+real(dp) ::  g
+real(dp) :: nu
+
+nu = 1.
+g = 0.1
+
 phase1 = tau*random_matrix(65,65)
 phase1 = tau*random_matrix(65,65)
 time1 = nu*random_matrix(65,65)
 time2 = nu*random_matrix(65,65)
         
 timesteps = 50
-grid = 100
+grid = 50
 
 dt = 0.25
 
@@ -51,18 +55,26 @@ call MaduLawrence_loop(time2,phase2,t,nu)
 ! Where there is 1 we have vu (testing)
 do c_x = 1 , grid
 do c_y = 1, grid
-do hex = 1,6
 
+if (MOD(c_x,2) > 0) THEN
 
 x = x_array(c_x)
 y = y_array(c_y)
 psi_result(c_x,c_y) = streamfunction(x,y,t,time1,phase1)
 phi_result(c_x,c_y) = potentialfunction(x,y,t,time1,time2,phase1,phase2)
 
+else 
+    psi_result(c_x,c_y) = streamfunction(x+5/grid,y,t,time1,phase1)
+    phi_result(c_x,c_y) = potentialfunction(x+5/grid,y,t,time1,time2,phase1,phase2)
+end if 
 
 end do
+
 end do 
 end do 
+
+
+end do
 print*, phi_result(2,2)
 print*, psi_result(2,2)
 
