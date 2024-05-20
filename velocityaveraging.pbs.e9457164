@@ -1,0 +1,30 @@
+passivetracers.f90:28:22:
+
+   28 |     real(dp) :: vel(2)
+      |                      1
+Error: Unexpected data declaration statement at (1)
+passivetracers.f90:60:45:
+
+   60 |             velsquare = velsquare + SQRT(vel(1)**2 + vel(2)**2)
+      |                                             1
+Error: Syntax error in argument list at (1)
+passivetracers.f90:9:71:
+
+    9 | function vel_passive(timesteps, phase1, phase2, time1, time2, N_part, g) result(partavg)
+      |                                                                       1
+Error: Dummy ‘g’ at (1) cannot have an initializer
+passivetracers.f90:48:7:
+
+   48 |     vel = (/0.,0./)
+      |       1
+Error: Symbol ‘vel’ at (1) has no IMPLICIT type
+executearray.f90:2:5:
+
+    2 | use passivetracers
+      |     1
+Fatal Error: Cannot open module file ‘passivetracers.mod’ for reading at (1): No such file or directory
+compilation terminated.
+/bin/ld: cannot find passivetracers.o: No such file or directory
+/bin/ld: cannot find executearray.o: No such file or directory
+collect2: error: ld returned 1 exit status
+/var/spool/PBS/mom_priv/jobs/9457164.pbs.SC: line 29: ./executearray: No such file or directory

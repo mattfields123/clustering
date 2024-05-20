@@ -1,0 +1,50 @@
+cp: cannot stat '/rds/general/user/mf620/home/HPC/high/parameters.f90': No such file or directory
+cp: cannot stat '/rds/general/user/mf620/home/HPC/high/constants.f90': No such file or directory
+cp: cannot stat '/rds/general/user/mf620/home/HPC/high/rossby_wave.f90': No such file or directory
+cp: cannot stat '/rds/general/user/mf620/home/HPC/high/rossby_wave_attributes.f90': No such file or directory
+cp: cannot stat '/rds/general/user/mf620/home/HPC/high/admin.f90': No such file or directory
+cp: cannot stat '/rds/general/user/mf620/home/HPC/high/random.f90': No such file or directory
+cp: cannot stat '/rds/general/user/mf620/home/HPC/high/velocity.f90': No such file or directory
+cp: cannot stat '/rds/general/user/mf620/home/HPC/high/particle.f90': No such file or directory
+cp: cannot stat '/rds/general/user/mf620/home/HPC/high/streampotential.f90': No such file or directory
+cp: cannot stat '/rds/general/user/mf620/home/HPC/plot.py': No such file or directory
+f951: Error: Cannot open file ‘constants.f90’
+<built-in>: Fatal Error: cannot open input file: constants.f90
+compilation terminated.
+f951: Error: Cannot open file ‘parameters.f90’
+<built-in>: Fatal Error: cannot open input file: parameters.f90
+compilation terminated.
+f951: Error: Cannot open file ‘admin.f90’
+<built-in>: Fatal Error: cannot open input file: admin.f90
+compilation terminated.
+f951: Error: Cannot open file ‘random.f90’
+<built-in>: Fatal Error: cannot open input file: random.f90
+compilation terminated.
+f951: Error: Cannot open file ‘rossby_wave.f90’
+<built-in>: Fatal Error: cannot open input file: rossby_wave.f90
+compilation terminated.
+f951: Error: Cannot open file ‘rossby_wave_attributes.f90’
+<built-in>: Fatal Error: cannot open input file: rossby_wave_attributes.f90
+compilation terminated.
+f951: Error: Cannot open file ‘velocity.f90’
+<built-in>: Fatal Error: cannot open input file: velocity.f90
+compilation terminated.
+f951: Error: Cannot open file ‘particle.f90’
+<built-in>: Fatal Error: cannot open input file: particle.f90
+compilation terminated.
+f951: Error: Cannot open file ‘streampotential.f90’
+<built-in>: Fatal Error: cannot open input file: streampotential.f90
+compilation terminated.
+/bin/ld: cannot find constants.o: No such file or directory
+/bin/ld: cannot find parameters.o: No such file or directory
+/bin/ld: cannot find rossby_wave.o: No such file or directory
+/bin/ld: cannot find rossby_wave_attributes.o: No such file or directory
+/bin/ld: cannot find admin.o: No such file or directory
+/bin/ld: cannot find random.o: No such file or directory
+/bin/ld: cannot find velocity.o: No such file or directory
+/bin/ld: cannot find particle.o: No such file or directory
+/bin/ld: cannot find streampotential.o: No such file or directory
+collect2: error: ld returned 1 exit status
+/var/spool/PBS/mom_priv/jobs/9455326.pbs.SC: line 28: ./streampotential: No such file or directory
+cp: cannot stat 'streamfunction.dat': No such file or directory
+cp: cannot stat 'potentialfunction.dat': No such file or directory
