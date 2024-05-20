@@ -1,0 +1,17 @@
+#PBS -l select=1:ncpus=4:mem=64gb
+#PBS -l walltime=23:55:00
+
+
+module load anaconda3/personal
+
+
+cp $HOME/work/clustering/fpfind/plotstream/plotstream.py $TMPDIR
+cp $HOME/work/partfiles/bigcluster/g01d01/stream.dat $TMPDIR
+cp $HOME/work/partfiles/bigcluster/g01d01/pot.dat $TMPDIR
+
+
+
+python plotstream.py
+
+cp figure.png $HOME/work/clustering/fpfind/plotstream
+
