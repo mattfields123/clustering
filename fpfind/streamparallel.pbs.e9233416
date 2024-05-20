@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/tmp/pbs.9233416.pbs/fixedparallel.py", line 235, in <module>
-    print('sums',np.sum(fields_metric[0][200])/len(combined_fixed_points[0][200]),np.sum(fields_metric[1]/len(combined_fixed_points[2]),np.sum(fields_metric[2])/len(combined_fixed_points[4][200])))
-                        ~~~~~~~~~~~~~~~~^^^^^
-TypeError: 'int' object is not subscriptable
-cp: cannot stat 'anim.mp4': No such file or directory

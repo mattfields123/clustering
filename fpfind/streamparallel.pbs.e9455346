@@ -1,6 +1,6 @@
 Traceback (most recent call last):
-  File "/var/tmp/pbs.9237756.pbs/fixedparallel.py", line 33, in <module>
+  File "/tmp/pbs.9455346.pbs/fixedparallel.py", line 33, in <module>
     PSI = PSI.reshape((tsteps,vel_domain,vel_domain))
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ValueError: cannot reshape array of size 40000000 into shape (500,200,200)
+ValueError: cannot reshape array of size 20000000 into shape (1000,200,200)
 cp: cannot stat 'anim.mp4': No such file or directory

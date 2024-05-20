@@ -186,7 +186,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.animation import FuncAnimation, FFMpegWriter
 
-N_part = 200
+N_part = 500
 
 with open("partx.dat") as file_name:
     partx = np.loadtxt(file_name)

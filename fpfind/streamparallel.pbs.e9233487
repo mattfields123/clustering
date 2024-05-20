@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/var/tmp/pbs.9233487.pbs/fixedparallel.py", line 235, in <module>
-    fields_metric = np.array(fields_metric)
-                    ^^^^^^^^^^^^^^^^^^^^^^^
-ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (3,) + inhomogeneous part.
-cp: cannot stat 'anim.mp4': No such file or directory

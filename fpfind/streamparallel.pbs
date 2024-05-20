@@ -6,10 +6,10 @@ module load anaconda3/personal
 
 
 cp $HOME/work/clustering/fpfind/fixedparallel.py $TMPDIR
-cp $HOME/work/partfiles/bigcluster/g01d01vinfa1Npart500tsteps1000/rd01/g1d1/stream.dat $TMPDIR
-cp $HOME/work/partfiles/bigcluster/g01d01vinfa1Npart500tsteps1000/rd01/g1d1/pot.dat $TMPDIR
-cp $HOME/work/partfiles/bigcluster/g01d01vinfa1Npart500tsteps1000/rd01/g1d1/partx.dat $TMPDIR
-cp $HOME/work/partfiles/bigcluster/g01d01vinfa1Npart500tsteps1000/rd01/g1d1/party.dat $TMPDIR
+cp $HOME/work/partfiles/bigcluster/g01d01/stream.dat $TMPDIR
+cp $HOME/work/partfiles/bigcluster/g01d01/pot.dat $TMPDIR
+cp $HOME/work/partfiles/bigcluster/g01d01/partx.dat $TMPDIR
+cp $HOME/work/partfiles/bigcluster/g01d01/party.dat $TMPDIR
 
 
 

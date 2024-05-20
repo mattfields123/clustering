@@ -11,8 +11,8 @@ with open('stream.dat') as file_name:
 with open('pot.dat') as file_name:
     PHI = np.loadtxt(file_name)
 
-vel_domain = 100
-tsteps = 500
+vel_domain = 200
+tsteps = 1000
 
 # t = np.linspace(0,5,tsteps)
 x = np.linspace(-5,5,vel_domain)
@@ -188,7 +188,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.animation import FuncAnimation, FFMpegWriter
 
-N_part = 100
+N_part = 500
 
 with open("partx.dat") as file_name:
     partx = np.loadtxt(file_name)
