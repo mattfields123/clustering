@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/var/tmp/pbs.9457187.pbs/plotstream.py", line 9, in <module>
+    plt.imshow(psi[100])
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/site-packages/matplotlib/pyplot.py", line 3346, in imshow
+    __ret = gca().imshow(
+            ^^^^^^^^^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/site-packages/matplotlib/__init__.py", line 1465, in inner
+    return func(ax, *map(sanitize_sequence, args), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/site-packages/matplotlib/axes/_axes.py", line 5751, in imshow
+    im.set_data(X)
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/site-packages/matplotlib/image.py", line 723, in set_data
+    self._A = self._normalize_image_array(A)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/site-packages/matplotlib/image.py", line 693, in _normalize_image_array
+    raise TypeError(f"Invalid shape {A.shape} for image data")
+TypeError: Invalid shape (40000,) for image data
+cp: cannot stat 'figure.png': No such file or directory
