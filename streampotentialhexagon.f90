@@ -13,7 +13,7 @@ real(dp) :: psi_result(10,10), x, y, x_array(10), y_array(10)
 real(dp) :: phi_result(10,10)
 real(dp) :: dispersions(65,65), amplitudes(65,65)
 integer :: c_x, c_y, c_t, timesteps, grid
-real(dp) :: t_array(10)
+real(dp) :: t_array(1000)
 real(dp) :: t
 real :: dt
 real(dp) ::  g
@@ -27,8 +27,8 @@ phase1 = tau*random_matrix(65,65)
 time1 = nu*random_matrix(65,65)
 time2 = nu*random_matrix(65,65)
         
-timesteps = 50
-grid = 50
+timesteps = 1000
+grid = 200
 
 dt = 0.25
 

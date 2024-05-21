@@ -36,6 +36,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     real(dp), allocatable :: stream(:,:)
     real(dp), allocatable :: pot(:,:)
     integer, allocatable :: bothvel(:,:)
+    integer :: y_domain
 
     allocate(partavg(timesteps+1))
     allocate(x_array(vel_domain))
@@ -47,9 +48,9 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     allocate(pot(vel_domain,vel_domain))
     allocate(bothvel(vel_domain,vel_domain))    
 
-
+    vel_domain = INT(vel_domain*2/SQRT(3))
     x_array = linspace(-5.0,(vel_domain-1.)/(0.1*vel_domain)-5.0,vel_domain)
-    y_array = linspace(-5.0,(vel_domain-1.)/(0.1*vel_domain)-5.0,vel_domain)
+    y_array = linspace(-5.0,(vel_domain-1.)/(0.1*vel_domain)-5.0,y_domain)
     t_array = linspace(0.,(timesteps-1)*dt,timesteps)
  
     linx = linspace(-5.0,(N_part-1.)/(0.1*N_part)-5.0,N_part)
@@ -97,7 +98,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     
     !$OMP PARALLEL DO private(c_v1,c_v2,vel)
     do c_v1 = 1, vel_domain
-    do c_v2 = 1, vel_domain
+    do c_v2 = 1, y_domain
         x = x_array(c_v1)
         y = y_array(c_v2)
         IF (MOD(c_v1,2) > 0) THEN

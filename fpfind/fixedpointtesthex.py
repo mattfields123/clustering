@@ -8,12 +8,13 @@ from time import time
 # with open('vvel.dat') as file_name:
     # vvel = np.loadtxt(file_name)
 
-vel_domain = 1000
+vel_domain = 201
 
 uvel = np.zeros((vel_domain,vel_domain))
 vvel = np.zeros((vel_domain,vel_domain))
-
-x = y = np.linspace(-5,5,vel_domain)
+y_domain = int(vel_domain*2/np.sqrt(3))
+x = np.linspace(-5,5,vel_domain)
+y = np.linspace(-5,5,y_domain)
 
 
 
@@ -21,10 +22,10 @@ x = y = np.linspace(-5,5,vel_domain)
 # PHI = np.sin(2*np.pi*X**2+2*np.pi*Y+3*Y**3)
 # PHI = np.sin(X) + np.cos(Y)
 # PHI = np.cos(2*np.pi*X+2*np.pi*Y)
-PHI = np.zeros((vel_domain,vel_domain))
+PHI = np.zeros((vel_domain,y_domain))
 
 for i in range(vel_domain):
-    for j in range(vel_domain):
+    for j in range(y_domain):
         if (np.mod(i,2) > 0):
             PHI[i,j] = np.cos(x[i])+np.sin(y[j]) 
         else:
@@ -46,7 +47,7 @@ fpoints_unstable_y = []
 
 
 for i in range(1,vel_domain-1):
-    for j in range(1,vel_domain-1):
+    for j in range(1,y_domain-1):
         
         if ((np.mod(i,2) == 1) and (np.mod(j,3) == 1)) or ((np.mod(i,2) == 0) and (np.mod(j,3)==2)):
 
@@ -132,7 +133,7 @@ for i in range(1,vel_domain-1):
                     fpoints_x.append(x_fix)
                     fpoints_y.append(y_fix)
                     print(t_i,t_j)
-                   
+            
             
 
 print(fpoints_x,fpoints_y,'fpoints')
