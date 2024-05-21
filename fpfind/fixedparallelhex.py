@@ -82,7 +82,7 @@ def compute_fixed(k):
     for i in range(1,vel_domain-1):
         for j in range(1,vel_domain-1):
             
-            if ((np.mod(j,2) == 1) and (np.mod(i,3) == 1)) or ((np.mod(j,2) == 0) and (np.mod(i,3)==2)):
+            if ((np.mod(i,2) == 1) and (np.mod(j,3) == 1)) or ((np.mod(i,2) == 0) and (np.mod(j,3)==2)):
 
 
                 t_i = i
@@ -91,37 +91,38 @@ def compute_fixed(k):
                 psi = np.zeros(6)
 
                 psi[0] = PSI[k,t_i-1,t_j-1]
-                psi[1] = PSI[k,t_i,t_j-1]
-                psi[2] = PSI[k,t_i-1,t_j]
-                psi[3] = PSI[k,t_i+1,t_j]
-                psi[4] = PSI[k,t_i-1,t_j+1]
-                psi[5] = PSI[k,t_i,t_j+1]
+                psi[1] = PSI[k,t_i-1,t_j]
+                psi[2] = PSI[k,t_i,t_j-1]
+                psi[3] = PSI[k,t_i,t_j+1]
+                psi[4] = PSI[k,t_i+1,t_j-1]
+                psi[5] = PSI[k,t_i+1,t_j]
 
-                if np.mod(t_i,2) > 0:
+                if np.mod(t_i,2) == 0:
 
-                    matrix[0] = parabola(x[t_i-1]+5/vel_domain,y[t_j-1])
-                    matrix[1] = parabola(x[t_i]+5/vel_domain,y[t_j-1])
-                    matrix[2] = parabola(x[t_i-1]+5/vel_domain,y[t_j])
-                    matrix[3] = parabola(x[t_i+1]+5/vel_domain,y[t_j])
-                    matrix[4] = parabola(x[t_i-1]+5/vel_domain,y[t_j+1])
-                    matrix[5] = parabola(x[t_i]+5/vel_domain,y[t_j+1])
+                    matrix[0] = parabola(x[t_i-1],y[t_j-1])
+                    matrix[1] = parabola(x[t_i-1],y[t_j])
+                    matrix[2] = parabola(x[t_i]+5/vel_domain,y[t_j-1])
+                    matrix[3] = parabola(x[t_i]+5/vel_domain,y[t_j+1])
+                    matrix[4] = parabola(x[t_i+1],y[t_j-1])
+                    matrix[5] = parabola(x[t_i+1],y[t_j])
 
                 else:
-                    matrix[0] = parabola(x[t_i-1],y[t_j-1])
-                    matrix[1] = parabola(x[t_i],y[t_j-1])
-                    matrix[2] = parabola(x[t_i-1],y[t_j])
-                    matrix[3] = parabola(x[t_i+1],y[t_j])
-                    matrix[4] = parabola(x[t_i-1],y[t_j+1])
-                    matrix[5] = parabola(x[t_i],y[t_j+1])
+                    matrix[0] = parabola(x[t_i-1]+5/vel_domain,y[t_j-1])
+                    matrix[1] = parabola(x[t_i-1]+5/vel_domain,y[t_j])
+                    matrix[2] = parabola(x[t_i],y[t_j-1])
+                    matrix[3] = parabola(x[t_i],y[t_j+1])
+                    matrix[4] = parabola(x[t_i+1]+5/vel_domain,y[t_j-1])
+                    matrix[5] = parabola(x[t_i+1]+5/vel_domain,y[t_j])
+
 
                 phi = np.zeros(6)
 
                 phi[0] = PHI[k,t_i-1,t_j-1]
-                phi[1] = PHI[k,t_i+1,t_j-1]
-                phi[2] = PHI[k,t_i-1,t_j]
-                phi[3] = PHI[k,t_i+1,t_j]
-                phi[4] = PHI[k,t_i-1,t_j+1]
-                phi[5] = PHI[k,t_i,t_j+1]
+                phi[1] = PHI[k,t_i-1,t_j]
+                phi[2] = PHI[k,t_i,t_j-1]
+                phi[3] = PHI[k,t_i,t_j+1]
+                phi[4] = PHI[k,t_i+1,t_j-1]
+                phi[5] = PHI[k,t_i+1,t_j]
 
                 if np.linalg.det(matrix) != 0:
 

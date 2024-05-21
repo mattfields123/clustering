@@ -1,0 +1,20 @@
+#PBS -l select=1:ncpus=4:mem=64gb
+#PBS -l walltime=23:55:00
+
+
+module load anaconda3/personal
+
+
+cp $HOME/work/clustering/fpfind/fixedparallelhex.py $TMPDIR
+cp $HOME/work/partfiles/bigcluster/g01d01/stream.dat $TMPDIR
+cp $HOME/work/partfiles/bigcluster/g01d01/pot.dat $TMPDIR
+cp $HOME/work/partfiles/bigcluster/g01d01/partx.dat $TMPDIR
+cp $HOME/work/partfiles/bigcluster/g01d01/party.dat $TMPDIR
+
+
+
+python fixedparallelhex.py
+
+cp anim.mp4 $HOME/work/clustering/fpfind/hex.mp4
+
+
