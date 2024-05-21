@@ -196,14 +196,6 @@ overall_array_x_stable,overall_array_y_stable,overall_array_x_unstable,overall_a
 combined_fixed_points = [overall_array_x_stable,overall_array_y_stable,overall_array_x_unstable,overall_array_y_unstable,overall_array_x_saddle,overall_array_y_saddle]
 
 
-fpoints_stable = np.array(combined_fixed_points[0],combined_fixed_points[1])
-fpoints_unstable_array = np.array(combined_fixed_points[2],combined_fixed_points[3])
-fpoints_saddle_array = np.array(combined_fixed_points[4],combined_fixed_points[5])
-
-np.savetxt('fpoints_stable.txt',fpoints_stable)
-np.savetxt('fpoints_unstable.txt',fpoints_unstable_array)
-np.savetxt('fpoints_saddle.txt',fpoints_saddle_array)
-
 print('time to compute: ',time()-time1)
 
 import matplotlib.pyplot as plt
