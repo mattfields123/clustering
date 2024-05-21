@@ -4,10 +4,11 @@ from scipy.stats import linregress
 
 
 
-with open("/Users/bunny/Documents/msci/mscigit/filesforplots/partavgdelta.dat") as file_name:
+# with open("/Users/bunny/Documents/msci/mscigit/filesforplots/partavgdelta.dat") as file_name:
+#     array = np.loadtxt(file_name)
+
+with open("/Users/bunny/Documents/msci/mscigit/amplitudevary/gammavary/partavg.dat") as file_name:
     array = np.loadtxt(file_name)
-
-
 
 
 
@@ -19,6 +20,8 @@ with open("/Users/bunny/Documents/msci/mscigit/filesforplots/partavgdelta.dat") 
 # barray2 = barray2*400
 
 # array3 = array3*400
+
+print(np.shape(array))
 
 t = np.linspace(0,1000*0.25,1001)
 arr = np.zeros(11)
