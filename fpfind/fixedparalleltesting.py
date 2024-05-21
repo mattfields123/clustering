@@ -7,11 +7,11 @@ import multiprocessing as mp
 
 time1 = time()
 
-with open('stream.dat') as file_name:
-    PSI = np.loadtxt(file_name)
+#with open('stream.dat') as file_name:
+  #  PSI = np.loadtxt(file_name)
 
-with open('pot.dat') as file_name:
-    PHI = np.loadtxt(file_name)
+#with open('pot.dat') as file_name:
+ #   PHI = np.loadtxt(file_name)
 
 vel_domain = 10
 tsteps = 3

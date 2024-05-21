@@ -14,7 +14,6 @@ cp $HOME/work/clustering/random.f90 $TMPDIR
 cp $HOME/work/clustering/velocitywhole.f90 $TMPDIR/velocity.f90
 cp $HOME/work/clustering/particle.f90 $TMPDIR
 cp $HOME/work/clustering/streampotential.f90 $TMPDIR
-cp $HOME/work/clustering/streamdata.f90 $TMPDIR
 
 gfortran -c constants.f90
 gfortran -c parameters.f90
