@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/var/tmp/pbs.9459876.pbs/fixedparallelhex.py", line 199, in <module>
+    fpoints_stable = np.array(combined_fixed_points[0],combined_fixed_points[1])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Tuple must have size 2, but has size 1000
+cp: cannot stat 'anim.mp4': No such file or directory
