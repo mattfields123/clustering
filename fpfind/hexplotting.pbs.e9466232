@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/var/tmp/pbs.9466232.pbs/fixedparallelhex.py", line 247, in <module>
+    fields_metric,new_fixed = field_radius(400)
+                              ^^^^^^^^^^^^^^^^^
+  File "/var/tmp/pbs.9466232.pbs/fixedparallelhex.py", line 238, in field_radius
+    new_fixed_points[a][tstep] = np.delete(new_fixed_points, combined_fixed_points[a][tstep][l])
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/site-packages/numpy/lib/function_base.py", line 5244, in delete
+    arr = asarray(arr)
+          ^^^^^^^^^^^^
+ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 2 dimensions. The detected shape was (6, 1000) + inhomogeneous part.
+cp: cannot stat 'anim.mp4': No such file or directory

@@ -235,8 +235,8 @@ def field_radius(tstep):
                         counter_l = counter_l + 1
             particles_in_vicinity.append(counter_l)
             if counter_l < 10:
-                new_fixed_points[a][tstep] = np.delete(new_fixed_points, combined_fixed_points[a][tstep][l])
-                new_fixed_points[a+1][tstep] = np.delete(new_fixed_points, combined_fixed_points[a+1][tstep][l])
+                new_fixed_points[a][tstep] = np.delete(new_fixed_points[a][tstep], combined_fixed_points[a][tstep][l])
+                new_fixed_points[a+1][tstep] = np.delete(new_fixed_points[a+1][tstep], combined_fixed_points[a+1][tstep][l])
         particle_total.append(particles_in_vicinity)
 
 
