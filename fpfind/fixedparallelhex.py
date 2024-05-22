@@ -14,7 +14,7 @@ with open('pot.dat') as file_name:
     PHI = np.loadtxt(file_name)
 
 vel_domain = 200
-tsteps = 1000
+tsteps = 500
 
 # t = np.linspace(0,5,tsteps)
 x = np.linspace(-5,5,vel_domain)
@@ -246,7 +246,7 @@ def field_radius(tstep):
 
 fields_metric,new_fixed = field_radius(400)
 
-print(len(new_fixed[1][400]))
+print(len(new_fixed[1]))
 print(len(combined_fixed_points[1][400]))
 
 
