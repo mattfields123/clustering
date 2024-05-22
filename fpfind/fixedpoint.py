@@ -8,7 +8,7 @@ from time import time
 # with open('vvel.dat') as file_name:
     # vvel = np.loadtxt(file_name)
 
-vel_domain = 250
+vel_domain = 500
 
 uvel = np.zeros((vel_domain,vel_domain))
 vvel = np.zeros((vel_domain,vel_domain))
@@ -21,7 +21,7 @@ X, Y = np.meshgrid(x,y)
 # PHI = np.sin(2*np.pi*X**2+2*np.pi*Y+3*Y**3)
 # PHI = np.sin(X) + np.cos(Y)
 # PHI = np.cos(2*np.pi*X+2*np.pi*Y)
-PHI = X**4 + Y**2
+PHI = np.cos(np.pi/4*X) + np.sin(np.pi/4*Y)
 
 def parabola(a,b):
     return [a**2,b**2,a*b,a,b,1]
@@ -37,7 +37,7 @@ fpoints_saddle_y = []
 fpoints_unstable_x = []
 fpoints_unstable_y = []
 
-
+total = 0
 for i in range(vel_domain-2):
     for j in range(vel_domain-2):
         
@@ -102,10 +102,11 @@ for i in range(vel_domain-2):
                     fpoints_saddle_y.append(y_fix)
                 fpoints_x.append(x_fix)
                 fpoints_y.append(y_fix)
-        
+                total = total + 1
 
 print(fpoints_x,fpoints_y)
 print((time()-t0))
-plt.scatter(fpoints_x,fpoints_y)
-plt.imshow(PHI.transpose(),extent=[-5,5,-5,5],origin='lower')
+print(total)
+plt.scatter(fpoints_y,fpoints_x)
+plt.imshow(PHI,extent=[-5,5,-5,5],origin='lower')
 plt.show()

@@ -7,7 +7,7 @@ from scipy.stats import linregress
 # with open("/Users/bunny/Documents/msci/mscigit/filesforplots/partavgdelta.dat") as file_name:
 #     array = np.loadtxt(file_name)
 
-with open("/Users/bunny/Documents/msci/mscigit/amplitudevary/gammavary/partavg.dat") as file_name:
+with open("/Users/bunny/Documents/msci/mscigit/amplitudevary/gammavary/partavgact.dat") as file_name:
     array = np.loadtxt(file_name)
 
 

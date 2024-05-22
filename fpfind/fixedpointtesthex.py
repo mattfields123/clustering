@@ -8,7 +8,7 @@ from time import time
 # with open('vvel.dat') as file_name:
     # vvel = np.loadtxt(file_name)
 
-vel_domain = 201
+vel_domain = 100
 
 uvel = np.zeros((vel_domain,vel_domain))
 vvel = np.zeros((vel_domain,vel_domain))
@@ -27,9 +27,9 @@ PHI = np.zeros((vel_domain,y_domain))
 for i in range(vel_domain):
     for j in range(y_domain):
         if (np.mod(i,2) > 0):
-            PHI[i,j] = np.cos(x[i])+np.sin(y[j]) 
+            PHI[i,j] = np.cos(np.pi/4*x[i])+np.sin(np.pi/4*y[j]) 
         else:
-            PHI[i,j] = np.cos(x[i]+5/vel_domain) + np.sin(y[j])
+            PHI[i,j] = np.cos(np.pi/4*(x[i]+5/vel_domain)) + np.sin(np.pi/4*y[j])
 
 def parabola(a,b):
     return [a**2,b**2,a*b,a,b,1]
@@ -45,6 +45,7 @@ fpoints_saddle_y = []
 fpoints_unstable_x = []
 fpoints_unstable_y = []
 
+total = 0
 
 for i in range(1,vel_domain-1):
     for j in range(1,y_domain-1):
@@ -133,11 +134,13 @@ for i in range(1,vel_domain-1):
                     fpoints_x.append(x_fix)
                     fpoints_y.append(y_fix)
                     print(t_i,t_j)
-            
-            
+                    total = total + 1 
+                elif ((x_loc-x_fix)**2 + (y[t_j]-y_fix)**2) < R**2:
+                    print(x_fix,y_fix,'lmao')
 
 print(fpoints_x,fpoints_y,'fpoints')
 print((time()-t0))
+print(total)
 plt.scatter(fpoints_x,fpoints_y)
 plt.imshow(PHI.transpose(),extent=[-5,5,-5,5],origin='lower')
 plt.show()
