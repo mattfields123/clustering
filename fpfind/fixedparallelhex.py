@@ -223,7 +223,7 @@ print(party.shape)
 def field_radius(tstep):
     particles_in_vicinity = []
     particle_total = []
-    new_fixed_points = copy(combined_fixed_points)
+    new_fixed_points = [[],[],[],[],[],[]]
     for b in range(3):
         particles_in_vicinity = []
         a = 2*b
@@ -234,9 +234,9 @@ def field_radius(tstep):
                     if (partx[tstep, i] - combined_fixed_points[a][tstep][l])**2 + (party[tstep,j]-combined_fixed_points[a+1][tstep][l])**2 < 0.01:
                         counter_l = counter_l + 1
             particles_in_vicinity.append(counter_l)
-            if counter_l < 10:
-                new_fixed_points[a][tstep] = np.delete(new_fixed_points[a][tstep], combined_fixed_points[a][tstep][l])
-                new_fixed_points[a+1][tstep] = np.delete(new_fixed_points[a+1][tstep], combined_fixed_points[a+1][tstep][l])
+            if counter_l > 10:
+                new_fixed_points[a].append(combined_fixed_points[a][tstep][l])
+                new_fixed_points[a+1].append(combined_fixed_points[a+1][tstep][l])
         particle_total.append(particles_in_vicinity)
 
 
