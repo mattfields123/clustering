@@ -8,8 +8,6 @@ implicit none
 real(dp) :: mu = 0.3_dp
 real(dp) :: scaling = 513.5_dp
 
-!real(dp) :: scaling = 65._dp**2
-
 
 contains
     function velocity_pointML(x, y, t, phase1, phase2, time1, time2, amplitudes, dispersions, g) result(velocity)
