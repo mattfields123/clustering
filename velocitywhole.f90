@@ -101,7 +101,7 @@ function potentialfunction(x, y, t, phase1, phase2, time1, time2, amplitudes, di
         psi1 = amp_scaling*amplitudes(c_k,c_l)*cos(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase1(c_k,c_l))
         psi2 = amp_scaling*amplitudes(c_k,c_l)*cos(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase2(c_k,c_l))
         
-        velocity = delta * psi1 + (1 - delta) * psi2
+        velocity = velocity + delta * psi1 + (1 - delta) * psi2
         end do
         end do
         !$OMP END PARALLEL DO
