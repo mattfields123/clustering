@@ -67,8 +67,8 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     open(3,file='party.dat')
     open(8,file='stream.dat')
     open(9,file='pot.dat')
-    phase1 = random_number(65,65)*tau
-    phase2 = random_number(65,65)*tau
+    phase1 = random_number(phase1)*tau
+    phase2 = random_number(phase2)*tau
 
 
     do counter_n1x = 1, N_part
