@@ -23,7 +23,7 @@ nu = 1.
 g = 0.1
 
 phase1 = tau*random_matrix(65,65)
-phase1 = tau*random_matrix(65,65)
+phase2 = tau*random_matrix(65,65)
 time1 = nu*random_matrix(65,65)
 time2 = nu*random_matrix(65,65)
         
@@ -142,8 +142,8 @@ k = k_array(c_k)
 l = l_array(c_l)
 int1 = delta 
 int2 = (1-delta)
-int11 = cos(tau*k*x+tau*l*y-dispersions(c_k,c_l)*t+phase1(c_k,c_l))
-int22 = cos(tau*k*x+tau*l*y-dispersions(c_k,c_l)*t+phase2(c_k,c_l))
+int11 = cos(tau*k*x+tau*l*y-dispersions(c_k,c_l)*t+ phase1(c_k,c_l))
+int22 = cos(tau*k*x+tau*l*y-dispersions(c_k,c_l)*t+ phase2(c_k,c_l))
 inter1 = int1*int11
 inter2 = int2*int22
 phi = phi + amplitudes(c_k,c_l) * (inter1 + inter2)

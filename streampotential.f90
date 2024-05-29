@@ -19,7 +19,7 @@ real :: dt
 real(dp) ::  g=0.1
 real(dp) :: nu=1.
 phase1 = tau*random_matrix(65,65)
-phase1 = tau*random_matrix(65,65)
+phase2 = tau*random_matrix(65,65)
 time1 = nu*random_matrix(65,65)
 time2 = nu*random_matrix(65,65)
         
