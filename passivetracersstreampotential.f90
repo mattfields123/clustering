@@ -26,7 +26,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     integer :: beginning,end
     real :: rate
     integer :: beg1,end1
-    integer :: vel_domain = 200
+    integer :: vel_domain = 250
     integer :: counter_i=0
     
 

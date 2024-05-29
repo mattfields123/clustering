@@ -35,7 +35,8 @@ cp partavg.dat $HOME/work/partfiles/bigcluster/g01d01
 cp stream.dat $HOME/work/partfiles/bigcluster/g01d01
 cp pot.dat $HOME/work/partfiles/bigcluster/g01d01
 
-
+cp stream.dat $HOME/work/clustering/streamdata/str.dat
+cp pot.dat $HOME/work/clustering/streamdata/p.dat
 
 
 
