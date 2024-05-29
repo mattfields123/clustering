@@ -146,7 +146,7 @@ int11 = cos(tau*k*x+tau*l*y-dispersions(c_k,c_l)*t+phase1(c_k,c_l))
 int22 = cos(tau*k*x+tau*l*y-dispersions(c_k,c_l)*t+phase2(c_k,c_l))
 inter1 = int1*int11
 inter2 = int2*int22
-phi = phi + inter1 + inter2
+phi = phi + amplitudes(c_k,c_l) * (inter1 + inter2)
 
 
 end do

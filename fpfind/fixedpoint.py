@@ -8,7 +8,7 @@ from time import time
 # with open('vvel.dat') as file_name:
     # vvel = np.loadtxt(file_name)
 
-vel_domain = 500
+vel_domain = 200
 
 uvel = np.zeros((vel_domain,vel_domain))
 vvel = np.zeros((vel_domain,vel_domain))
@@ -86,7 +86,7 @@ for i in range(vel_domain-2):
 
             # x_fix = (2*B*D-E*C)/(C**2-4*A*B)
             # y_fix = (2*A*E-D*C)/(C**2-4*A*B)
-            if abs(x[t_i]-x_fix) < 10/vel_domain and abs(y[t_j]-y_fix) < 10/vel_domain:
+            if abs(x[t_i]-x_fix) < 5/vel_domain and abs(y[t_j]-y_fix) < 5/vel_domain:
                 DET = np.linalg.det(matcoef)
                 TR = np.trace(matcoef)
 

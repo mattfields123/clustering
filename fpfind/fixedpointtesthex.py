@@ -8,7 +8,7 @@ from time import time
 # with open('vvel.dat') as file_name:
     # vvel = np.loadtxt(file_name)
 
-vel_domain = 100
+vel_domain = 300
 
 uvel = np.zeros((vel_domain,vel_domain))
 vvel = np.zeros((vel_domain,vel_domain))
@@ -107,10 +107,10 @@ for i in range(1,vel_domain-1):
 
                 # x_fix = (2*B*D-E*C)/(C**2-4*A*B)
                 # y_fix = (2*A*E-D*C)/(C**2-4*A*B)
-                r = (np.sqrt(3)/2)*10/vel_domain
-                R = 10/vel_domain
+                r = (np.sqrt(3)/2)* 10 / vel_domain
+                R = 10 / vel_domain
                 if np.mod(t_i,2)  == 0:
-                    x_loc = x[t_i] + 5/vel_domain
+                    x_loc = x[t_i] + 5 / vel_domain
                 else:
                     x_loc = x[t_i]
 

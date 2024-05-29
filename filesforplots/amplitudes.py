@@ -105,7 +105,7 @@ plt.show()
 
 
 fig, ax = plt.subplots(1,2)
-ax[0].set_xlabel('Gamma')
+ax[0].set_xlabel('Amplitude scaling')
 ax[0].set_ylabel('Drift Velocity / $\mathrm{kmday}^{-1}$')
 
 #t1 = t0[0:3] + t0[4:11]

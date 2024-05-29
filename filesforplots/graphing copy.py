@@ -4,12 +4,15 @@ from scipy.stats import linregress
 
 
 
-with open("/Users/bunny/Documents/msci/mscigit/filesforplots/gammasmallvalues.dat") as file_name:
+# with open("/Users/bunny/Documents/msci/mscigit/filesforplots/gammasmallvalues.dat") as file_name:
+#     array = np.loadtxt(file_name)
+# with open("/Users/bunny/Documents/msci/mscigit/filesforplots/gammalarge.dat") as file_name:
+#     barray = np.loadtxt(file_name)
+
+with open("/Users/bunny/Documents/msci/mscigit/amplitudevary/gamma/small.dat") as file_name:
     array = np.loadtxt(file_name)
-with open("/Users/bunny/Documents/msci/mscigit/filesforplots/gammalarge.dat") as file_name:
+with open("/Users/bunny/Documents/msci/mscigit/amplitudevary/gamma/large.dat") as file_name:
     barray = np.loadtxt(file_name)
-
-
 
 
 
