@@ -6,15 +6,15 @@ module load anaconda3/personal
 
 
 cp $HOME/work/clustering/fpfind/fixedparallel.py $TMPDIR
-cp $HOME/work/partfiles/bigcluster/g01d01/stream.dat $TMPDIR
-cp $HOME/work/partfiles/bigcluster/g01d01/pot.dat $TMPDIR
-cp $HOME/work/partfiles/bigcluster/g01d01/partx.dat $TMPDIR
-cp $HOME/work/partfiles/bigcluster/g01d01/party.dat $TMPDIR
+cp $HOME/work/partfiles/bigcluster/g01d01/hex2/stream.dat $TMPDIR
+cp $HOME/work/partfiles/bigcluster/g01d01/hex2/pot.dat $TMPDIR
+cp $HOME/work/partfiles/bigcluster/g01d01/hex2/partx.dat $TMPDIR
+cp $HOME/work/partfiles/bigcluster/g01d01/hex2/party.dat $TMPDIR
 
 
 
 
 python fixedparallel.py
 
-cp anim.mp4 $HOME/work/clustering/fpfind/anim11allparallel.mp4
+cp anim.mp4 $HOME/work/clustering/fpfind/anim11lol.mp4
 

@@ -48,7 +48,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     allocate(pot(vel_domain,vel_domain))
     allocate(bothvel(vel_domain,vel_domain))    
 
-    vel_domain = INT(vel_domain*2/SQRT(3))
+    vel_domain = INT(vel_domain*2/SQRT(3.))
     x_array = linspace(-5.0,(vel_domain-1.)/(0.1*vel_domain)-5.0,vel_domain)
     y_array = linspace(-5.0,(vel_domain-1.)/(0.1*vel_domain)-5.0,y_domain)
     t_array = linspace(0.,(timesteps-1)*dt,timesteps)
@@ -107,7 +107,7 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
         ELSE
         stream(c_v1,c_v2) = streamfunction(x+5.0/vel_domain,y+5.0/vel_domain,t,phase1,phase2,time1,time2,amplitudes,dispersions,g)
         pot(c_v1,c_v2) = potentialfunction(x+5.0/vel_domain,y+5.0/vel_domain,t,phase1,phase2,time1,time2,amplitudes,dispersions,g)
-
+        END IF
     end do
     end do
     !$OMP END PARALLEL DO

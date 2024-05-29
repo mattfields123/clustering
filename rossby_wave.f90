@@ -19,6 +19,7 @@ do b = 1,65
 k = k_array(a)
 l = l_array(b)
 amplitudes(a,b) = amp_scaling * exp(-(25.*k/32.)**2-(25.*l/32.)**2)*((25.*k/32.)**2 + (25.*l/32.)**2)
+!amplitudes(a,b) = amp_scaling * exp(-k**2-l**2)*(k**2+l**2)
 end do 
 end do
 end subroutine amplitudes_array
