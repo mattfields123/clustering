@@ -1,0 +1,12 @@
+f951: Error: Cannot open file ‘passivetracers.f90’
+<built-in>: Fatal Error: cannot open input file: passivetracers.f90
+compilation terminated.
+f951: Error: Cannot open file ‘executearray.f90’
+<built-in>: Fatal Error: cannot open input file: executearray.f90
+compilation terminated.
+/bin/ld: cannot find streampotential.o: No such file or directory
+/bin/ld: cannot find streamdata.o: No such file or directory
+collect2: error: ld returned 1 exit status
+/var/spool/PBS/mom_priv/jobs/9498929.pbs.SC: line 29: ./executearray: No such file or directory
+cp: cannot stat 'streamimage.dat': No such file or directory
+cp: cannot stat 'potimage.dat': No such file or directory
