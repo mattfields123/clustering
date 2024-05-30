@@ -7,7 +7,7 @@ from scipy.stats import linregress
 # with open("/Users/bunny/Documents/msci/mscigit/filesforplots/partavgdelta.dat") as file_name:
 #     array = np.loadtxt(file_name)
 
-with open("/Users/bunny/Documents/msci/mscigit/amplitudevary/gammavary/partavgact.dat") as file_name:
+with open("/Users/bunny/Documents/msci/mscigit/filesforplots/delta.dat") as file_name:
     array = np.loadtxt(file_name)
 
 
@@ -38,7 +38,7 @@ for x in range(11):
 #t0b = [0.2,0.25,0.3,0.35,0.45,0.5,0.6,0.7,0.8,0.9,1] # gamma large
 # t0 = [0.1,0.5,1,2,3,4,9,25,36,49,64] # amp
 t0 = [0.01,0.025,0.05,0.075,0.1,0.2,0.3,0.5,0.75,0.9,1] # gamma
-
+# t0 = [0.01,0.05,0.075,0.1,0.25,0.3,0.5,0.75,0.8,0.9,1] # second run
 
 logt = np.log10(t0)
 logx = np.log10(-arr)

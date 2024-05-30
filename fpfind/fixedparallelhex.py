@@ -147,28 +147,28 @@ def compute_fixed(k):
 
                     
 
-                    
-                    matcoefinv = np.linalg.inv(matcoef)
-                    xy = np.matmul(matcoefinv,nonhom)
-                    x_fix = xy[0]
-                    y_fix = xy[1]
+                    if np.linalg.det(matcoef) != 0:
+                        matcoefinv = np.linalg.inv(matcoef)
+                        xy = np.matmul(matcoefinv,nonhom)
+                        x_fix = xy[0]
+                        y_fix = xy[1]
 
-                    r = (np.sqrt(3)/2)*10/vel_domain
+                        r = (np.sqrt(3)/2)*10/vel_domain
 
-                    if (x[t_i]-x_fix)**2 + (y[t_j]-y_fix)**2 < r**2:
-                            DET = np.linalg.det(matcoef)
-                            TR = np.trace(matcoef)
+                        if (x[t_i]-x_fix)**2 + (y[t_j]-y_fix)**2 < r**2:
+                                DET = np.linalg.det(matcoef)
+                                TR = np.trace(matcoef)
 
-                            if DET > 0:
-                                if TR < 0:
-                                    fpoints_stable_x.append(x_fix)
-                                    fpoints_stable_y.append(y_fix)
-                                if TR > 0:
-                                    fpoints_unstable_x.append(x_fix)
-                                    fpoints_unstable_y.append(y_fix)
-                            elif DET < 0:
-                                fpoints_saddle_x.append(x_fix)
-                                fpoints_saddle_y.append(y_fix)
+                                if DET > 0:
+                                    if TR < 0:
+                                        fpoints_stable_x.append(x_fix)
+                                        fpoints_stable_y.append(y_fix)
+                                    if TR > 0:
+                                        fpoints_unstable_x.append(x_fix)
+                                        fpoints_unstable_y.append(y_fix)
+                                elif DET < 0:
+                                    fpoints_saddle_x.append(x_fix)
+                                    fpoints_saddle_y.append(y_fix)
         
     fpoints_x_array = np.array(fpoints_x)
     fpoints_y_array = np.array(fpoints_y)

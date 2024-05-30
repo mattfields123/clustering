@@ -92,10 +92,10 @@ ax3[1,1].set_ylabel('log C')
 # ax3[0,1].set_xlabel('log $\gamma$')
 # ax3[0,1].set_ylabel('C')
 
-ax3[0,0].scatter(t0[0:9],-arr[0:9],marker='x')
+ax3[0,0].plot(t0[0:9],-arr[0:9],marker='x')
 
 
-ax3[0,0].set_xlabel('$\gamma$')
+ax3[0,0].set_xlabel('alpha')
 ax3[0,0].set_ylabel('C')
 
 plt.show()
@@ -115,7 +115,7 @@ ax[0].set_ylabel('Drift Velocity / $\mathrm{kmday}^{-1}$')
 #ax[0].plot(t0[1:3],-arr[1:3],)
 #ax[0].plot(t0[4:11],-arr[4:11])
 
-ax[0].scatter(t0,-arr,marker='x')
+ax[0].plot(t0,-arr,marker='x')
 
 
 #t0 = [10*np.pi,20*np.pi,50*np.pi,100*np.pi,200*np.pi,500*np.pi,1000*np.pi,2000*np.pi,2*np.pi,np.pi,0.2*np.pi] # delta
