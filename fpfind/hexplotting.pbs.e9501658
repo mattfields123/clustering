@@ -1,0 +1,33 @@
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+           ^^^^^^^^^^^^^^^^
+  File "/var/tmp/pbs.9501658.pbs/fixedparallelhex.py", line 151, in compute_fixed
+    matcoefinv = np.linalg.inv(matcoef)
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/site-packages/numpy/linalg/linalg.py", line 561, in inv
+    ainv = _umath_linalg.inv(a, signature=signature, extobj=extobj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/site-packages/numpy/linalg/linalg.py", line 112, in _raise_linalgerror_singular
+    raise LinAlgError("Singular matrix")
+numpy.linalg.LinAlgError: Singular matrix
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/var/tmp/pbs.9501658.pbs/fixedparallelhex.py", line 194, in <module>
+    overall_array_x_stable,overall_array_y_stable,overall_array_x_unstable,overall_array_y_unstable,overall_array_x_saddle,overall_array_y_saddle = zip(*pool.map(compute_fixed,range(0,tsteps)))
+                                                                                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 367, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/mf620/home/anaconda3/lib/python3.11/multiprocessing/pool.py", line 774, in get
+    raise self._value
+numpy.linalg.LinAlgError: Singular matrix
+cp: cannot stat 'anim.mp4': No such file or directory
