@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/var/tmp/pbs.9502015.pbs/fixedparallelhex.py", line 254, in <module>
+    print('sums',sum(fields_metric[0])/len(fields_metric[0]),sum(fields_metric[1])/len(fields_metric[1]),sum(fields_metric[2])/len(fields_metric[2]))
+                 ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+cp: cannot stat 'anim.mp4': No such file or directory
