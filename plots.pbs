@@ -8,11 +8,11 @@ module load anaconda3/personal
 cp $HOME/work/clustering/plotparticle.py $TMPDIR
 
 
-cp $HOME/work/partfiles/bigcluster/paveltest/partx.dat $TMPDIR
-cp $HOME/work/partfiles/bigcluster/paveltest/party.dat $TMPDIR
+cp $HOME/work/partfiles/bigcluster/g01d01/partx.dat $TMPDIR
+cp $HOME/work/partfiles/bigcluster/g01d01/party.dat $TMPDIR
 
 
 
 python plotparticle.py
 
-cp anim.mp4 $HOME/work/clustering/animdata.mp4
+cp anim.mp4 $HOME/work/clustering/g1d0anim.mp4
