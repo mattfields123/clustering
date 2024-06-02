@@ -21,8 +21,8 @@ contains
 !     tausol = 8*atan(1.)*(1-gamma) !relies on gamma
  !    taupot = 8*atan(1.)*gamma !relies on gamma
   
-        tausol = (1-gamma)*8*atan(1.)
-        taupot = gamma*8*atan(1.)
+        tausol = (1-g)*8*atan(1.)
+        taupot = g*8*atan(1.)
       
         k_array = linspace(-3.2,3.2,65)
         l_array = linspace(-3.2,3.2,65)
@@ -36,10 +36,10 @@ contains
         psi1 = amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase1(c_k,c_l))
         psi2 = amplitudes(c_k,c_l)*sin(tau*k*x + tau*l*y - dispersions(c_k,c_l)*t + phase2(c_k,c_l))
 
-        velocity(1) = velocity(1) + (tausol*l - taupot*k*g)*psi1 
-        velocity(1) = velocity(1) - taupot*(1-g)*k*psi2
-        velocity(2) = velocity(2) - (tausol*k + taupot*l*g)*psi1 
-        velocity(2) = velocity(2) - taupot*l*(1-g)*psi2
+        velocity(1) = velocity(1) + (tausol*l - taupot*k*delta)*psi1 
+        velocity(1) = velocity(1) - taupot*(1-delta)*k*psi2
+        velocity(2) = velocity(2) - (tausol*k + taupot*l*delta)*psi1 
+        velocity(2) = velocity(2) - taupot*l*(1-delta)*psi2
 
         end do
         end do
