@@ -41,14 +41,14 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
 
     do counter_n1x = 1, N_part
         do counter_n1y = 1, N_part
- !           partx(counter_n1x,counter_n1y) = linx(counter_n1x)
-  !          party(counter_n1x,counter_n1y) = liny(counter_n1y)
+           partx(counter_n1x,counter_n1y) = linx(counter_n1x)
+           party(counter_n1x,counter_n1y) = liny(counter_n1y)
            partwx(counter_n1x,counter_n1y) = linx(counter_n1x)
            partwy(counter_n1x,counter_n1y) = liny(counter_n1y)
         enddo
     enddo
     
-  !  partavg(1) = sum(partx)/(N_part**2)
+    partavg(1) = sum(partx)/(N_part**2)
     partavgw(1) = sum(partwx)/(N_part**2)
     
     call dispersion_relation_array(dispersions)
@@ -67,9 +67,9 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     do c_n2x = 1, N_part
         do c_n2y = 1, N_part
 
-   !         parts = passive(partx(c_n2x,c_n2y),party(c_n2x,c_n2y),t,phase1,phase2,time1,time2,dt,amplitudes,dispersions,g)
-    !        partx(c_n2x,c_n2y) = parts(1)
-     !       party(c_n2x,c_n2y) = parts(2)
+           parts = passive(partx(c_n2x,c_n2y),party(c_n2x,c_n2y),t,phase1,phase2,time1,time2,dt,amplitudes,dispersions,g)
+           partx(c_n2x,c_n2y) = parts(1)
+           party(c_n2x,c_n2y) = parts(2)
 
            partsw = passivewfunction(partx(c_n2x,c_n2y),party(c_n2x,c_n2y),t,phase1,phase2,time1,time2,dt,amplitudes,dispersions,g)
            partwx(c_n2x,c_n2y) = partsw(1)
@@ -78,16 +78,16 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
         end do
     end do
     !$OMP END PARALLEL DO 
-   ! partavg(counter_t+1) = sum(partx)/(N_part**2)
+    partavg(counter_t+1) = sum(partx)/(N_part**2)
     partavgw(counter_t+1) = sum(partwx)/(N_part**2)
     
     end do
    
     print*, N_part**2, ' particles: cluster big data'
     call system_clock(end)
-   !  partavgdiff = abs(partavg - partavg)
+    partavgdiff = abs(partavg - partavg)
     print *, "time : ", real(end-beginning) / real(rate)
-    ! write(2,*) partavgdiff
+    write(2,*) partavgdiff
 end function vel_passive
 
 end module passivetracers
