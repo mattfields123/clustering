@@ -28,11 +28,11 @@ gfortran -fopenmp executearray.f90 -c
 gfortran -fopenmp constants.o parameters.o rossby_wave_attributes.o rossby_wave.o admin.o random.o velocity.o particle.o passivetracers.o executearray.o -o executearray
 OMP_NUM_THREADS=256 ./executearray
 
-cp partx.dat $HOME/work/partfiles/bigcluster/g01d01
-cp party.dat $HOME/work/partfiles/bigcluster/g01d01
-cp partavg.dat $HOME/work/partfiles/bigcluster/g01d01
-cp stream.dat $HOME/work/partfiles/bigcluster/g01d01
-cp pot.dat $HOME/work/partfiles/bigcluster/g01d01
+cp partx.dat $HOME/work/partfiles/bigcluster/g01d01/t
+cp party.dat $HOME/work/partfiles/bigcluster/g01d01/t
+cp partavg.dat $HOME/work/partfiles/bigcluster/g01d01/t
+cp stream.dat $HOME/work/partfiles/bigcluster/g01d01/t
+cp pot.dat $HOME/work/partfiles/bigcluster/g01d01/t
 
 
 

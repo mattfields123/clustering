@@ -29,6 +29,6 @@ OMP_NUM_THREADS=256 ./executearray
 
 
 cp * $EPHEMERAL/testcase2
-cp partavg.dat $HOME/work/clustering/beta64.dat
+cp partavg.dat $HOME/work/clustering/beta16.dat
 cp partx.dat $HOME/work/partfiles/test
 cp party.dat $HOME/work/partfiles/test

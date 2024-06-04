@@ -6,6 +6,6 @@ module constants
     real :: tau = 8*atan(1.)
     ! real :: g = 3.92e8
     real :: Rd = 0.1 
-    real :: beta = 64
+    real :: beta = 16
     ! real :: f = 400
 end module constants

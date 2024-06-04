@@ -168,9 +168,9 @@ def compute_fixed(k):
     fpoints_saddle_x_array = np.array(fpoints_saddle_x)
     fpoints_saddle_y_array = np.array(fpoints_saddle_y)
 
-    print('stable numer = ',len(fpoints_stable_x))
-    print('unstable numer = ',len(fpoints_unstable_x))
-    print('saddle numer = ',len(fpoints_saddle_x))
+    #print('stable numer = ',len(fpoints_stable_x))
+    #print('unstable numer = ',len(fpoints_unstable_x))
+    #print('saddle numer = ',len(fpoints_saddle_x))
     return fpoints_stable_x_array,fpoints_stable_y_array,fpoints_unstable_x_array,fpoints_unstable_y_array,fpoints_saddle_x_array,fpoints_saddle_y_array
 
 pool = mp.Pool(30)
@@ -201,6 +201,24 @@ party = np.fmod(party+1000,10)-5
 print(partx.shape)
 
 print(party.shape)
+
+
+tot_stable = 0
+tot_unstable = 0
+tot_saddle = 0
+
+for i in range(tsteps):
+    tot_stable = tot_stable + len(overall_array_x_stable[i])
+    tot_unstable = tot_unstable + len(overall_array_x_unstable[i])
+    tot_saddle = tot_saddle + len(overall_array_x_saddle[i])
+
+print('stab avg ',tot_stable/tsteps)
+print('unstab avg',tot_unstable/tsteps)
+print('saddle avg',tot_saddle/tsteps)
+
+
+ 
+
 
 
 
