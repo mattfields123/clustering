@@ -239,8 +239,15 @@ def field_radius(tstep):
     return particle_total
 
 
-fields_metric = field_radius(200)
+fields_metric = field_radius(10)
 
+partical_list = []
+
+cool = mp.Pool(20)
+
+partical_list = zip(*cool.map(field_radius,range(0,20)))
+
+print(partical_list[20])
 
 print(fields_metric)
 print('sums',sum(fields_metric[0])/len(fields_metric[0]),sum(fields_metric[1])/len(fields_metric[1]),sum(fields_metric[2])/len(fields_metric[2]))

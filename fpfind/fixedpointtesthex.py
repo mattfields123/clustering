@@ -142,5 +142,12 @@ print(fpoints_x,fpoints_y,'fpoints')
 print((time()-t0))
 print(total)
 plt.scatter(fpoints_x,fpoints_y)
+
+
+# plt.scatter(fpoints_saddle_x,fpoints_saddle_y,color='green')
+# plt.scatter(fpoints_unstable_x,fpoints_unstable_y,color='blue')
+# plt.scatter(fpoints_stable_x,fpoints_stable_y,color='red')
+
+
 plt.imshow(PHI.transpose(),extent=[-5,5,-5,5],origin='lower')
 plt.show()

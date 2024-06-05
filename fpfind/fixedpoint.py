@@ -107,6 +107,10 @@ for i in range(vel_domain-2):
 print(fpoints_x,fpoints_y)
 print((time()-t0))
 print(total)
-plt.scatter(fpoints_y,fpoints_x)
+
+plt.scatter(fpoints_stable_y,fpoints_stable_x,color='red')
+plt.scatter(fpoints_unstable_y,fpoints_unstable_x,color='green')
+plt.scatter(fpoints_saddle_y,fpoints_saddle_x,color='blue')
+
 plt.imshow(PHI,extent=[-5,5,-5,5],origin='lower')
 plt.show()
