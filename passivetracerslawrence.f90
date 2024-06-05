@@ -59,8 +59,8 @@ real(dp) :: x, y, t, phase1(65,65), phase2(65,65), time1(65,65), time2(65,65), v
     
     t = t_array(counter_t)
     
-    call MaduLawrence_loop(time1, phase1, t, vu)
-    call MaduLawrence_loop(time2, phase2, t, vu)
+    call MaduLawrence_loop(time1, phase1, t, g)
+    call MaduLawrence_loop(time2, phase2, t, g)
     
     !$OMP PARALLEL DO private(parts,modx,mody,c_n2x,c_n2y)
     do c_n2x = 1, N_part
